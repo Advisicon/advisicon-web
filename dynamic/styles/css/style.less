@@ -903,6 +903,77 @@ td { vertical-align: top; }
 						}
 					}
 				}
+				#currentPublicCourses {
+					float: left;
+					.eb_event_list_title, .head_title { // effects both head and list
+						display: block;
+						float: left;
+						width: 48%;
+						padding-left: 1%;
+						padding-right: 1%;
+					}
+					.eb_event_list_location, .head_location { // effects both head and list
+						display: block;
+						float: left;
+						width: 27%;
+						padding-left: 1%;
+						padding-right: 1%;
+					}
+					.eb_event_list_date, .head_date { // effects both head and list
+						display: block;
+						float: left;
+						width: 17%;
+						padding-left: 1%;
+						padding-right: 1%;
+					}
+					#eb_event_header {
+						float: left;
+						width: 100%;
+						border-bottom: 1px solid #333;
+						font-weight: bold;
+					}
+					.eb_event_list {
+						float: left;
+						.eb_event_list_item {
+							padding-top: .5em;
+							padding-bottom: .5em;
+							float: left;
+							width: 100%;
+							&:hover {
+								background-color: #eeeeee;
+							}
+							a {
+								&:link {
+									color: #000000;
+									text-decoration: none;
+									border-bottom: 1px solid #000000;
+								}
+								&:visited {
+									color: #888888;
+									text-decoration: none;
+									border-bottom: 1px solid #888888;
+								}
+								&:hover {
+									color: @red;
+									text-decoration: none;
+									border-bottom: 1px solid @red;
+								}
+								&:active {
+									color: #ffffff;
+									text-decoration: none;
+									background-color: @transparentRed;
+									border-bottom: none;
+								}
+							}
+							.eb_event_list_title {
+							}
+							.eb_event_list_location {
+							}
+							.eb_event_list_date {
+							}
+						}
+					}
+				}
 			} 
 		}
 		footer {

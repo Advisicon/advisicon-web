@@ -116,8 +116,8 @@ Eventbrite.prototype = {
 
       html = "<div class='eb_event_list_item' id='evnt_div_" + evnt.id + "'>" + 
              "<span class='eb_event_list_title'><a href='" + evnt.url + "' title='Register on eventbrite!'>" + evnt.title + "</a></span>" +
-             "<span class='eb_event_list_date'>" + date_string + "</span>" +
-             "<span class='eb_event_list_location'><a href='" + venue_map_url + "' title='Map " + venue_name + " on google maps!'>" + venue_name + "</a></span></div>";
+             "<span class='eb_event_list_location'><a href='" + venue_map_url + "' title='Map " + venue_name + " on google maps!'>" + venue_name + "</a></span>" +
+             "<span class='eb_event_list_date'>" + date_string + "</span></div>";
       return html;
     },
     'formatTime': function( time ){

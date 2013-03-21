@@ -112,7 +112,7 @@
 							};
 							
 							eb.event_search( options, function( response ){
-								$('#currentPublicCourses').html(eb.utils.eventList( response, eb.utils.eventListRow ));
+								$('#currentPublicCourses').html('<div id="eb_event_header"><span class="head_title">Course</span><span class="head_location">Location</span><span class="head_date">Date</span></div>'+ eb.utils.eventList( response, eb.utils.eventListRow ));
 							});
 						});
 						
