@@ -1,0 +1,3 @@
+1331248298
+CreatePosts	C:/Web Bin/advisicon.com/rails/blog/db/migrate/20120308230904_create_posts.rb	class CreatePosts 
+change	C:/Web Bin/advisicon.com/rails/blog/db/migrate/20120308230904_create_posts.rb	  def change
