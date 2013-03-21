@@ -55,16 +55,26 @@
 			<!-- #include virtual="/include/featuredTools.htm" -->
 		</aside>
 		<section id="main">
-			<h1>Public Courses</h1>
-				<p>Invest in your project management career!</p>
-			<h2>Current Course Offerings</h2>
+			<h1>Advisicon Courses</h1>
+				<p>Advisicon delivers customized, consultative instructor-led project management training based on project management best practices on the following topics using Advisicon&rsquo;s proprietary course manuals, process flowcharts, and electronic tools and templates (on course CD).</p>
+				<p><a href="/how-to-claim-pdus.htm" title="Find out how to claim PDUs">Instructions to claim PDUs</a></p>
+				<p>Advisicon&rsquo;s highly qualified staff, including MVPs, MCTs, MCPs, and PMPs, are available for on-site, customized training.</p>
+				<p>Our classes can be centered around the specific material you need and want to cover, or we can deliver the classes as outlined below, to your staff.</p>
+				<p><a href="/public_classes.htm" title="Our upcoming public class schedule">On-site classes</a> can also be scheduled to best meet your organization&rsquo;s timing. Corporate classes can be held at your facility, our <a href="#meeting-room" title="skip down to preview our meeting space">training facility</a>, or off-site should you prefer. Corporate classes can be held as a 1-day, 2-day or 3-day class, depending on content. All classes include reference/training manuals for each person.</p>
+				<p>For more information and for corporate pricing, please contact us at <a href="mailto:courseinfo@Advisicon.com">courseinfo@Advisicon.com</a>.</p>
+			<h2>Current Public Course Offerings</h2>
 			
 			<div id="currentPublicCourses">
 				<p>Find all of <a href="http://advisicon.eventbrite.com/" title="Advisicon&rsquo;s events on Eventbrite">our current public course offerings</a> on our Eventbrite page.</p>
 				<p><strong>Loading events&hellip;</strong><p>
 			</div>
 				
-				
+			<h2 id="meeting-room">Our Meeting Room</h2>
+				<p>Our meeting room is for rent!</p>
+				<!--<iframe src="http://rtvpix.com/tour/src/tour_java_only.php?utl=BU-5037-9QK11Y-01&h=339&w=500" height="339" width="500" marginwidth="0" marginheight="0" scrolling="no"></iframe>-->
+				<a href="http://rtvpix.com/rst/BU-5037-9QK11Y-01?h=500&w=700" title="take a virtual tour" target="_blank onclick="_gaq.push(['_trackEvent', 'virtual tour', 'flash 3d']);"><img src="/pix/advisicon-virtual-tour.jpg" alt="take a virtual tour" width="100%" /></a>
+				<p>Click the image above to take a virtual tour of the Advisicon Headquarters or visit our facebook page to see an <a href="http://www.facebook.com/media/set/?set=a.10150709101698512.393774.136755573511&type=3" title="pictures of the Advisicon Headquarters building" onclick="_gaq.push(['_trackEvent', 'Facebook', 'User: Advisicon', 'HQ image gallery']);">image gallery of shots of our headquarters building</a>. To obtain a quote for renting our meeting room, please contact us at <a href="mailto:info@advisicon.com?subject=Meeting Room Quote Request">info@Advisicon.com</a>.</p>
+	
 
 		</section>
 	</div> <!-- END #content -->
@@ -105,23 +115,7 @@
        mathiasbynens.be/notes/async-analytics-snippet -->
 				<script src="/Scripts/rootGoogleAnalytics.js" type="text/javascript"></script>
 				<script src="/js/Eventbrite.jquery.js" type="text/javascript"></script>
-					<script type="text/javascript">
-						Eventbrite({'app_key': "P47XBRPQTVS7YF64Z5"}, function(eb){
-							var options = {
-								'organizer'    : "Advisicon"
-							};
-							
-							eb.event_search( options, function( response ){
-								$('#currentPublicCourses').html('<div id="eb_event_header"><span class="head_title">Course</span><span class="head_location">Location</span><span class="head_date">Date</span></div>'+ eb.utils.eventList( response, eb.utils.eventListRow ));
-							});
-						});
-						
-					//var xhr = new XMLHttpRequest();
-					//xhr.open("GET", "http://www.eventbrite.com/json/user_list_events?app_key=P47XBRPQTVS7YF64Z5&user=jeff.jacobson@advisicon.com&do_not_display=description,organizer,logo,style,tickets&event_statuses=live", true);
-					//xhr.send();
-					//xmlDocument = xhr.responseJSON;
-					//$("#currentPublicCourses").html(xmlDocument);
-				</script>
+				<script src="/js/load-public-courses.js" type="text/javascript"></script>
 
 </body>
 </html>
