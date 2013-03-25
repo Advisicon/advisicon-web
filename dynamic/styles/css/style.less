@@ -229,6 +229,12 @@ td { vertical-align: top; }
 		border-radius: @radius * 1px;
 		overflow: hidden;
 	}
+	.round-targeted-corners(@top-left-corner: 0, @top-right-corner: 0, @bottom-right-corner: 0, @bottom-left-corner: 0) {
+		-moz-border-radius: @top-left-corner @top-right-corner @bottom-right-corner @bottom-left-corner;
+		border-radius: @top-left-corner @top-right-corner @bottom-right-corner @bottom-left-corner;
+		overflow: hidden;
+
+	}
 	@red: #860c0c;
 	@transparentRed: rgba(134, 12, 12, .75);
 	@gold: #ffcc33;
@@ -532,6 +538,7 @@ td { vertical-align: top; }
 					.advisiconFont (16);
 					color: @red;
 					padding-top: 1em;
+					clear: left;
 					abbr {
 						color: @red;
 						border-bottom-color: @red;
@@ -934,11 +941,14 @@ td { vertical-align: top; }
 					}
 					.eb_event_list {
 						float: left;
+						clear: left;
+						width: 509px;
 						.eb_event_list_item {
 							padding-top: .5em;
 							padding-bottom: .5em;
 							float: left;
-							width: 100%;
+							clear: left;
+							width: 502px;
 							&:hover {
 								background-color: #eeeeee;
 							}
@@ -970,6 +980,27 @@ td { vertical-align: top; }
 							.eb_event_list_location {
 							}
 							.eb_event_list_date {
+							}
+							.eb_event_list_details {
+								clear: left;
+								padding-top: 1em;
+								padding-left: 7px;
+								padding-bottom: 1em;
+								background-color: #eeeeee;
+								border-top: 1px solid #cccccc;
+								.round-targeted-corners(0, 0, 5px, 5px);
+								.boxShadow(0, 1px, 5px, 0, #cccccc);
+								& ul {
+									width: 462px;
+									& li {
+										width: 435px;
+									}
+								}
+								&.hidden {
+									position: absolute;
+									width: 600px;
+									left: 20000px;
+								}
 							}
 						}
 					}
