@@ -10,6 +10,7 @@ Eventbrite({'app_key': "P47XBRPQTVS7YF64Z5"}, function(eb){
 									'<span class="head_date">Date</span></div>'+ eb.utils.eventList( response, eb.utils.eventListRow ));
 							});
 						});
+
 	$(window).on('load', function(){
 		$('.eb_event_list_item').click(function(){
 			$event_id_number = $(this).attr('id');
@@ -18,13 +19,3 @@ Eventbrite({'app_key': "P47XBRPQTVS7YF64Z5"}, function(eb){
 	});
 
 // Add GoToTraining courses
-$.get('https://api.citrixonline.com/G2T/rest/organizers/2221055618378781957/trainings', 
-	{
-		'Content-type': 'application/json',
-		'Accept': 'application/json',
-		'Authorization': 'OAuth oauth_token=b149f7276941cdad5fadbdc55911c111'
-	},
-	function(data){
-		$('#onlineCourses').html('<p style="color:red;">Success!</p>');
-		$('#onlineCourses').append(data);
-	}, 'json');

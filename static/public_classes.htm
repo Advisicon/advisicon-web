@@ -55,126 +55,28 @@
 			<!-- #include virtual="/include/featuredTools.htm" -->
 		</aside>
 		<section id="main">
-			<h1>Public Courses</h1>
-				<p>Invest in your project management career!</p>
-			<h2>Current Course Offerings</h2>
-			<p>Find all of <a href="http://advisicon.eventbrite.com/" title="Advisicon&rsquo;s events on Eventbrite">our current public course offerings</a> on our Eventbrite page.</p>
-				<%@LANGUAGE=VBSCRIPT%>
-				<%
-				sub process_html(up_http) 
-					dim xmlhttp : set xmlhttp = createobject("msxml2.xmlhttp.3.0")
-					xmlhttp.open "get", up_http, false
-					xmlhttp.send
-					
-					dim response_array : response_array = split(xmlhttp.responseText, "<item>")
-					
-					dim re : Set re = new regexp 'defines the variable re and makes it a new regular expression
-						re.Pattern = "<title>.*</title>" 'set up a regular expression to use for searching the items in our array. We're using it to search for the title tags.
-						re.IgnoreCase = True 'regular expression search is case insensitive. Don't know why we can't just do this in the regexp itself.
-						re.Global = True 'makes sure match applies to the entire string
-					'	dim reAmp : Set reAmp = new regexp
-					'		reAmp.Pattern = "&amp;amp;"
-					'		reAmp.IgnoreCase = True
-					'		reAmp.Global = True
-					'		dim reAmpMatch as String = Replace(reAmp, )
-					'		Set reAmpMatches = reAmp.Execute(response_array(i))
-					'			for each reAmpMatch in reAmpMatches
-					'				amp = Replace(reAmpMatch.Value,"&amp;")
-					'			Next
-							
-					
-				'	response.write(response_array(1))
-					dim i 'declare a new variable, i. We'll use this to step through the items in the array
-					response.write("<table><tbody><tr><th>Course</th><th>Location</th><th>Date</th></tr></tbody>") 'build the table header
-					for i = 1 to ubound(response_array) 'steps through the items in the array, starting at the position response_array(1) and continuing to the end of response_array. ubound seems to act a bit like .length, len(), etc. We start at position 1 instead of 0 so that we don't pick up matches from the stuff in the <channel> before the first <item>
-						if re.Test(response_array(i)) then 'if the regular expression pattern defined earlier as re is found within the array item then do the following. re.Test() returns a boolean.
-							Set Matches = re.Execute(response_array(i)) 'make a new array, this one called Matches. Created from the current item in response_array.
-							for each Match in Matches 'for each item in this new Matches array ...
-								title = Replace(Match.Value,"<title>","") 'remove the opening <title>
-								title = Replace(title,"</title>","") 'remove the closing </title> tag
-							'	dim ampersands As String = title.text
-							'	dim title As String = Replace(ampersands, "&amp;amp;", "&amp;")
-									
-								dim reLink : Set reLink = new regexp 'new regular expression, this one is called reLink. We'll use it to search for the <link> tags
-									reLink.Pattern = "<link>.*</link>" 'looking for the <link> tags
-									reLink.IgnoreCase = True 'case insensitive
-									reLink.Global = True 'search entire string
-									Set linkMatches = reLink.Execute(response_array(i)) 'make a new array called linkMatches from the current item in response_array()
-										for each linkMatch in linkMatches
-											link = Replace(linkMatch.Value,"<link>","") 'remove the opening <link>
-											link = Replace(link,"</link>", "") 'remove the closing </link>
-										Next
-								dim reStartDate : Set reStartDate = new regexp 'new regular expression called reDate for finding the date of the event
-									reStartDate.Pattern = "((January|February|March|April|June|July|August|September|October|November|December)\s+(\d+), (\d+)\s+(at|from)\s+\d+:\d\d\s+(a|p)m\s+(<span\sclass=.pipe..*>-|to))|Multiple Dates"'(\b.*\b).?\s+"'(\b.*\b)\s+(\d+).?\s+(\d+).*\-.*"
-									reStartDate.IgnoreCase = True
-									reStartDate.Multiline = True
-									reStartDate.Global = True
-									dim reDate : Set reDate = new regexp
-										reDate.Pattern = "((January|February|March|April|June|July|August|September|October|November|December)\s+(\d+), (\d+))|Multiple Dates"
-										reDate.IgnoreCase = True
-										reDate.Multiline = True
-										reDate.Global = True
-										Set startDateMatches = reStartDate.Execute(response_array(i))
-											for each startDateMatch in startDateMatches
-												Set dateMatches = reDate.Execute(startDateMatch)
-													for each dateMatch in dateMatches
-														eventDate = dateMatch.Value
-													Next
-											Next
-								dim reLocation : Set reLocation = new regexp
-									reLocation.Pattern = "<b>(.*)<\/b><br>(.*)<br>(.*)<"   '"Where:.*\n.*<b>(.*)<\/b><br>(.*)<br>(.*)<br>[\n.*]*"
-									reLocation.IgnoreCase = True
-									reLocation.Multiline = True
-									reLocation.Global = True
-									dim reBizLocation : Set reBizLocation = new regexp
-										reBizLocation.Pattern = "<b>(.*)<\/b>"
-										reBizLocation.IgnoreCase = True
-									dim reAddressLocation : Set reAddressLocation = new regExp
-										reAddressLocation.Pattern = "<br>(.*)<br>(.*)"
-										reAddressLocation.IgnoreCase = True
-										reAddressLocation.Multiline = True
-										Set locationMatches = reLocation.Execute(response_array(i))
-											for each locationMatch in locationMatches
-												Set bizLocationMatches = reBizLocation.Execute(locationMatch.Value)
-													for each bizLocationMatch in bizLocationMatches
-														venue = Replace(bizLocationMatch.Value,"<B>","")
-														venue = Replace(venue,"</B>","")
-													Next
-												Set addressLocationMatches = reAddressLocation.Execute(locationMatch.Value)
-													for each addressLocationMatch in addressLocationMatches
-														eventAddress = Replace(addressLocationMatch.Value,"<BR>"," ")
-														eventAddress = Replace(eventAddress," ","+",2)
-														eventAddress = Replace(eventAddress,"<","")
-													Next
-											'	dim bizMap
-											'	bizMap = "http://maps.google.com/maps?q=" & eventAddress
-											'	dim eventLocation
-											'	eventLocation = "<a href='" & bizMap & "' title='Find " & bizLocation & " on Google Maps>"& bizLocation &"</a>"
-											Next
-								
-								response.write("<tr><td><a href='" & link & "' title='Register for &ldquo;" & title & "&rdquo; on Eventbrite'>" & title & "</a></td><td><a href='http://maps.google.com/maps?q=" & eventAddress & "' title='Find " & venue & " on Google Maps'>"& venue & "</a></td><td>" & eventDate & "</td></tr>") 'build the table row for this event
-							Next
-						else
-							response.write("<p>I couldn't find the title.</p>")
-						end if
-					next 'use a for loop to use the regular expression on the array. The output from the loop will be the line(s) containing the search pattern
-					response.write("</table>") 'build the end tag for the table
-					
-					set re = nothing
-					set eventDate = nothing
-					set eventAddress = nothing
-					set addressLocationMatches = nothing
-					set bizLocationMatches = nothing
-					set reAddressLocation = nothing
-					set locationMatches = nothing
-					set reLocation = nothing
-					set reBizLocation = nothing
-					set xmlhttp = nothing
-					
-				end sub 'free up any memory used by the process
-				
-				process_html("http://www.eventbrite.com/rss/user_list_events/35721498302") 'point the subprocess to the webpage you want to access
-				%>
+			<h1>Advisicon Courses</h1>
+				<p>Advisicon delivers customized, consultative instructor-led project management training based on project management best practices on the following topics using Advisicon&rsquo;s proprietary course manuals, process flowcharts, and electronic tools and templates (on course CD).</p>
+				<p><a href="/how-to-claim-pdus.htm" title="Find out how to claim PDUs">Instructions to claim PDUs</a></p>
+				<p>Advisicon&rsquo;s highly qualified staff, including MVPs, MCTs, MCPs, and PMPs, are available for on-site, customized training.</p>
+				<p>Our classes can be centered around the specific material you need and want to cover, or we can deliver the classes as outlined below, to your staff.</p>
+				<p><a href="/public_classes.htm" title="Our upcoming public class schedule">On-site classes</a> can also be scheduled to best meet your organization&rsquo;s timing. Corporate classes can be held at your facility, our <a href="#meeting-room" title="skip down to preview our meeting space">training facility</a>, or off-site should you prefer. Corporate classes can be held as a 1-day, 2-day or 3-day class, depending on content. All classes include reference/training manuals for each person.</p>
+				<p>For more information and for corporate pricing, please contact us at <a href="mailto:courseinfo@Advisicon.com">courseinfo@Advisicon.com</a>.</p>
+			<h2>Current Public Course Offerings</h2>
+			<div id="currentPublicCourses">
+				<p>Find all of <a href="http://advisicon.eventbrite.com/" title="Advisicon&rsquo;s events on Eventbrite">our current public course offerings</a> on our Eventbrite page.</p>
+			</div>
+			<h2>Public Online Course Offerings</h2>
+			<div id="onlineCourses">
+				<p>Find all of our public online <a href="https://attendee.gototraining.com/78mx2/catalog/8775170764717674752">courses at GoToTraining</a>.</p>
+				<iframe src="https://attendee.gototraining.com/78mx2/catalog/8775170764717674752" width="509"></iframe>
+			</div>
+			<h2 id="meeting-room">Our Meeting Room</h2>
+				<p>Our meeting room is for rent!</p>
+				<!--<iframe src="http://rtvpix.com/tour/src/tour_java_only.php?utl=BU-5037-9QK11Y-01&h=339&w=500" height="339" width="500" marginwidth="0" marginheight="0" scrolling="no"></iframe>-->
+				<a href="http://rtvpix.com/rst/BU-5037-9QK11Y-01?h=500&w=700" title="take a virtual tour" target="_blank onclick="_gaq.push(['_trackEvent', 'virtual tour', 'flash 3d']);"><img src="/pix/advisicon-virtual-tour.jpg" alt="take a virtual tour" width="100%" /></a>
+				<p>Click the image above to take a virtual tour of the Advisicon Headquarters or visit our facebook page to see an <a href="http://www.facebook.com/media/set/?set=a.10150709101698512.393774.136755573511&type=3" title="pictures of the Advisicon Headquarters building" onclick="_gaq.push(['_trackEvent', 'Facebook', 'User: Advisicon', 'HQ image gallery']);">image gallery of shots of our headquarters building</a>. To obtain a quote for renting our meeting room, please contact us at <a href="mailto:info@advisicon.com?subject=Meeting Room Quote Request">info@Advisicon.com</a>.</p>
+	
 
 		</section>
 	</div> <!-- END #content -->
@@ -193,8 +95,8 @@
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.0.min.js"><\/script>')</script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.6.0.min.js"><\/script>')</script>
 
   <!-- scripts concatenated and minified via build script -->
   <script src="/js/plugins.js"></script>
@@ -211,10 +113,11 @@
 <script src="/Scripts/featuredProducts.js" type="text/javascript"></script> <!-- Controls the slideshow action of fading from book to book in the "Featured Books" section of the index page [Jeff] -->
 <script src="/Scripts/googlePlusOneButton.js" type="text/javascript"></script><!-- Render call for the google +1 link [Jeff] -->
   <!-- end scripts -->
-
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
        mathiasbynens.be/notes/async-analytics-snippet -->
-	<script src="/Scripts/rootGoogleAnalytics.js" type="text/javascript"></script>
-	
+				<script src="/Scripts/rootGoogleAnalytics.js" type="text/javascript"></script>
+				<script src="/js/Eventbrite.jquery.js" type="text/javascript"></script>
+				<script src="/js/load-public-courses.js" type="text/javascript"></script>
+
 </body>
 </html>
