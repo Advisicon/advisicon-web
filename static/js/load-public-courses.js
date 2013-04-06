@@ -11,11 +11,19 @@ Eventbrite({'app_key': "P47XBRPQTVS7YF64Z5"}, function(eb){
 							});
 						});
 
-	$(window).on('load', function(){
-		$('.eb_event_list_item').click(function(){
-			$event_id_number = $(this).attr('id');
-			$(this).find('.eb_event_list_details').toggleClass('hidden');
-		});
-	});
 
 // Add GoToTraining courses
+/*$.ajax({
+	'type': 'GET',
+	'url': 'https://api.citrixonline.com/G2T/rest/organizers/2221055618378781957', 
+	'headers': { Accept: 'application/json', Content-Type: 'application/json', Authorization: '&nbsp;OAuth&nbsp;oauth_token=b149f7276941cdad5fadbdc55911c111' },
+	'success': function(data)
+		{
+			alert('works');
+			$('#onlineCourses').html('<p style="color:red;">Success!</p>');
+			$('#onlineCourses').append(data);
+		}, 
+	'error': function(xhr){
+		alert('failed');
+	},
+	'dataType': 'json'});*/
