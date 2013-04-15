@@ -42,19 +42,19 @@
   %div{ :role => 'main'}
     #content
       %img{ :border => '0', :src => '/pix/advisicon_banner-012709.jpg', :alt => 'Advisicon, Inc.', :id => 'advisiconBanner', :width => '950', :height => '110', :usemap => '#Map' }
-      / <!-- #include virtual="/include/topNavTrial.htm" -->
-      / <!-- #include virtual="/include/navAndCred.htm" -->
+      = render_partial 'partials/top_navigation'
+      = render_partial 'partials/secondary_nav_and_credentials'
       %aside{ :id => 'secondaryContent' }
-        / <!-- #include virtual="/include/socialMediaProfiles.htm" -->
+        / #include virtual="/include/socialMediaProfiles.htm"
         %div{ :class => 'rPopBox' }
           %h3 Recent Blog Posts
           %ul{ :id => 'feedContent' }
-        / <!-- #include virtual="/include/featuredTools.htm" -->
+        / #include virtual="/include/featuredTools.htm"
         %section{ :id => 'main' }
 
           =yield
     %footer
-      / <!-- #include virtual="/include/footer.htm" -->
+      / #include virtual="/include/footer.htm"
     %map{ :name => 'Map', :id => 'Map' }
       %area{ :shape => 'rect', :coords => '858,21,936,99', :href => '/', :alt => 'Advisicon Home'  }
       %area{ :shape => 'rect', :coords => '860,22,861,24', :href => '#', :alt => 'Advisicon' }
