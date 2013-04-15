@@ -54,7 +54,7 @@
 
           =yield
     %footer
-      / #include virtual="/include/footer.htm"
+      = render_partial '/partials/footer'
     %map{ :name => 'Map', :id => 'Map' }
       %area{ :shape => 'rect', :coords => '858,21,936,99', :href => '/', :alt => 'Advisicon Home'  }
       %area{ :shape => 'rect', :coords => '860,22,861,24', :href => '#', :alt => 'Advisicon' }
