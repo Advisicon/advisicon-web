@@ -42,14 +42,14 @@
   %div{ :role => 'main'}
     #content
       %img{ :border => '0', :src => '/pix/advisicon_banner-012709.jpg', :alt => 'Advisicon, Inc.', :id => 'advisiconBanner', :width => '950', :height => '110', :usemap => '#Map' }
-      = render_partial 'partials/top_navigation'
-      = render_partial 'partials/secondary_nav_and_credentials'
+      = render_partial '/partials/top_navigation'
+      = render_partial '/partials/secondary_nav_and_credentials'
       %aside{ :id => 'secondaryContent' }
-        / #include virtual="/include/socialMediaProfiles.htm"
+        = render_partial '/partials/social_media_profiles'
         %div{ :class => 'rPopBox' }
           %h3 Recent Blog Posts
           %ul{ :id => 'feedContent' }
-        / #include virtual="/include/featuredTools.htm"
+        = render_partial '/partials/featured_tools'
         %section{ :id => 'main' }
 
           =yield
