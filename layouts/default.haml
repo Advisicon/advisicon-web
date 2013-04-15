@@ -50,9 +50,9 @@
           %h3 Recent Blog Posts
           %ul{ :id => 'feedContent' }
         = render_partial '/partials/featured_tools'
-        %section{ :id => 'main' }
+      %section{ :id => 'main' }
 
-          =yield
+        =yield
     %footer
       = render_partial '/partials/footer'
     %map{ :name => 'Map', :id => 'Map' }
