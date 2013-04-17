@@ -44,7 +44,7 @@ description: Find our currently available public classes.
           - @courseTitle = course['name']
           - @registrationURL = "https://attendee.gototraining.com/78mx2/register/#{course['trainingKey']}"
           /%span.g2t_event_list_title= course['name']
-          %span.eb_event_list_title= "<a href='#{@registrationURL}'>#{@courseTitle}</a>"
+          %span.eb_event_list_title= "<a href='#{@registrationURL}' title='Register on GoToTraining!'>#{@courseTitle}</a>"
           - @date = DateTime.parse(course['times'][0]['startDate']).to_date
           /%span.g2t_event_list_date= @date.to_s
           %span.eb_event_list_date= @date.to_s
