@@ -1,5 +1,54 @@
 !!! 5
-%html
+/
+/                                                  `                                                   
+/                                                 +m`                                                  
+/                                                :MMd`                                                 
+/                                               -NMMMh                                                 
+/                                              .NMMMMMs                                                
+/                                             `mMMMMMMM+                                               
+/                                             dMMMMMMMMM/                                              
+/                                            yMMMMMMMMMMM-                                             
+/                                           oMMMMMMMMMMMMN.                                            
+/                                          +MMMMMMMMMMMMMMm`                                           
+/                                         :MMMMMMMm+MMMMMMMd`                                          
+/                                        -NMMMMMMN. oMMMMMMMh                                          
+/                                       .NMMMMMMM:   yMMMMMMMs                                         
+/                                      `mMMMMMMM+     dMMMMMMM+                                        
+/                                      dMMMMMMMs      `mMMMMMMM/                                       
+/                                     yMMMMMMMh        -NMMMMMMM-                                      
+/                                    sMMMMMMMm`         :MMMMMMMN.                                     
+/                                   +MMMMMMMN.           +MMMMMMMm`                                    
+/              `..---:::::::::---.....--:/+o-             sMMMMMMMd`                                   
+/        .:/osssssssoo+++/////////++++oosso+//:-..`        hMMMMMMMh                                   
+/     `/ssssso/-.`               .soo++/::``..--:/++++/:-.``+shmMMMMs                                  
+/     ossss:`                   `mMMMMMMMh            `.-:/++/:..:+ym+                                 
+/     +sss/                     dMMMMMMMm`                   `.:/++:-.          ````                   
+/      :sso`               -   yMMMMMMMN.        ..`          /ds+-.-/+/-           `....              
+/        -+o:`             ./-oMMMMMMMM:        //-.-.         sMMMMds/.-//-            `-::.          
+/          `-//-`            sMMMMMMMM+         -++//`          hMMMMMMMd. ./-              -++-       
+/              `--..`       :MMMMMMMMs            ``            `dMMMMMMMm`  `-               :ss/`    
+/                   `..``` :MMMMMMMMh/++:-`                      `mMMMMMMMd                    osss.   
+/                         -NMMMMMMMd`   .-/++/:-.`                -NMMMMMMMy                 `/ssss+   
+/                        `mMMMMMMMm`          .-:/++++/:--..`      /MMMMMMMMs            `.:+sssss+`   
+/                       `dMMMMMMMN-                  `.--:/++oooo+++dMMMMMMMMo::::///+oosssssso/-`     
+/                       hMMMMMMMM:                              ``..-hMMMMMMMMy++++////::--.`          
+/                      sMMMMMMMM+                                    `mMMMMMMMN-                       
+/                     oMMMMMMMMs                                      .NMMMMMMMN.                      
+/                    /MMMMMMMMh                                        :MMMMMMMMm`                     
+/                   -MMMMMMMMd`                                         +MMMMMMMMd`                    
+/                  .NMMMMMMMN.                                           sMMMMMMMMh                    
+/                  -////////.                                             /////////.                   
+/                                                                                                      
+/                                                                                               ---`   
+/       ``        ..`       ``   .      ``       `-.       .        `..       `-.        .   . .:---   
+/       sm`       m/+h:     -m  -m      h/      ho:/-      m-      +h//.     +y:+h`      mo  m  `.`    
+/      `m++       m` :d      d: s+      h/     `m-         m-     `N        `M`  yo      ms- m         
+/      +o`d       m` .N      /y m`      h/      `os/       m-     .d        -M   sy      N`h`m         
+/      mo+m:      m` :d       m+o       h/         ss      m-     `N`       `M`  yo      N`-ym         
+/     :d``:h      m+oh-       +N.       h/      o:/h:      m-      oh//.     +y/+h`      N` +d         
+/     ``   .      ..`          .        ``      `..        .        `..       `..        .   .         
+/                                                                                                      
+
 / paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 /[if lt IE 7] <html class='no-js lt-ie9 lt-ie8 lt-ie7' lang='en'>
 /[if IE 7] <html class='no-js lt-ie9 lt-ie8' lang='en'>
@@ -15,7 +64,7 @@
     More info: h5bp.com/i/378
   %meta{ 'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1' }
   %meta{ :name => 'keywords', :content => "#{keywords}"  }
-  %meta{ :itemprop => 'name', :content => "Advisicon #{title}" }
+  %meta{ :itemprop => 'name', :content => "Advisicon: #{title}" }
   %meta{ :name => 'description', :itemprop => 'description', :content => "#{description}" }
   %title= "#{title} | Advisicon"
   / Mobile viewport optimized: h5bp.com/viewport
@@ -46,10 +95,16 @@
       = render_partial '/partials/secondary_nav_and_credentials'
       %aside{ :id => 'secondaryContent' }
         = render_partial '/partials/social_media_profiles'
-        %div{ :class => 'rPopBox' }
+        .rPopBox
           %h3 Recent Blog Posts
-          %ul{ :id => 'feedContent' }
+          %ul#feedContent
+            - if (employee_name != nil) && (employee_name != '') && defined?(employee_name)
+              %li{ :author => "#{employee_name}"} Visit the <a href="http://advisiconblog.com/" title="view the Advisicon blog">Advisicon blog</a> to see our most recent blog posts.
         = render_partial '/partials/featured_tools'
+        = render_partial '/partials/news_and_events'
+        -if title != 'Public Classes'
+          = render_partial '/partials/course_listings'
+        = render_partial '/partials/featured_books'
       %section{ :id => 'main' }
 
         =yield
@@ -68,6 +123,7 @@
     %script{ :src => '/js/script.js' }
     / Script for loading the google feed API.
     %script{ :src => 'https://www.google.com/jsapi', :type => 'text/javascript' }
+    / Loads the Advisicon blog feed
     %script{ :src => '/Scripts/loadGoogleFeed.js', :type => 'text/javascript' }
     / loads tweets
     %script{ :src => '/Scripts/twitter.js', :type => 'text/javascript' }
