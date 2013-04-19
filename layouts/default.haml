@@ -34,16 +34,16 @@
     Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
     chromium.org/developers/how-tos/chrome-frame-getting-started
   /[if lt IE 8]
-    %p{ :class => 'chromeframe' }
+    %p.chromeframe
       :maruku
         Your browser is _ancient!_ [Upgrade to a different browser](http://browsehappy.com/) or [install Google Chrome Frame](http://www.google.com/chromeframe/?redirect=true) to experience this site.
   %header
   %div{ :role => 'main'}
     #content
-      %img{ :border => '0', :src => '/pix/advisicon_banner-012709.jpg', :alt => 'Advisicon, Inc.', :id => 'advisiconBanner', :width => '950', :height => '110', :usemap => '#Map' }
+      %img#advisiconBanner{ :border => '0', :src => '/pix/advisicon_banner-012709.jpg', :alt => 'Advisicon, Inc.', :width => '950', :height => '110', :usemap => '#Map' }
       = render_partial '/partials/top_navigation'
       = render_partial '/partials/secondary_nav_and_credentials'
-      %aside{ :id => 'secondaryContent' }
+      %aside#secondaryContent
         = render_partial '/partials/social_media_profiles'
         .rPopBox
           %h3 Recent Blog Posts
@@ -55,12 +55,12 @@
         -if title != 'Public Classes'
           = render_partial '/partials/course_listings'
         = render_partial '/partials/featured_books'
-      %section{ :id => 'main' }
+      %section#main
 
         =yield
     %footer
       = render_partial '/partials/footer'
-    %map{ :name => 'Map', :id => 'Map' }
+    %map#Map{ :name => 'Map' }
       %area{ :shape => 'rect', :coords => '858,21,936,99', :href => '/', :alt => 'Advisicon Home'  }
       %area{ :shape => 'rect', :coords => '860,22,861,24', :href => '#', :alt => 'Advisicon' }
     / JavaScript at the bottom for fast page loading
