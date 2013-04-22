@@ -1,34 +1,29 @@
 title: Contact Us
-keywords: contact, phone, address, email, headquarters, Central Oregon, Midwest, Phoenix, Vancouver, Latin America
-description: Contact Advisicon: Headquarters, Central Oregon, Midwest/Heartland, Phoenix, and Latin America.
+keywords: contact, phone, address, email, headquarters, Midwest, Vancouver, Latin America
+description: Contact Advisicon &ndash; Headquarters, Midwest/Heartland, and Latin America.
 employee_name:
 --------------------------------------------------------META
 
 
 %h1 Contact Advisicon
 .vcard
-	%h2.fn.org Advisicon Headquarters
-	.adr
-		%p
-      %span.street-address 5411 NE 107th Ave
-      , 
-      %span.extended-address Suite 200
-		%p
-      %span.locality Vancouver
-      , 
-      %span.region WA
-
-      %span.postal-code 98662
-	.tel
-		%p
-      %span.type{ :value => 'work' } Toll Free
-      : 
-      %a.value{ :href => 'tel:+1-866-362-3847', :onclick => "_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Toll Free']);" } 1-866-362-3847
-		%p
-      %span.type Local
-      : 
-      %a.value{ :href => 'tel:+1-360-314-6702', :onclick => "_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Local']);" } 360-314-6702
-	%p
+  %h2.fn.org Advisicon Headquarters
+  .adr
+    %p 
+      <span class="street-address">5411 NE 107th Ave</span>, 
+      <span class="extended-address">Suite 200</span>
+    %p 
+      <span class="locality"> Vancouver</span>, 
+      <span class="region">WA</span> 
+      <span class="postal-code">98662</span>
+  .tel
+    %p
+      <span class="type" value="work">Toll Free</span>: 
+      <a class="value" href= "tel:+1-866-362-3847" onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Toll Free']);" 1-866-362-3847</a>
+    %p
+      <span class="type">Local</span>: 
+      <a class="value" href="tel:+1-360-314-6702" onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Local']);"> 360-314-6702</a>
+  %p
     Email us at: 
     %a.email{ :href => 'mailto:info@advisicon.com', :onclick => "_gaq.push(['_trackEvent', 'Emails', 'Corporate', 'via info@advisicon.com']);" } Info@Advisicon.com
 / end Headquarters vCard
@@ -40,37 +35,34 @@ employee_name:
 
 .vcard
   %h2.org Advisicon Midwest/Heartland Branch
-	%p
+  %p
     Branch Head: 
     %a.fn.url{ :href => '/staff_bios/cindy-lewis.htm', :title => 'find out more about Cindy' } Cindy M. Lewis
-	%p.tel
-    %span.type Cell
-    : 
+  %p.tel
+    <span clas="type">Cell</span>: 
     %a.value{ :href => 'tel:+1-616-446-8569', :onclick => "_gaq.push(['_trackEvent', 'Phone Calls', 'Cindy', 'Cell']);" } 616-446-8569
-	%p
+  %p
     Email: 
     %a.email{ :href => 'mailto:Michigan@Advisicon.com', :onclick => "_gaq.push(['_trackEvent', 'Emails', 'Cindy', 'via michigan@advisicon.com']);" } Michigan@Advisicon.com
 / end Midwest/Heartland Branch vCard
 
 .vcard
-	%h2.org.fn Advisicon Latin America
-	.adr
-		%p
-      %span.extended-address Col. Roma Norte
-      , 
-      %span.locality Mexico City
-      , 
-      %span.country-name Mexico
-	.tel
-		%p
+  %h2.org.fn Advisicon Latin America
+  .adr
+    %p
+      <span class="extended-address">Col. Roma Norte</span>, 
+      <span class="locality">Mexico City</span>, 
+      <span class="country-name">Mexico</span>
+  .tel
+    %p
       %span.type Local
-      : 
+      \: 
       %a.value{ :href => 'tel:+52-55-9000-8075', :onclick => "_gaq.push(['_trackEvent', 'Phone Calls', 'Mexico', 'Local']);" } 55-9000-8075
-	%p
+  %p
     Email: 
     %a.email{ :href => 'mailto:informacion@advisicon.com', :onclick => "_gaq.push(['_trackEvent', 'Emails', 'Mexico', 'via informacion@advisicon.com']);" }Informacion@Advisicon.com
-	%iframe{ :width => '100%', :height => '350', :frameborder => '0', :scrolling => 'no', :marginheight => '0', :marginwidth => '0', :src => 'https://maps.google.com/maps?q=col.+roma+norte,+mexico+city&amp;ie=UTF8&amp;hq=&amp;gl=us&amp;t=m&amp;z=14&amp;ll=19.420156,-99.175255&amp;output=embed' }
-	%br/
-	%p
+  %iframe{ :width => '100%', :height => '350', :frameborder => '0', :scrolling => 'no', :marginheight => '0', :marginwidth => '0', :src => 'https://maps.google.com/maps?q=col.+roma+norte,+mexico+city&amp;ie=UTF8&amp;hq=&amp;gl=us&amp;t=m&amp;z=14&amp;ll=19.420156,-99.175255&amp;output=embed' }
+  %br/
+  %p
     %a{ :href => 'https://maps.google.com/maps?q=col.+roma+norte,+mexico+city&amp;ie=UTF8&amp;hq=&amp;hnear=Roma+Norte,+Cuauht%C3%A9moc,+Mexico+City,+Distrito+Federal,+Mexico&amp;gl=us&amp;t=m&amp;z=14&amp;ll=19.420156,-99.175255&amp;source=embed' } View Larger Map
 / end Latin America Branch vCard
