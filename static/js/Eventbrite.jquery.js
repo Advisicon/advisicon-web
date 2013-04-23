@@ -100,11 +100,19 @@ Eventbrite.prototype = {
     'eventListRow': function( evnt ){
       var not_iso_8601 = /\d\d-\d\d-\d\d \d\d:\d\d:\d\d/;
       var date_string = not_iso_8601.test( evnt.start_date ) ? evnt.start_date.replace(' ', 'T') : evnt.start_date;
-      var start_date = new Date( Date.parse( date_string ));
+      var start_date;
+      if ( evnt.repeats == 'yes' ){
+        $.each( evnt.repeat_schedule[0], function(index, value){
+          if (index == 'start_date') {
+            date_string = value;
+          }
+        });
+      } 
+        var start_date = new Date( Date.parse( date_string ));
+        var time_string = Eventbrite.prototype.utils.formatTime( start_date );
+        date_string = start_date.toDateString();
       var venue_name = 'Online'; //default location name
-      var time_string = Eventbrite.prototype.utils.formatTime( start_date );
       var html = '';
-      date_string = start_date.toDateString();
       if( evnt.venue !== undefined && evnt.venue.name !== undefined && evnt.venue.name !== ''){ 
           venue_name = evnt.venue.name;
       }
