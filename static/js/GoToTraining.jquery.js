@@ -11,34 +11,53 @@ var GoToTraining = function () {                                              //
     callback = args.pop();                                                    // As the comment says, the last argument is the callback. This grabs it from the args Array.
   
   if(typeof args[0] === 'object'){                                            // if the first argument in the args Array is an Object...
-    auth_tokens = args[0];                                                    // ...then save the first argument as auth_tokens
-  }else if(typeof args[0] === 'function' || args[0] === undefined ){
-    auth_tokens.access_token = Eventbrite.prototype.data.getAccessToken();
-  }else{
-    auth_tokens.organizer_key = args[0];
-    if(typeof args[1] !== 'function'){
-      if(typeof args[2] !== 'function'){
-       auth_tokens.user = args[1];
-       auth_tokens.password = args[1];
-      }else{
-       auth_tokens.user_key = args[1];
+    auth_tokens = args[0];                                                    //   ...then save the first argument as auth_tokens.
+  }else if(typeof args[0] === 'function' || args[0] === undefined ){          // otherwise, if the first argument in the args Array is a function or is undefined...
+    auth_tokens.access_token = GoToTraining.prototype.data.getAccessToken();  //   ...then run the getAccessToken method of the data method in GoToTraining and save it as the access_token method of auth_tokens.
+  }else{                                                                      // and if nothing else applies (the first argument isn't an object, function, or undefined)...
+    auth_tokens.organizer_key = args[0];                                      //   ...the first argument in the args Array is saved as the organizer_key method in auth_tokens, and
+    if(typeof args[1] !== 'function'){                                        //     if the second argument in the args Array is not a function, and
+      if(typeof args[2] !== 'function'){                                      //       if the third argument in the args Array is not a function either...
+       auth_tokens.user = args[1];                                            //         ...save the second argument in the args Array as the user method of auth_tokens, and...
+       auth_tokens.password = args[1];                                        //         ...save it as the password too
+      }else{                                                                  //       otherwise (because the second argument in the args Array *is* a function)...
+       auth_tokens.user_key = args[1];                                        //         ...save the second argument as the user_key method of auth_tokens
       }
     }
   }
 
   // make sure the function is called as a constructor
-  if (!(this instanceof GoToTraining)) {
-    return new GoToTraining(auth_tokens, callback);
+  if (!(this instanceof GoToTraining)) {                                      // if this is not an instance of GoToTraining
+    return new GoToTraining(auth_tokens, callback);                           // create a new GoToTraining instance using the established auth_tokens and the callback
   }
-  this.auth_tokens = auth_tokens;
+  this.auth_tokens = auth_tokens;                                             // use the same auth_tokens, and
 
   // call callback
-  callback(this);
+  callback(this);                                                             // callback ???
 };
 
-GoToTraining.prototype = {
-  'api_host': 'https://api.citrixonline.com/G2T/rest/organizers/' + {organizerKey} + '/trainings',
-  'api_methods': ['discount_new', 'discount_update', 'event_copy', 'event_get', 'event_list_attendees', 'event_list_discounts', 'event_new', 'event_search', 'event_update', 'organizer_list_events', 'organizer_new', 'organizer_update', 'organizer_get', 'payment_update', 'ticket_new', 'ticket_update', 'user_get', 'user_list_events', 'user_list_organizers', 'user_list_tickets', 'user_list_venues', 'user_new', 'user_update', 'venue_new', 'venue_get', 'venue_update'],
+GoToTraining.prototype = {                                                    // effect the prototype of GoToTraining
+  'api_host': 'https://api.citrixonline.com/G2T/rest/organizers/' +           // declare the api_host method as a url beginning... (can I break it up like this? Is that allowed?)
+              this.auth_tokens.organizer_key +                                //   ...insert the organizer_key into the url...
+              '/trainings',                                                   //   ...and finish up with the last part of the url
+  'api_methods': ['cancel_registration',                                      // declare the api_methods methods, starting with registrants methods...
+                  'get_registrant', 
+                  'get_training_registrants', 
+                  'register_for_training', 
+                  'get_attendance_details',
+                  'get_organizers',                                           // ...then organizer methods...
+                  'get_organizers_by_training',
+                  'get_sessions_by_date_range',                               // ...then sessions methods...
+                  'get_sessions_by_training',
+                  'create_training',                                          // ...then trainings methods.
+                  'delete_training',
+                  'get_manage_training_url',
+                  'get_training',
+                  'get_trainings',
+                  'update_training_name_and_description',
+                  'update_training_organizers',
+                  'update_training_registration_settings',
+                  'update_training_times'],
   'request': function ( method, params, cb ) {
     var auth_headers = {};
     if(typeof params === 'function'){ cb = params; params = {};}
