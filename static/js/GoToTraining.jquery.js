@@ -1,21 +1,21 @@
 /*
- * Eventbrite API client (jQuery required) - https://github.com/ryanjarvinen/Eventbrite.jquery.js
+ * GoToTraining API client (jQuery required) 
  */
 
 //Constructor
-var Eventbrite = function () {
-  "use strict";
-  var auth_tokens = {},
-    args = Array.prototype.slice.call(arguments),
+var GoToTraining = function () {                                              // Declare a constant: GoToTraining
+  "use strict";                                                               // ???
+  var auth_tokens = {},                                                       // Declare an object within GoToTraining: auth_tokens. The first part is an empty object.
+    args = Array.prototype.slice.call(arguments),                             // The second part is an Array of arguments (any length): args
     // the last argument is the callback
-    callback = args.pop();
+    callback = args.pop();                                                    // As the comment says, the last argument is the callback. This grabs it from the args Array.
   
-  if(typeof args[0] === 'object'){
-    auth_tokens = args[0];
+  if(typeof args[0] === 'object'){                                            // if the first argument in the args Array is an Object...
+    auth_tokens = args[0];                                                    // ...then save the first argument as auth_tokens
   }else if(typeof args[0] === 'function' || args[0] === undefined ){
     auth_tokens.access_token = Eventbrite.prototype.data.getAccessToken();
   }else{
-    auth_tokens.app_key = args[0];
+    auth_tokens.organizer_key = args[0];
     if(typeof args[1] !== 'function'){
       if(typeof args[2] !== 'function'){
        auth_tokens.user = args[1];
@@ -27,8 +27,8 @@ var Eventbrite = function () {
   }
 
   // make sure the function is called as a constructor
-  if (!(this instanceof Eventbrite)) {
-    return new Eventbrite(auth_tokens, callback);
+  if (!(this instanceof GoToTraining)) {
+    return new GoToTraining(auth_tokens, callback);
   }
   this.auth_tokens = auth_tokens;
 
@@ -36,15 +36,15 @@ var Eventbrite = function () {
   callback(this);
 };
 
-Eventbrite.prototype = {
-  'api_host': "https://developer.eventbrite.com/json/",
+GoToTraining.prototype = {
+  'api_host': 'https://api.citrixonline.com/G2T/rest/organizers/' + {organizerKey} + '/trainings',
   'api_methods': ['discount_new', 'discount_update', 'event_copy', 'event_get', 'event_list_attendees', 'event_list_discounts', 'event_new', 'event_search', 'event_update', 'organizer_list_events', 'organizer_new', 'organizer_update', 'organizer_get', 'payment_update', 'ticket_new', 'ticket_update', 'user_get', 'user_list_events', 'user_list_organizers', 'user_list_tickets', 'user_list_venues', 'user_new', 'user_update', 'venue_new', 'venue_get', 'venue_update'],
   'request': function ( method, params, cb ) {
     var auth_headers = {};
     if(typeof params === 'function'){ cb = params; params = {};}
     else if( params === undefined){ params = {}; }
     if( this.auth_tokens.access_token === undefined ){
-      if(this.auth_tokens.app_key){ params.app_key = this.auth_tokens.app_key;}
+      if(this.auth_tokens.organizer_key){ params.organizer_key = this.auth_tokens.organizer_key;}
       if(this.auth_tokens.user_key){ params.user_key = this.auth_tokens.user_key;}
       if(this.auth_tokens.user){ params.user = this.auth_tokens.user;}
       if(this.auth_tokens.password){ params.password = this.auth_tokens.password;}
@@ -182,10 +182,10 @@ Eventbrite.prototype = {
     'logoutLink': function( ) {
       return Eventbrite.prototype.utils.logout;
     },
-    'logout': function( app_key ) {
+    'logout': function( organizer_key ) {
       // delete token and do other cleanup work
       Eventbrite.prototype.data.deleteAccessToken();
-      Eventbrite.prototype.widget.login({'app_key': app_key }, function(widget_html){
+      Eventbrite.prototype.widget.login({'organizer_key': organizer_key }, function(widget_html){
         $('.eb_login_widget').replaceWith(widget_html);
       });
     },
@@ -271,10 +271,10 @@ Eventbrite.prototype = {
         }
         login_params.oauth_link = options.oauth_link;
         if( login_params.oauth_link === undefined ){
-          login_params.oauth_link = Eventbrite.prototype.utils.oauthLink(options.app_key);
+          login_params.oauth_link = Eventbrite.prototype.utils.oauthLink(options.organizer_key);
         }
         if( login_params.logout_link === undefined ){
-          login_params.logout_link = "Eventbrite.prototype.utils.logout('" + options.app_key + "');";
+          login_params.logout_link = "Eventbrite.prototype.utils.logout('" + options.organizer_key + "');";
         }
         if( response !== undefined && typeof response == 'object'){
           if( response.user_email !== undefined ){
