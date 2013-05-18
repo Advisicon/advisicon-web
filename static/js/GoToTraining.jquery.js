@@ -33,7 +33,7 @@ var GoToTraining = function () {                                              //
   this.auth_tokens = auth_tokens;                                             // use the same auth_tokens, and
 
   // call callback
-  callback(this);                                                             // callback ???
+  callback(this);                                                             // ??? callback ??? ... I'm not sure what 'this' is here
 };
 
 GoToTraining.prototype = {                                                    // effect the prototype of GoToTraining
