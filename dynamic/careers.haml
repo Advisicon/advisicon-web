@@ -8,45 +8,46 @@ layout: base-alt/default.haml
 
 %h1 Advisicon Careers
 %p Current Openings:
-/ <%
+-#
+  / <%
 
-/ Dim strConnectionJob, connJob, rsJob, strSQLJob 
+  / Dim strConnectionJob, connJob, rsJob, strSQLJob 
 
-/ strConnectionJob = "Provider=SQLOLEDB;Server=ADVISICON-COLO;Database=AdvisiconCareers;User Id=webuser; password=webuser;encrypt=true" 
+  / strConnectionJob = "Provider=SQLOLEDB;Server=ADVISICON-COLO;Database=AdvisiconCareers;User Id=webuser; password=webuser;encrypt=true" 
 
-/ Set connJob = Server.CreateObject("ADODB.Connection")
+  / Set connJob = Server.CreateObject("ADODB.Connection")
 
-/ connJob.Open strConnectionJob
+  / connJob.Open strConnectionJob
 
-/ Set rsJob = Server.CreateObject("ADODB.recordset")
-/ strSQLJob = "SELECT dbo.Careers.CareerTitle AS Title, dbo.Careers.CareerDesc AS Description, dbo.Careers.CareerLink AS Link, dbo.Careers.CurrentStatus FROM dbo.Careers WHERE dbo.Careers.CurrentStatus = 'True'"
-/ rsJob.open strSQLJob, connJob, 3,3
+  / Set rsJob = Server.CreateObject("ADODB.recordset")
+  / strSQLJob = "SELECT dbo.Careers.CareerTitle AS Title, dbo.Careers.CareerDesc AS Description, dbo.Careers.CareerLink AS Link, dbo.Careers.CurrentStatus FROM dbo.Careers WHERE dbo.Careers.CurrentStatus = 'True'"
+  / rsJob.open strSQLJob, connJob, 3,3
 
-/ %>
+  / %>
 
-/ <% do until rsJob.EOF %>
+  / <% do until rsJob.EOF %>
 
-/ <%
-/   for each x in rsJob.Fields
-/     Select Case x.name
-/       Case "Title"
-/         dim jobTitle
-/         jobTitle = x.value
-/       Case "Description"
-/         dim jobDescription
-/         jobDescription = x.value
-/       Case "Link"
-/         dim detailsLink
-/         detailsLink = x.value
-/           response.write("<div itemscope itemtype='http://schema.org/JobPosting'><h2 itemprop='title'><a href='/" & detailsLink & "' title='view details about the " & jobTitle & " position'>" & jobTitle & "</a></h2>")
-/           response.write("<p itemprop='description'>" & jobDescription & " ")
-/           response.write("[See <a href='/" & detailsLink & "' title='view details about the " & jobTitle & " position' itemprop='url'>details</a>]</div>")
-/     End Select
-/   next
-/ %>
-/ <% rsJob.MoveNext %>
-/ <% loop %>
-/ <%rsJob.close%>
+  / <%
+  /   for each x in rsJob.Fields
+  /     Select Case x.name
+  /       Case "Title"
+  /         dim jobTitle
+  /         jobTitle = x.value
+  /       Case "Description"
+  /         dim jobDescription
+  /         jobDescription = x.value
+  /       Case "Link"
+  /         dim detailsLink
+  /         detailsLink = x.value
+  /           response.write("<div itemscope itemtype='http://schema.org/JobPosting'><h2 itemprop='title'><a href='/" & detailsLink & "' title='view details about the " & jobTitle & " position'>" & jobTitle & "</a></h2>")
+  /           response.write("<p itemprop='description'>" & jobDescription & " ")
+  /           response.write("[See <a href='/" & detailsLink & "' title='view details about the " & jobTitle & " position' itemprop='url'>details</a>]</div>")
+  /     End Select
+  /   next
+  / %>
+  / <% rsJob.MoveNext %>
+  / <% loop %>
+  / <%rsJob.close%>
 %div{ :itemscope => true, :itemtype => 'http://schema.org/JobPosting' }
   %h2{ :itemprop => 'title' }
     %a{ :href => '/jobs/it-integration-advisor.htm', :title => 'view details about the IT Integration Advisor/System Administrator position' }

@@ -5,11 +5,28 @@ employee_name:
 layout: base-alt/default.haml
 --------------------------------------------------------META
 
-%h1 Who is Advisicon?
-%p Advisicon delivers strategic project control solutions using advanced project and portfolio management methodologies, custom application development and consultative training. Our clients throughout North America and Latin America have realized quantifiable results through our unique approach of combining knowledge transfer, optimization and sustainability of processes and technology while increasing stakeholder competencies.
+:maruku
 
-%h2 Our People
-%p Our team of professionals includes <abbr title="Project Management Institute">PMI</abbr> certified <abbr title="Project Management Professional">PMP</abbr>s, Microsoft Certified Professionals (with specializations in Enterprise Project Management, Networking and Infrastructure Solutions), and Microsoft MVPs.
+  #{render_partial '/partials/references'}
+  #{render_partial '/partials/glossary'}
+
+  Who is Advisicon?
+  =================
+
+  Advisicon delivers strategic project control solutions using advanced project 
+  and portfolio management methodologies, custom application development and 
+  consultative training. Our clients throughout North America and Latin America 
+  have realized quantifiable results through our unique approach of combining 
+  knowledge transfer, optimization and sustainability of processes and technology 
+  while increasing stakeholder competencies.
+
+  Our People
+  ----------
+
+  Our team of professionals includes PMI certified PMPs, Microsoft Certified 
+  Professionals (with specializations in Enterprise Project Management, 
+  Networking and Infrastructure Solutions), and Microsoft MVPs.
+
 #employees
   %a{ :href => '/staff_bios/tim-runcie.htm' }
     %img{ :alt => 'Tim Runcie', :src => '/pix/biopics/tim-runcie.jpg', :width => '107', :height => '161' }
@@ -59,12 +76,6 @@ layout: base-alt/default.haml
       Jeff Jacobson-Swartfager
       %br/
       Advisicon Press
-  %a{ :href => '/staff_bios/nicole-brown.htm' }
-    %img{ :alt => 'Nicole Brown', :src => '/pix/biopics/nicole-brown.jpg', :width => '107', :height => '161' }
-    %p
-      Nicole Brown
-      %br/
-      Social Media and Marketing Administrator
   %a{ :href => '/staff_bios/chris-pfenninger.htm' }
     %img{ :alt => 'Chris Pfenninger', :src => '/pix/biopics/chris-pfenninger.jpg', :width => '107', :height => '161' }
     %p
@@ -77,7 +88,13 @@ layout: base-alt/default.haml
       Joe Brewer, MCP, MCTS, MBA
       %br/
       Director of Advisicon University
-  /
+  -# 
+    %a{ :href => '/staff_bios/nicole-brown.htm' }
+      %img{ :alt => 'Nicole Brown', :src => '/pix/biopics/nicole-brown.jpg', :width => '107', :height => '161' }
+      %p
+        Nicole Brown
+        %br/
+        Social Media and Marketing Administrator
     <a href="/staff_bios/jason-stegner.htm" title="Jason Stegner&apos;s bio">
     <img alt="Jason Stegner" src="/pix/biopics/jason-stegner.jpg" width="107" height="161" />
     <p>Jason Stegner, MCP, MCTS<br />Advisicon Information Services</p>
@@ -123,16 +140,39 @@ layout: base-alt/default.haml
     <img alt="Luis Manuel Estrada" src="/pix/biopics/luis-estrada.jpg" width="107" height="161" />
     <p>Luis Manuel Estrada<br />Project Management Consultant</p>
     </div>
-  / end #employees
+  -# end #employees
 
-%h2 Our Philosophy
-%p Advisicon is based on three tenets: Optimization, Knowledge Transfer and Sustained Results.
+:maruku
+  
+  #{render_partial '/partials/references'}
+  #{render_partial '/partials/glossary'}
 
-%h3 Optimization
-%p Advisicon integrates project management best practices and project management technologies to fit each client&rsquo;s organizational structure, strategy, goals and culture.
+  Our Philosophy
+  --------------
 
-%h3 Knowledge Transfer
-%p Advisicon teaches clients to internalize and standardize project management best practices and use of technology. Clients receive task-specific coaching, in-depth process development, customized project management methodology and supervised training with the technology.
+  Advisicon is based on three tenets: Optimization, Knowledge Transfer and 
+  Sustained Results.
 
-%h3 Sustained Results
-%p Through our phased approach, our clients are able to adopt and implement strategic project management improvements one step at a time, growing from one level of project management maturity to the next. Through this process of optimization and knowledge transfer, Advisicon delivers sustained results to our clients.
+  
+  ### Optimization ###
+  
+  Advisicon integrates project management best practices and project management 
+  technologies to fit each client's organizational structure, strategy, goals 
+  and culture.
+
+  
+  ### Knowledge Transfer ###
+
+  Advisicon teaches clients to internalize and standardize project management 
+  best practices and use of technology. Clients receive task-specific coaching, 
+  in-depth process development, customized project management methodology and 
+  supervised training with the technology.
+
+
+  ### Sustained Results ###
+  
+  Through our phased approach, our clients are able to adopt and implement 
+  strategic project management improvements one step at a time, growing from 
+  one level of project management maturity to the next. Through this process 
+  of optimization and knowledge transfer, Advisicon delivers sustained results 
+  to our clients.

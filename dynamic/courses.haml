@@ -5,22 +5,46 @@ employee_name:
 layout: base-alt/default.haml
 --------------------------------------------------------META
 
-%h1 Advisicon Courses
-%p Advisicon delivers customized, consultative instructor-led project management training based on project management best practices on the following topics using Advisicon&rsquo;s proprietary course manuals, process flowcharts, and electronic tools and templates (on course CD).
-%p
-  %a{ :href => "/how-to-claim-pdus.htm", :title => "Find out how to claim PDUs" } Instructions to claim PDUs
-%p Advisicon&rsquo;s highly qualified staff, including MVPs, MCTs, MCPs, and PMPs, are available for on-site, customized training.
-%p Our courses can be centered around the specific material you need and want to cover, or we can deliver the courses as outlined below, to your staff.
-%p
-  :maruku
-    [On-site courses](/public-courses.html "Our upcoming public course schedule") can also be scheduled to best meet your organization&rsquo;s timing. Corporate courses can be held at your facility, our [training facility](#meeting-room "skip down to preview our meeting space"), or off-site should you prefer. Corporate courses can be held as a 1-day, 2-day or 3-day class, depending on content. All courses include reference/training manuals for each person.
-%p
-  :maruku
-    For more information and for corporate pricing, please contact us at [courseinfo@Advisicon.com](mailto:courseinfo@Advisicon.com).
+:maruku
 
-%h2 Traditional Classroom Course Offerings
+  #{render_partial '/partials/references'}
+  #{render_partial '/partials/glossary'}
+
+  [1]: #traditional-classroom "Our upcoming public course schedule"
+  [2]: #meeting-room "about out meeting space"
+
+  Advisicon Courses
+  =================
+
+  Advisicon delivers customized, consultative instructor-led project management 
+  training based on project management best practices on the following topics 
+  using Advisicon's proprietary course manuals, process flowcharts, and 
+  electronic tools and templates (on course CD).
+
+  [Instructions to claim PDUs][claim-pdu]
+
+  Advisicon's highly qualified staff, including MVPs, MCTs, MCPs, and PMPs, 
+  are available for on-site, customized training.
+
+  Our courses can be centered around the specific material you need and want to 
+  cover, or we can deliver the courses as outlined below, to your staff.
+
+  [On-site courses][1] can also be scheduled to best meet your organization's 
+  timing. Corporate courses can be held at your facility, our [training facility][2], 
+  or off-site should you prefer. Corporate courses can be held as a 1-day, 2-day 
+  or 3-day class, depending on content. All courses include reference/training 
+  manuals for each person.
+
+  For more information and for corporate pricing, please contact us at 
+  [courseinfo@Advisicon.com](mailto:courseinfo@Advisicon.com).
+
+  Traditional Classroom Course offerings                                      {#traditional-classroom}
+  --------------------------------------
+
 #classroom-learning
-  %p Find all of <a href="http://advisicon.eventbrite.com/" title="Advisicon&rsquo;s events on Eventbrite">our current public course offerings</a> on our Eventbrite page.
+  :maruku
+  
+    Find all of <a href="http://advisicon.eventbrite.com/" title="Advisicon&rsquo;s events on Eventbrite">our current public course offerings</a> on our Eventbrite page.
 
 %h2 Virtual Course Offerings
 #online-learning
