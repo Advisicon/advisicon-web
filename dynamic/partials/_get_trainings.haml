@@ -1,0 +1,14 @@
+:erb
+  -
+    require '../../GoToTraining-Ruby/lib/go_to_training.rb'
+    @g2t = GoToTraining::Client.new('ccd6b830c54436e074f0cc9cdb8931f2', '7863484309822919941', '2221055618378781957').get_trainings('')
+
+
+    @g2t_head = "<div id='g2t_event_header'><span class='head_title'>Course</span><span class='head_date'>Date</span>"
+    @g2t_list = "<div class='eb_event_list'>"
+    @g2t.each do |course|
+      @courseTitle = course['name']
+      @registrationURL = "https://attendee.gototraining.com/78mx2/register/#{course['trainingKey']}"
+      @date = DateTime.parse(course['times'][0]['startDate']).to_date
+      @g2t_list += "<div class='eb_event_list_item'><span class='eb_event_list_title'><a href='#{@registrationURL}' title='Register on GoToTraining!' onclick='_gaq.push(['_trackEvent', 'view online course', '#{@courseTitle}', '#{@date}']);'>#{@courseTitle}</a></span><span class='eb_event_list_date'>#{@date.to_s}</span></div>"
+

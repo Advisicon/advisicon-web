@@ -38,20 +38,27 @@ layout: base-alt/default.haml
   For more information and for corporate pricing, please contact us at 
   [courseinfo@Advisicon.com](mailto:courseinfo@Advisicon.com).
 
+
   Traditional Classroom Course offerings                                      {#traditional-classroom}
   --------------------------------------
 
-#classroom-learning
-  :maruku
+  <div id="classroom-learning" markdown="1">
   
-    Find all of <a href="http://advisicon.eventbrite.com/" title="Advisicon&rsquo;s events on Eventbrite">our current public course offerings</a> on our Eventbrite page.
+  Find all of <a href="http://advisicon.eventbrite.com/" title="Advisicon&rsquo;s events on Eventbrite">our current public course offerings</a> on our Eventbrite page.
 
-%h2 Virtual Course Offerings
+  </div>
+
+  Virtual Course Offerings {#online-learning}
+  ------------------------
+
 #online-learning
-  %p Find all of our public online <a href="https://attendee.gototraining.com/78mx2/catalog/8775170764717674752">courses at GoToTraining</a>.
+
+  :maruku
+
+    #{render_partial '/partials/references'}
+
+    Find all of our public online [courses at GoToTraining][GoToTraining-catalog].
   
-  /<iframe src="https://attendee.gototraining.com/r/1323092169217913856" width="509"></iframe>
-  / Add GoToTraining courses
   - require '../../GoToTraining-Ruby/lib/go_to_training.rb'
   - @g2t = GoToTraining::Client.new('ccd6b830c54436e074f0cc9cdb8931f2', '7863484309822919941', '2221055618378781957').get_trainings('')
 
