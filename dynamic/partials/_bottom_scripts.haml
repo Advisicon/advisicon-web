@@ -1,32 +1,32 @@
-/ JavaScript at the bottom for fast page loading
-/ Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline
+-# JavaScript at the bottom for fast page loading
+-# Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline
 %script{ :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' }
 %script
   window.jQuery || document.write('<script src="/js/libs/jquery-1.6.0.min.js"><\/script>')
-/ scripts concatenated and minified via build script
+-# scripts concatenated and minified via build script
 %script{ :src => '/js/plugins.js' }
 %script{ :src => '/js/script.js' }
-/ Script for loading the google feed API.
+-# Script for loading the google feed API.
 %script{ :src => 'https://www.google.com/jsapi', :type => 'text/javascript' }
-/ Loads the Advisicon blog feed
+-# Loads the Advisicon blog feed
 %script{ :src => '/Scripts/loadGoogleFeed.js', :type => 'text/javascript' }
-/ loads tweets
+-# loads tweets
 %script{ :src => '/Scripts/twitter.js', :type => 'text/javascript' }
-/ To populate the events list from eventbrite... no longer neccessary now that we're doing it server side
+-# To populate the events list from eventbrite... no longer neccessary now that we're doing it server side
 %script{ :src => '/Scripts/loadPublicEvents.js', :type => 'text/javascript' }
-/ I believe this is for animating the slides in that (ridiculous) header
+-# I believe this is for animating the slides in that (ridiculous) header
 %script{ :src => '/jscript/jquery.easing.1.3.js', :type => 'text/javascript' }
-/ Part of the slide control in the header
+-# Part of the slide control in the header
 %script{ :src => '/jscript/2/jquery.hslides.js', :type => 'text/javascript' }
-/ Animates the fade in/fade out of book in the "Featured Books section"
+-# Animates the fade in/fade out of book in the "Featured Books section"
 %script{ :src => '/jscript/2/jquery.innerfade.js', :type => 'text/javascript' }
-/ Controls the display of that silly banner at the top of the index page. It sizes all of the slides the same [Jeff]
+-# Controls the display of that silly banner at the top of the index page. It sizes all of the slides the same [Jeff]
 %script{ :src => '/Scripts/frontPageSlideshowHeader.js', :type => 'text/javascript' }
-/ Controls the slideshow action of fading from book to book in the "Featured Books" section of the index page [Jeff]
+-# Controls the slideshow action of fading from book to book in the "Featured Books" section of the index page [Jeff]
 %script{ :src => '/Scripts/featuredProducts.js', :type => 'text/javascript' }
-/ Render call for the google +1 link [Jeff]
+-# Render call for the google +1 link [Jeff]
 %script{ :src => '/Scripts/googlePlusOneButton.js', :type => 'text/javascript' }
-/
-  Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-  mathiasbynens.be/notes/async-analytics-snippet
+-#
+  / Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+  / mathiasbynens.be/notes/async-analytics-snippet
 %script{ :src => '/Scripts/rootGoogleAnalytics.js', :type => 'text/javascript' }

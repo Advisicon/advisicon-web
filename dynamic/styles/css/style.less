@@ -238,6 +238,10 @@ td { vertical-align: top; }
 	@red: #860c0c;
 	@transparentRed: rgba(134, 12, 12, .75);
 	@gold: #ffcc33;
+	.rgbaColor(@rgba-red, @rgba-green, @rgba-blue, @rgba-alpha) {
+		color: rgb(@rgba-red, @rgba-green, @rgba-blue);
+		color: rgba(@rgba-red, @rgba-green, @rgba-blue, @rgba-alpha);
+	}
 	.advisiconFont(@height: 12) { /* sets font size, leading, and family */
 		font-family: 'Calibri', Arial, San-Serif;
 		font-size: @height * 1pt;
@@ -1196,8 +1200,8 @@ td { vertical-align: top; }
 							height: 34px;
 							display: block;
 							float: left;
-							color: #ffffff;
-							color: rgba(254, 254, 254, .9);
+							color: #f6f6f6;
+							// .rgbaColor(254, 254, 254, .9);
 							text-decoration: none;
 							.advisiconFont(11);
 							line-height: 32px;

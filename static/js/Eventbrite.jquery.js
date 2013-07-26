@@ -92,7 +92,7 @@ Eventbrite.prototype = {
           }
         }
       }else{
-        html.push('No events are available at this time.');
+        html.push('Oops! We had trouble loading these events. Please visit <a href="http://advisicon.eventbrite.com/" title="Our course listings on eventbrite">our eventbrite listing</a> instead.');
       }
       html.push('</div>');
       return html.join('\n');
