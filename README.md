@@ -1,3 +1,6 @@
-# Advisicon Website
+Github for Advisicon: Put SharePoint to Shame
+=============================================
 
-This is the Advisicon website. Run it through [Frank](https://github.com/blahed/frank "Frank on GitHub") in order to compile the [.less](http://lesscss.org/ "LESS CSS") to .css. 
+Get ready to make some awesome stuff with github for Advisicon!
+
+_details coming soon..._
