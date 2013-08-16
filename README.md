@@ -19,9 +19,9 @@ Don't worry too much about it. Haml is just a really awesome HTML abstraction wr
 
 You'll find the haml in `dynamic/`.
 
-The top bit is YAML. Here's a snippit from the sharepoint.haml file:
+The top bit is YAML. Here's a snippit from the **sharepoint.haml** file:
 
-~~~
+```yaml
 title: SharePoint
 keywords: Microsoft, SharePoint, Training, Deployment, Customization
 description: About Advisicon&rsquo;s Microsoft SharePoint training, deployment, and customization
@@ -29,4 +29,4 @@ employee_name:
 layout: base-alt/default.haml
 --------------------------------------------------------META
 ...
-~~~
+```
