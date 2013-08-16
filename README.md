@@ -48,3 +48,5 @@ Each of those lines is a little bit of meta info about the page.
   This is the name of the employee the page is for.
 - **layout** should be left alone. This is the layout file that will determine 
   how all the stuff on this page is used.
+
+The line on the bottom marks the end of the YAML section. Hooray!
