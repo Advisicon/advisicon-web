@@ -38,7 +38,7 @@ var Eventbrite = function () {
 
 Eventbrite.prototype = {
   'api_host': "https://developer.eventbrite.com/json/",
-  'api_methods': ['discount_new', 'discount_update', 'event_copy', 'event_get', 'event_list_attendees', 'event_list_discounts', 'event_new', 'event_search', 'event_update', 'organizer_list_events', 'organizer_new', 'organizer_update', 'organizer_get', 'payment_update', 'ticket_new', 'ticket_update', 'user_get', 'user_list_events', 'user_list_organizers', 'user_list_tickets', 'user_list_venues', 'user_new', 'user_update', 'venue_new', 'venue_get', 'venue_update'],
+  'api_methods': ['discount_new', 'discount_update', 'event_copy', 'event_get', 'event_list_attendees', 'event_list_discounts', 'event_new', 'event_search', 'event_update', 'organizer_list_events', 'organizer_new', 'organizer_update', 'organizer_get', 'payment_update', 'ticket_new', 'ticket_update', 'user_get', 'user_list_events', 'user_list_abbr_events','user_list_organizers', 'user_list_tickets', 'user_list_venues', 'user_new', 'user_update', 'venue_new', 'venue_get', 'venue_update'],
   'request': function ( method, params, cb ) {
     var auth_headers = {};
     if(typeof params === 'function'){ cb = params; params = {};}
@@ -139,6 +139,124 @@ Eventbrite.prototype = {
   			venue_lat = evnt.venue.latitude;
   			venue_map_url = "https://maps.google.com/maps?q=" + venue_lat + "+" + venue_lng;
   	  }
+
+      html = "<div class='eb_event_list_item' id='evnt_div_" + evnt.id + "'>" + 
+             "<span class='eb_event_list_title'><a href='" + evnt.url + "' title='Register on eventbrite!'>" + evnt.title + "</a></span>" +
+             "<span class='eb_event_list_location'><a href='" + venue_map_url + "' title='Map " + venue_name + " on google maps!'>" + venue_name + "</a></span>" +
+             compiled_date_string +
+             "<div class='eb_event_list_details hidden'>" + evnt.description + "</div>" +
+             "</div>";
+      return html;
+    },
+    'abbrEventList': function( evnts, callback, options){
+      // var html = ['<ul class="courses">'];
+      // if( evnts.events !== undefined ){
+      //   var len = evnts.events.length;
+      //   for( var i = 0; i < len; i++ ){
+      //     if(evnts.events[i].event !== undefined ){
+      //       html.push( callback( evnts.events[i].event, options ));
+
+      //     }
+      //   }
+      // }else{
+      //   html.push('<li>Oops! We had trouble loading these events. Please visit <a href="http://advisicon.eventbrite.com/" title="Our course listings on eventbrite">our eventbrite listing</a> instead.</li>');
+      // }
+      // html.push('</ul>');
+      // return html.join('\n');
+      var html = ['<div class="eb_event_list">'];
+      if( evnts.events !== undefined ){
+        var len = evnts.events.length;
+        for( var i = 0; i < len; i++ ){
+          if(evnts.events[i].event !== undefined ){
+            html.push( callback( evnts.events[i].event, options ));
+
+          }
+        }
+      }else{
+        html.push('Oops! We had trouble loading these events. Please visit <a href="http://advisicon.eventbrite.com/" title="Our course listings on eventbrite">our eventbrite listing</a> instead.');
+      }
+      html.push('</div>');
+      return html.join('\n');
+    },
+    'abbrEventListRow': function( evnt ){
+      // var not_iso_8601 = /\d\d-\d\d-\d\d \d\d:\d\d:\d\d/;
+      // var date_string = '';
+      // var date_array = [];
+      // var date_now = new Date();
+      // var compiled_date_string = '';
+      // if ( evnt.repeats == 'yes' ){
+      //   $.each( evnt.repeat_schedule, function(occurance_index, occurance_value){
+      //     $.each( evnt.repeat_schedule[occurance_index], function(index, value){
+      //       // alert(evnt.title + "\n\nindex: " + index + "\n\nvalue: " + value);
+      //       occurance_date = new Date( Date.parse( value ) );
+      //       if (index == 'start_date' && occurance_date > date_now){
+      //         date_string = not_iso_8601.test( value ) ? value.replace(' ', 'T') : value;
+      //         date_array.push(date_string);
+      //       }
+      //     });
+      //   });
+      // } else {
+      //   date_string = not_iso_8601.test( evnt.start_date ) ? evnt.start_date.replace(' ', 'T') : evnt.start_date;
+      //   date_array.push(date_string);
+      // }
+
+
+      // $.each(date_array, function(da_item, da_value){
+      //   var start_date = new Date( Date.parse( da_value ));
+      //   compiled_date_string += "(" + start_date.toDateString() + ")";
+      // });
+
+      
+      // var start_date = new Date( Date.parse( date_string ));
+      // date_string = start_date.toDateString();
+      // var time_string = Eventbrite.prototype.utils.formatTime( start_date );
+      // var html = '';
+
+      // html = "<li id='evnt_div_" + evnt.id + "'>" + 
+      //        "<a href='" + evnt.url + "' title='Register on eventbrite!'>" + evnt.title + "</a>" +
+      //        compiled_date_string + "" ;
+      // return html;
+      var not_iso_8601 = /\d\d-\d\d-\d\d \d\d:\d\d:\d\d/;
+      var date_string = '';
+      var date_array = [];
+      var date_now = new Date();
+      var compiled_date_string = '';
+      if ( evnt.repeats == 'yes' ){
+        $.each( evnt.repeat_schedule, function(occurance_index, occurance_value){
+          $.each( evnt.repeat_schedule[occurance_index], function(index, value){
+            // alert(evnt.title + "\n\nindex: " + index + "\n\nvalue: " + value);
+            occurance_date = new Date( Date.parse( value ) );
+            if (index == 'start_date' && occurance_date > date_now){
+              date_string = not_iso_8601.test( value ) ? value.replace(' ', 'T') : value;
+              date_array.push(date_string);
+            }
+          });
+        });
+      } else {
+        date_string = not_iso_8601.test( evnt.start_date ) ? evnt.start_date.replace(' ', 'T') : evnt.start_date;
+        date_array.push(date_string);
+      }
+
+
+      $.each(date_array, function(da_item, da_value){
+        var start_date = new Date( Date.parse( da_value ));
+        compiled_date_string += "<span class='eb_event_list_date'>" + start_date.toDateString() + "</span>";
+      });
+
+      
+      var start_date = new Date( Date.parse( date_string ));
+      date_string = start_date.toDateString();
+      var time_string = Eventbrite.prototype.utils.formatTime( start_date );
+      var venue_name = 'Online'; //default location name
+      var html = '';
+      if( evnt.venue !== undefined && evnt.venue.name !== undefined && evnt.venue.name !== ''){ 
+          venue_name = evnt.venue.name;
+      }
+      if( venue_name !== undefined ){
+        venue_lng = evnt.venue.longitude;
+        venue_lat = evnt.venue.latitude;
+        venue_map_url = "https://maps.google.com/maps?q=" + venue_lat + "+" + venue_lng;
+      }
 
       html = "<div class='eb_event_list_item' id='evnt_div_" + evnt.id + "'>" + 
              "<span class='eb_event_list_title'><a href='" + evnt.url + "' title='Register on eventbrite!'>" + evnt.title + "</a></span>" +
