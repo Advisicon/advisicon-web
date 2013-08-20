@@ -1,7 +1,7 @@
 %form#trial-request
   %fieldset
     %label Full Name
-    %input#full_name{ :type => 'text',    :placeholder => 'Jane Doe', :name => 'full_name', :required => 'true', :autofocus => true }
+    %input#full_name{ :type => 'text',    :placeholder => 'jane doe', :name => 'full_name', :required => 'true', :autofocus => true }
 
   %fieldset
     %label Company
@@ -9,7 +9,7 @@
   
   %fieldset
     %label Email Address
-    %input#email_addr{ :type => 'email', :required => 'true' }
+    %input#email_addr{ :type => 'email',  :placeholder => 'your email', :required => 'true' }
 
     -#
       %label Repeat Email Address
@@ -17,7 +17,7 @@
   
   %fieldset
     %label Phone Number
-    %input#phone{ :type => 'tel',   :placeholder => 'Phone number', :required => 'true' }
+    %input#phone{ :type => 'tel',   :placeholder => 'phone number', :required => 'true' }
   
   %input#submit{ :type => 'submit', :value => 'Request Free Trial' }
 
