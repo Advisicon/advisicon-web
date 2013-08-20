@@ -1,0 +1,24 @@
+%form#trial-request
+  %fieldset
+    %label Full Name
+    %input#full_name{ :type => 'text',    :placeholder => 'Jane Doe', :name => 'full_name', :required => 'true', :autofocus => true }
+
+  %fieldset
+    %label Company
+    %input#company_name{ :type => 'text', :placeholder => 'your company', :name => 'company_name', :required => 'true' }
+  
+  %fieldset
+    %label Email Address
+    %input#email_addr{ :type => 'email', :required => 'true' }
+
+    -#
+      %label Repeat Email Address
+      %input#email_addr_repeat{ :type => 'email', :required => 'true', :oninput => 'check(this)' }
+  
+  %fieldset
+    %label Phone Number
+    %input#phone{ :type => 'tel',   :placeholder => 'Phone number', :required => 'true' }
+  
+  %input#submit{ :type => 'submit', :value => 'Request Free Trial' }
+
+-# %script{ :src => '/js/check-input.js', :type => 'text/javascript' }
