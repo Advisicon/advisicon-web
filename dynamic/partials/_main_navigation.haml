@@ -1,6 +1,9 @@
 %nav{ :id => 'mainNavigation' }
   %a{ :href => '/', :title => 'Advisicon main page', :id => 'homepage' } Home
-  %a{ :href => '/about-us.html', :title => 'about Advisicon', :id => 'about'} About Us
+  -# don't use this ink until we've got extension forwarding working
+  -# %a{ :href => '/about-us.html', :title => 'about Advisicon', :id => 'about'} About Us
+  -# remove the following link when the extension forwarding is working
+  %a{ :href => '/aboutus.htm', :title => 'about Advisicon', :id => 'about'} About Us
   %a{ :href => '/contactus.htm', :title => 'contact Adviscion', :id => 'contactUs' } Contact Us
   %a{ :href => 'http://www.advisiconblog.com', :title => 'Advisicon blog', :target => '_blank', :id => 'blog'} Blog
   %a{ :href => 'http://store.advisicon.com', :title => 'Advisicon store', :target => '_blank', :id => 'advisiconStore' } Store
