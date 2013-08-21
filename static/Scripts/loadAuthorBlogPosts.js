@@ -57,7 +57,7 @@
 			for (var i = 0; i < result.feed.entries.length; i++) {
 			  var entry = result.feed.entries[i];
 			  var li = document.createElement("li");
-			  li.innerHTML = '<a href="' + entry.link + '">' + entry.title + '</a>';
+			  li.innerHTML = '<a href="' + entry.link + '" author="' + firstName + " " + lastName + '">' + entry.title + '</a>';
 			  container.appendChild(li);
 			}
 		} else {
