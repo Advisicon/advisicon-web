@@ -170,37 +170,36 @@ Eventbrite.prototype = {
       var date_array = [];
       var date_now = new Date();
       var compiled_date_string = '';
-      // if ( evnt.repeats == 'yes' ){
-      //   $.each( evnt.repeat_schedule, function(occurance_index, occurance_value){
-      //     $.each( evnt.repeat_schedule[occurance_index], function(index, value){
-      //       occurance_date = new Date( Date.parse( value ) );
-      //       if (index == 'start_date' && occurance_date > date_now){
-      //         date_string = not_iso_8601.test( value ) ? value.replace(' ', 'T') : value;
-      //         date_array.push(date_string);
-      //       }
-      //     });
-      //   });
-      // } else {
-      //   date_string = not_iso_8601.test( evnt.start_date ) ? evnt.start_date.replace(' ', 'T') : evnt.start_date;
-      //   date_array.push(date_string);
-      // }
+      if ( evnt.repeats == 'yes' ){
+        $.each( evnt.repeat_schedule, function(occurance_index, occurance_value){
+          $.each( evnt.repeat_schedule[occurance_index], function(index, value){
+            occurance_date = new Date( Date.parse( value ) );
+            if (index == 'start_date' && occurance_date > date_now){
+              date_string = not_iso_8601.test( value ) ? value.replace(' ', 'T') : value;
+              date_array.push(date_string);
+            }
+          });
+        });
+      } else {
+        date_string = not_iso_8601.test( evnt.start_date ) ? evnt.start_date.replace(' ', 'T') : evnt.start_date;
+        date_array.push(date_string);
+      }
 
 
-      // $.each(date_array, function(da_item, da_value){
-      //   var start_date = new Date( Date.parse( da_value ));
-      //   compiled_date_string += "(" + start_date.toDateString() + ")";
-      // });
+      $.each(date_array, function(da_item, da_value){
+        var start_date = new Date( Date.parse( da_value ));
+        compiled_date_string += " (" + start_date.toDateString() + ")";
+      });
 
       
-      // var start_date = new Date( Date.parse( date_string ));
-      // date_string = start_date.toDateString();
-      // var time_string = Eventbrite.prototype.utils.formatTime( start_date );
-      // var html = '';
+      var start_date = new Date( Date.parse( date_string ));
+      date_string = start_date.toDateString();
+      var time_string = Eventbrite.prototype.utils.formatTime( start_date );
+      var html = '';
 
-      // html = "<li id='evnt_div_" + evnt.id + "'>" + 
-      //        "<a href='" + evnt.url + "' title='Register on eventbrite!'>" + evnt.title + "</a>" +
-      //        compiled_date_string + "" ;
-      html = "<li>test</li>"
+      html = "<li id='evnt_div_" + evnt.id + "'>" + 
+             "<a href='" + evnt.url + "' title='Register on eventbrite!'>" + evnt.title + "</a>" +
+             compiled_date_string + "" ;
       return html;
     },
     'formatTime': function( time ){
