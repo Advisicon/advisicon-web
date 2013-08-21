@@ -11,9 +11,8 @@
     %label Email Address
     %input#email_addr{ :type => 'email',  :placeholder => 'your email', :required => 'true' }
 
-    -#
-      %label Repeat Email Address
-      %input#email_addr_repeat{ :type => 'email', :required => 'true', :oninput => 'check(this)' }
+    %label Repeat Email Address
+    %input#email_addr_repeat{ :type => 'email', :required => 'true', :oninput => 'check(this)' }
   
   %fieldset
     %label Phone Number
@@ -21,4 +20,3 @@
   
   %input#submit{ :type => 'submit', :value => 'Request Free Trial' }
 
--# %script{ :src => '/js/check-input.js', :type => 'text/javascript' }
