@@ -509,6 +509,49 @@ td { vertical-align: top; }
                 display: none;
               }
             }
+            &.advert {
+              &.project {
+                background-color: #08aa4b;
+                font-family: "Segoe UI", Segoe, "Helvetica Neue", Helvetica, "Trebuchet MS", "Lucida Grande", "Lucida Sans", Verdana, Arial, sans-serif;
+                padding-bottom: 1em;
+                &:hover {
+                  background-color: #666666;
+                }
+                a {
+                  display: block;
+                  color: #eeeeee;
+                  text-decoration: none;
+                  &:link{
+                    color: #eeeeee;
+                    text-decoration: none;
+                  }
+                  &:visited{
+                    color: #eeeeee;
+                    text-decoration: none;
+                  }
+                  &:hover{
+                    color: #eeeeee;
+                    text-decoration: none;
+                  }
+                  &:active{
+                    color: #eeeeee;
+                    text-decoration: none;
+                  }
+                  h3 {
+                    font-size: 32px;
+                    font-weight: 100;
+                    letter-spacing: 1px;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                  }
+                  p {
+                    font-size: 16px;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -1606,6 +1649,12 @@ td { vertical-align: top; }
               }
               &#featuredBooks {
                 display: block;
+              }
+            }
+            &.advert {
+              &.project {
+                float: right;
+                margin-bottom: 1em;
               }
             }
           }
