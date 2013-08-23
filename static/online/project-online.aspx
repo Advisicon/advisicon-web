@@ -73,15 +73,15 @@
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta content='width=device-width' name='viewport' />
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-  <link href='../styles/css/style.css' rel='stylesheet' />
+  <link href='/styles/css/style.css' rel='stylesheet' />
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
   <!--
     All JavaScript at the bottom, except this Modernizr build.
     Modernizr enables HTML5 elements & feature detects for optimal performance.
     Create your own custom Modernizr build: www.modernizr.com/download/
   -->
-  <script src='../js/libs/modernizr-2.5.3.min.js'></script>
-  <script src='../js/libs/css3-mediaqueries.js'></script>
+  <script src='/js/libs/modernizr-2.5.3.min.js'></script>
+  <script src='/js/libs/css3-mediaqueries.js'></script>
 </head>
 <body>
   <!--
@@ -96,51 +96,51 @@
   <header></header>
   <div role='main'>
     <div id='content'>
-      <img alt='Advisicon, Inc.' border='0' height='110' id='advisiconBanner' src='../pix/advisicon_banner-012709.jpg' usemap='#Map' width='950' />
+      <img alt='Advisicon, Inc.' border='0' height='110' id='advisiconBanner' src='/pix/advisicon_banner-012709.jpg' usemap='#Map' width='950' />
       <div class='navbar'>
         <nav id='mainNavigation'>
-          <a href='../' id='homepage' title='Advisicon main page'>Home</a>
-          <a href='../aboutus.html' id='about' title='about Advisicon'>About Us</a>
-          <a href='../contactus.htm' id='contactUs' title='contact Adviscion'>Contact Us</a>
+          <a href='/' id='homepage' title='Advisicon main page'>Home</a>
+          <a href='/aboutus.htm' id='about' title='about Advisicon'>About Us</a>
+          <a href='/contactus.htm' id='contactUs' title='contact Adviscion'>Contact Us</a>
           <a href='http://www.advisiconblog.com' id='blog' target='_blank' title='Advisicon blog'>Blog</a>
           <a href='http://store.advisicon.com' id='advisiconStore' target='_blank' title='Advisicon store'>Store</a>
-          <a href='../careers.htm' id='advisiconJobs' title='careers at Advisicon'>Careers</a>
+          <a href='/careers.htm' id='advisiconJobs' title='careers at Advisicon'>Careers</a>
           <a class='tel' href='tel:+1-866-362-3847' id='callUs' onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Toll Free']);" title='call us at 1-866-362-3847'>1.866.36.ADVIS</a>
         </nav>
         <nav id='highlightsNavigation'>
-          <a href='../project-management.htm' title='view our Project Management services'>Project Management</a>
-          <a href='../microsoft-project-office.htm' title='view our Microsoft Project and Microsoft Project Server consulting and training services'>Microsoft Project Server</a>
-          <a href='../sharepoint.htm'>Microsoft SharePoint</a>
-          <a href='../training.htm'>Training</a>
-          <a href='../application-development.htm'>Application Development</a>
+          <a href='/project-management.htm' title='view our Project Management services'>Project Management</a>
+          <a href='/microsoft-project-office.htm' title='view our Microsoft Project and Microsoft Project Server consulting and training services'>Microsoft Project Server</a>
+          <a href='/sharepoint.htm'>Microsoft SharePoint</a>
+          <a href='/training.htm'>Training</a>
+          <a href='/application-development.htm'>Application Development</a>
         </nav>
       </div>
       <div id='navAndCred'>
   <nav id='secondaryNav'>
-    <a class='secondaryNavButton' href='../case-studies.htm' title='see case studies'>Case Studies</a>
-    <a class='secondaryNavButton' href='../clients.htm' title='see our clients'>Clients</a>
-    <a class='secondaryNavButton' href='../partners.htm' title='see our partners'>Partners</a>
-    <a class='secondaryNavButton' href='../training.htm' title='view our training offerings'>Training</a>
+    <a class='secondaryNavButton' href='/case-studies.htm' title='see case studies'>Case Studies</a>
+    <a class='secondaryNavButton' href='/clients.htm' title='see our clients'>Clients</a>
+    <a class='secondaryNavButton' href='/partners.htm' title='see our partners'>Partners</a>
+    <a class='secondaryNavButton' href='/training.htm' title='view our training offerings'>Training</a>
     <a class='secondaryNavButton' href='http://store.advisicon.com' title='shop our products in our store'>Store</a>
-    <a class='secondaryNavButton longText' href='../professional-associations.htm' title='see our professional associations'>Professional Associations</a>
-    <a class='secondaryNavButton' href='../news.htm' title='Advisicon news and events'>News &amp; Events</a>
-    <a class='secondaryNavButton highlightedNavButton' href='../public-courses.html' title='view our public course schedule'>Advisicon Public Course Schedule</a>
-    <a class='secondaryNavButton highlightedNavButton' href='../contactus.htm' title='view our contact info'>Contact Us!</a>
+    <a class='secondaryNavButton longText' href='/professional-associations.htm' title='see our professional associations'>Professional Associations</a>
+    <a class='secondaryNavButton' href='/news.htm' title='Advisicon news and events'>News &amp; Events</a>
+    <a class='secondaryNavButton highlightedNavButton' href='/courses.htm' title='view our public course schedule'>Advisicon Public Course Schedule</a>
+    <a class='secondaryNavButton highlightedNavButton' href='/contactus.htm' title='view our contact info'>Contact Us!</a>
   </nav>
   <ul id='credentials'>
   <li>
-    <a href='../staff_bios/tim-runcie.htm' title='Learn more about Advisicon&amp;rsquo;s President, Tim Runcie, a Microsoft MVP'>
-      <img alt='Microsoft MVP' border='0' height='53' src='../pix/MVP_Horizontal_FullColor-small.jpg' width='150' />
+    <a href='/staff_bios/tim-runcie.htm' title='Learn more about Advisicon&amp;rsquo;s President, Tim Runcie, a Microsoft MVP'>
+      <img alt='Microsoft MVP' border='0' height='53' src='/pix/MVP_Horizontal_FullColor-small.jpg' width='150' />
     </a>
   </li>
   <li>
-    <a href='../our-certifications.htm' title='Learn more about our competencies as a Microsoft Certified Partner'>
-      <img alt='Microsoft Certified Gold Partner in Project and Portfolio Management, Silver Partner in Midmarket Solution Provider' border='0' height='52' src='../pix/AdvisiconPartnersLogo.png' width='150' />
+    <a href='/our-certifications.htm' title='Learn more about our competencies as a Microsoft Certified Partner'>
+      <img alt='Microsoft Certified Gold Partner in Project and Portfolio Management, Silver Partner in Midmarket Solution Provider' border='0' height='54' src='/pix/microsoft-partner.png' width='150' />
     </a>
   </li>
   <li>
     <a href='http://www.pmi.org/' title='The PMI website'>
-      <img alt='Project Management Institute / Registered Education Provider' border='0' src='../pix/logos/PMI-REP-logo.png' width='150' />
+      <img alt='Project Management Institute / Registered Education Provider' border='0' src='/pix/logos/PMI-REP-logo.png' width='150' />
     </a>
   </li>
 </ul>
@@ -156,17 +156,22 @@
           <ul class='otherCommsList'>
             <li>
               <a href='http://twitter.com/Advisicon' target='_blank'>
-                <img alt='Advisicon on Twitter' border='0' height='40' onclick="_gaq.push(['_trackEvent', 'Twitter', 'User: Advisicon', 'User stream']);" src='../pix/twitter.png' title='Twitter' width='40' />
+                <img alt='Advisicon on Twitter' border='0' height='40' onclick="_gaq.push(['_trackEvent', 'Twitter', 'User: Advisicon', 'User stream']);" src='/pix/twitter.png' title='Twitter' width='40' />
               </a>
             </li>
             <li>
               <a href='http://www.linkedin.com/companies/advisicon' target='_blank'>
-                <img alt='Advisicon on LinkedIn' border='0' height='40' onclick="_gaq.push(['_trackEvent', 'LinkedIn', 'User: Advisicon', 'Company Profile']);" src='../pix/linkedinicon.png' title='LinkedIn' width='40' />
+                <img alt='Advisicon on LinkedIn' border='0' height='40' onclick="_gaq.push(['_trackEvent', 'LinkedIn', 'User: Advisicon', 'Company Profile']);" src='/pix/linkedinicon.png' title='LinkedIn' width='40' />
               </a>
             </li>
             <li>
               <a href='http://www.facebook.com/Advisicon/' target='_blank'>
-                <img alt='Advisicon on facebook' border='0' height='40' onclick="_gaq.push(['_trackEvent', 'Facebook', 'User: Advisicon', 'Fan Page']);" src='../pix/facebook.png' title='Facebook' width='40' />
+                <img alt='Advisicon on facebook' border='0' height='40' onclick="_gaq.push(['_trackEvent', 'Facebook', 'User: Advisicon', 'Fan Page']);" src='/pix/facebook.png' title='Facebook' width='40' />
+              </a>
+            </li>
+            <li>
+              <a href='http://pinpoint.microsoft.com/en-US/partners/Advisicon-Inc-4295604986' target='_blank'>
+                <img alt='Our Microsoft Pinpoint listing' border='0' height='40' onclick="_gaq.push(['_trackEvent', 'Pinpoint', 'Advisicon', 'Follow Advisicon']);" src='/pix/icons/pinpoint.jpg' title='Pinpoint' width='40' />
               </a>
             </li>
             <li>
@@ -174,28 +179,35 @@
             </li>
           </ul>
         </div>
+        <div class='advert project'>
+          <a href='/online/project-online.aspx'>
+            <h3>Free Project Online Trial</h3>
+            <p>Sign up for a Project Online trial!</p>
+          </a>
+        </div>
         <div class='rPopBox'>
           <h3>Recent Blog Posts</h3>
           <ul id='feedContent'>
+            <li>Visit the Visit the <a href="http://blog.advisicon.com/" title="view the Advisicon blog">Advisicon blog</a> to see our most recent blog posts.</li>
           </ul>
         </div>
         <div class='rPopBox'>
           <h3>Featured Tool(s)</h3>
           <ul>
             <li itemscope='itemscope' itemtype='http://schema.org/Product'>
-              <a href="../tools/MSP-Rex.htm" itemprop="name url">MSP-Rex</a> (<span itemprop="description">Report Extractor</span>)
+              <a href="/tools/MSP-Rex.htm" itemprop="name url">MSP-Rex</a> (<span itemprop="description">Report Extractor</span>)
             </li>
             <li itemscope='itemscope' itemtype='http://schema.org/Product'>
-              <a href="../tools/skill-tracker.htm" itemprop="name url">Skill Tracker</a>
+              <a href="/tools/skill-tracker.htm" itemprop="name url">Skill Tracker</a>
             </li>
           </ul>
         </div>
         <div class='rPopBox'>
-          <h3>News &amp; Events</h3>
-          <ul>
-            
-          </ul>
-        </div>
+  <h3>News &amp; Events</h3>
+  <ul runat="server" id="newsevent">
+    
+  </ul>
+</div>
         <div class='rPopBox'>
           <h3>Current Course Listings</h3>
           <div>
@@ -209,37 +221,37 @@
           <ul id='portfolio'>
             <li>
               <a href='http://store.advisicon.com/products/microsoft-access-in-a-sharepoint-world'>
-                <img alt='Microsoft Access in a SharePoint World' border='0' height='195' src='../pix/Cover-MASW.jpg' width='150' />
+                <img alt='Microsoft Access in a SharePoint World' border='0' height='195' src='/pix/Cover-MASW.jpg' width='150' />
               </a>
             </li>
             <li>
               <a href='http://store.advisicon.com/products/microsoft-business-intelligence-building-executive-dashboards-with-sharepoint-2010'>
-                <img alt='Microsoft Business Intelligence' border='0' height='195' src='../pix/Cover-BI-thumb.png' width='150' />
+                <img alt='Microsoft Business Intelligence' border='0' height='195' src='/pix/Cover-BI-thumb.png' width='150' />
               </a>
             </li>
             <li>
               <a href='http://store.advisicon.com/products/microsoft-project-server-2010-administrators-guide'>
-                <img alt='Microsoft Project Server 2010&amp;nbsp;&amp;ndash; Administrator&amp;rsquo;s Guide' border='0' height='195' src='../pix/Cover-MSPS2010-Admin.jpg' width='150' />
+                <img alt='Microsoft Project Server 2010&amp;nbsp;&amp;ndash; Administrator&amp;rsquo;s Guide' border='0' height='195' src='/pix/Cover-MSPS2010-Admin.jpg' width='150' />
               </a>
             </li>
             <li>
               <a href='http://store.advisicon.com/products/microsoft-project-server-2010-project-managers-guide'>
-                <img alt='Microsoft Project Server 2010&amp;nbsp;&amp;ndash; Project Manager&amp;rsquo;s Guide' border='0' height='195' src='../pix/Cover-MSPS2010-PM.jpg' width='150' />
+                <img alt='Microsoft Project Server 2010&amp;nbsp;&amp;ndash; Project Manager&amp;rsquo;s Guide' border='0' height='195' src='/pix/Cover-MSPS2010-PM.jpg' width='150' />
               </a>
             </li>
             <li>
               <a href='http://store.advisicon.com/products/microsoft-project-server-2010-team-members-guide'>
-                <img alt='Microsoft Project Server 2010&amp;nbsp;&amp;ndash; Team Member&amp;rsquo;s Guide' border='0' height='195' src='../pix/Cover-MSPS2010-TM.jpg' width='150' />
+                <img alt='Microsoft Project Server 2010&amp;nbsp;&amp;ndash; Team Member&amp;rsquo;s Guide' border='0' height='195' src='/pix/Cover-MSPS2010-TM.jpg' width='150' />
               </a>
             </li>
             <li>
               <a href='http://store.advisicon.com/products/managing-projects-with-microsoft-project-2010-best-practices-in-managing-projects-with-microsoft-project'>
-                <img alt='Managing Projects with Microsoft Project 2010' border='0' height='195' src='../pix/Cover-MPWMSP2010.jpg' width='150' />
+                <img alt='Managing Projects with Microsoft Project 2010' border='0' height='195' src='/pix/Cover-MPWMSP2010.jpg' width='150' />
               </a>
             </li>
             <li>
               <a href='http://store.advisicon.com/products/sharepoint-for-effective-team-collaboration-2010'>
-                <img alt='SharePoint for Effective Team Collaboration' border='0' height='195' src='../pix/Cover-SPfETC-thumb.jpg' width='150' />
+                <img alt='SharePoint for Effective Team Collaboration' border='0' height='195' src='/pix/Cover-SPfETC-thumb.jpg' width='150' />
               </a>
             </li>
           </ul>
@@ -258,41 +270,38 @@
         <p>Microsoft Project Online is a flexible online solution for project portfolio management (PPM) and everyday work. Delivered through Office 365, Project Online enables organizations to get started, prioritize project portfolio investments and deliver the intended business value&#8211;from virtually anywhere on nearly any device.</p>
         
         <p>Now available for a <strong>FREE 30-day trial</strong>. Advisicon can be your &#8220;partner of record&#8221; and provide you with a a free 30-day trial and assist in your subscription request. To get started visit our Project Online 30-day Trial Request.</p>
+        
         <form id="frmCapture" runat="server" action="project-online.aspx">
-          <table>
-            <tr>
-                <td>Full Name
-                </td>
-                <td><asp:TextBox ID="txtFullName" runat="server"></asp:TextBox>
+          <fieldset>
+            <label>Full Name</label>
+                <asp:TextBox ID="txtFullName" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvtxtFullName" ValidationGroup="FormCheck" runat="server" ErrorMessage="*" ControlToValidate="txtFullName"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td>Company
-                </td>
-                <td><asp:TextBox ID="txtCompanyName" runat="server"></asp:TextBox>
+           </fieldset>
+          <fieldset>
+            <label>Company</label>
+                <asp:TextBox ID="txtCompanyName" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvtxtCompanyName" ValidationGroup="FormCheck" runat="server" ErrorMessage="*" ControlToValidate="txtCompanyName"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td>Email Address
-                </td>
-                <td><asp:TextBox ID="txtEmailAddress" runat="server"></asp:TextBox>
+          </fieldset>
+          <fieldset>
+            <label>Email Address</label>
+                <asp:TextBox ID="txtEmailAddress" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvtxtEmailAddress" ValidationGroup="FormCheck" runat="server" ErrorMessage="*" ControlToValidate="txtEmailAddress"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td>Phone Number
-                </td>
-                <td><asp:TextBox ID="txtPhoneNumber" runat="server"></asp:TextBox>
+                <br />
+            <label>Repeat Email Address</label>
+                <asp:TextBox ID="txtRepeatEmailAddress" runat="server"></asp:TextBox>
+                <asp:CompareValidator ID="cmpEmailAddress" ValidationGroup="FormCheck" runat="server" ControlToValidate="txtEmailAddress" ErrorMessage="*" ControlToCompare="txtRepeatEmailAddress" Type="String"></asp:CompareValidator>
+           </fieldset>
+          <fieldset>
+            <label>Phone Number</label>
+                <asp:TextBox ID="txtPhoneNumber" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvtxtPhoneNumber" ValidationGroup="FormCheck" runat="server" ErrorMessage="*" ControlToValidate="txtPhoneNumber"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-          </table>
+          </fieldset>
+
+          
           <asp:Label ID="lblConfirmation" ForeColor="Blue" runat="server"></asp:Label><br />
           <asp:Button ID="btnSubmit" OnClick="btnSubmit_Click" runat="server" ValidationGroup="FormCheck" Text="Request Free Trial" />                    
           <br />
-        </form>
+        </form>        
         <p>Get started today either online or onsite with a Microsoft Certified expert. This demo will consist of an interactive session discovering all aspects of assessing and executing this new cloud based solution.</p>
         
         <p>For more details regarding the Partner-Led Project Trial, please email <a href='mailto:info@advisicon.com?project%20online%20free%20trial'>info</a>, call <a href='tel:+1-866-362-847'>866 36 ADVIS</a> or <a href='#trial-request'>online contact form</a></p>
@@ -305,15 +314,15 @@
             <td></td>
           </tr>
         </table>
-        <img alt='footer background' border='0' height='14' src='../pix/footer_bar.jpg' width='950' />
+        <img alt='footer background' border='0' height='14' src='/pix/footer_bar.jpg' width='950' />
       </div>
       <div id='nav'>
         <ul class='navbarmini'>
           <li>
-            <a href='../site_map.htm' title='view the site map'>Site Map</a>
+            <a href='/site_map.htm' title='view the site map'>Site Map</a>
           </li>
           <li>
-            <a href='../privacy-policy.htm' title='view our privacy policy'>Privacy Policy</a>
+            <a href='/privacy-policy.htm' title='view our privacy policy'>Privacy Policy</a>
           </li>
           <li>
             <a class='tel' href='tel:+1-866-362-3847' onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Toll Free']);" title='call us at 1-866-362-3847'>1.866.36.ADVIS</a>
@@ -322,29 +331,28 @@
       </div>
     </footer>
     <map id='Map' name='Map'>
-      <area alt='Advisicon Home' coords='858,21,936,99' href='../' shape='rect' />
+      <area alt='Advisicon Home' coords='858,21,936,99' href='/' shape='rect' />
       <area alt='Advisicon' coords='860,22,861,24' href='#' shape='rect' />
     </map>
     <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
     <script>
-      window.jQuery || document.write('<script src="../js/libs/jquery-1.6.0.min.js"><\/script>')
+      window.jQuery || document.write('<script src="/js/libs/jquery-1.6.0.min.js"><\/script>')
     </script>
-    <script src='../js/plugins.js'></script>
-    <script src='../js/script.js'></script>
+    <script src='/js/plugins.js'></script>
+    <script src='/js/script.js'></script>
     <script src='https://www.google.com/jsapi' type='text/javascript'></script>
-    <script src='../Scripts/loadGoogleFeed.js' type='text/javascript'></script>
-    <script src='../Scripts/twitter.js' type='text/javascript'></script>
-    <script src='../jscript/jquery.easing.1.3.js' type='text/javascript'></script>
-    <script src='../jscript/2/jquery.hslides.js' type='text/javascript'></script>
-    <script src='../jscript/2/jquery.innerfade.js' type='text/javascript'></script>
-    <script src='../Scripts/frontPageSlideshowHeader.js' type='text/javascript'></script>
-    <script src='../Scripts/featuredProducts.js' type='text/javascript'></script>
-    <script src='../Scripts/googlePlusOneButton.js' type='text/javascript'></script>
-    <script src='../Scripts/rootGoogleAnalytics.js' type='text/javascript'></script>
+    <script src='/Scripts/twitter.js' type='text/javascript'></script>
+    <script src='/jscript/jquery.easing.1.3.js' type='text/javascript'></script>
+    <script src='/jscript/2/jquery.hslides.js' type='text/javascript'></script>
+    <script src='/jscript/2/jquery.innerfade.js' type='text/javascript'></script>
+    <script src='/Scripts/frontPageSlideshowHeader.js' type='text/javascript'></script>
+    <script src='/Scripts/featuredProducts.js' type='text/javascript'></script>
+    <script src='/Scripts/googlePlusOneButton.js' type='text/javascript'></script>
+    <script src='/Scripts/rootGoogleAnalytics.js' type='text/javascript'></script>
     <!-- add a couple of extra scripts -->
-    <script src='../js/Eventbrite.jquery.js' type='text/javascript'></script>
-    <script src='../js/load-public-courses.js' type='text/javascript'></script>
-    <script src='../js/load-short-course-listing.js' type='text/javascript'></script>
+    <script src='/Scripts/loadGoogleFeed.js' type='text/javascript'></script>
+    <script src='/js/Eventbrite.jquery.js' type='text/javascript'></script>
+    <script src='/js/load-public-courses.js' type='text/javascript'></script>
   </div>
 </body>
-
+</html>
