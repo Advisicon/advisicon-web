@@ -1083,13 +1083,18 @@ td { vertical-align: top; }
             ul {
               padding-top: 0;
               padding-bottom: 0;
+              margin-top: 0;
+              margin-bottom: 0;
               .rounded-corners(0);
               border-bottom: none;
+              // background: #eeeeee url(/pix/icons/toc-arrow.png) no-repeat 0px 0px;
               &:before {
                 content: none;
               }
-              li:first-child {
-                padding-top: 0;
+              li {
+                &:first-child {
+                  padding-top: 0;
+                }
               }
             }
           }
