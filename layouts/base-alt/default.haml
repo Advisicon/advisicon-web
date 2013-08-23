@@ -57,7 +57,7 @@
             - else
               %li Visit the Visit the <a href="http://blog.advisicon.com/" title="view the Advisicon blog">Advisicon blog</a> to see our most recent blog posts.
         = render_partial '/partials/featured_tools'
-        -if (title != 'Events')
+        -if title != ('Events'||'Project Online Trial')
           = render_partial '/partials/news_and_events'
         -if title != ('Public Classes'||'Courses')
           = render_partial '/partials/course_listings'
