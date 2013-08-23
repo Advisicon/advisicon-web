@@ -1078,15 +1078,22 @@ td { vertical-align: top; }
           border-bottom: 3px solid #e6e6e6;
           .rounded-corners(5);
           fieldset {
-            margin-bottom: 1em;
+            float: left;
+            clear: left;
+            width: 100%;
             label {
+              width: 100%;
+              display: block;
+              float: left;
             }
             input {
-              width: 70%;
-              float: right;
+              width: 100%;
+              float: left;
             }
           }
           input#submit {
+            float: left;
+            clear: left;
           }
         }
       }

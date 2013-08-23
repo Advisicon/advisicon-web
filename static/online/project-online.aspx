@@ -179,12 +179,6 @@
             </li>
           </ul>
         </div>
-        <div class='advert project'>
-          <a href='/online/project-online.aspx'>
-            <h3>Free Project Online Trial</h3>
-            <p>Sign up for a Project Online trial!</p>
-          </a>
-        </div>
         <div class='rPopBox'>
           <h3>Recent Blog Posts</h3>
           <ul id='feedContent'>
@@ -202,12 +196,6 @@
             </li>
           </ul>
         </div>
-        <div class='rPopBox'>
-  <h3>News &amp; Events</h3>
-  <ul runat="server" id="newsevent">
-    
-  </ul>
-</div>
         <div class='rPopBox'>
           <h3>Current Course Listings</h3>
           <div>
