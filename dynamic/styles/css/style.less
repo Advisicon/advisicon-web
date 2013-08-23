@@ -1064,6 +1064,36 @@ td { vertical-align: top; }
             }
           }
         }
+        .maruku_toc {
+          ul {
+            margin-left: 0px;
+            width: auto;
+            padding-right: 9px;
+            padding-bottom: 1em;
+            padding-top: 1em;
+            .rounded-corners(5);
+            background-color: #eeeeee;
+            border-bottom: 3px solid #dddddd;
+            &:before {
+              content: "Skip to a section below...";
+            }
+            li:first-child {
+              padding-top: 2em;
+            }
+            ul {
+              padding-top: 0;
+              padding-bottom: 0;
+              .rounded-corners(0);
+              border-bottom: none;
+              &:before {
+                content: none;
+              }
+              li:first-child {
+                padding-top: 0;
+              }
+            }
+          }
+        }
       } 
       form {
         &#frmCapture {
