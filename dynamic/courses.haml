@@ -62,7 +62,7 @@ layout: base-alt/default.haml
   - require '../../GoToTraining-Ruby/lib/go_to_training.rb'
   - @g2t = GoToTraining::Client.new('ccd6b830c54436e074f0cc9cdb8931f2', '7863484309822919941', '2221055618378781957').get_trainings('')
 
-  - if @g2t != nil
+  - if @g2t != nil && @g2t.any?
 
     #g2t_event_header
       %span.head_title Course
@@ -82,8 +82,10 @@ layout: base-alt/default.haml
           /%span.g2t_event_list_date= @date.to_s
           %span.eb_event_list_date= @date.to_s
           -# %p{ :style => 'float: left; clear: left;' }= course
-  - else
+  - elsif @g2t.any? == false
     %iframe{ :src => "https://attendee.gototraining.com/78mx2/catalog/8775170764717674752", :width => "509" }
+  - else
+    %p No trainings are available at this time.
 
   -#
     %p ALTERNATELY...
@@ -94,7 +96,7 @@ layout: base-alt/default.haml
   - require '../../GoToWebinar-Ruby/lib/go_to_webinar.rb'
   - @g2w = GoToWebinar::Client.new('b7b4db05bdbe3d9f8e88aeccacec9863', '9071527632275453445').get_upcoming_webinars
 
-  - if @g2w != nil
+  - if @g2w != nil && @g2w.any? 
 
     #g2t_event_header
       %span.head_title Webinar
@@ -108,6 +110,9 @@ layout: base-alt/default.haml
           - @webinarDate = DateTime.parse(webinar['times'][0]['startTime']).to_date
           %span.eb_event_list_title= "<a href='#{@webinarURL}' title='Register on GoToWebinar!' onclick='_gaq.push(['_trackEvent', 'view webinar', '#{@webinarTitle}', '#{@webinarDate}']);'>#{@webinarTitle}</a>"
           %span.eb_event_list_date= @webinarDate.to_s
+  - else
+
+    %p No webinars are available at this time.
 
 %h2{ :id => "meeting-room" } Our Meeting Room
 %p Our meeting room is for rent!
