@@ -333,7 +333,23 @@
     <script src='/js/plugins.js'></script>
     <script src='/js/script.js'></script>
     <script src='https://www.google.com/jsapi' type='text/javascript'></script>
-    <script src='/Scripts/twitter.js' type='text/javascript'></script>
+    <script type='text/javascript'>
+     $("form#frmCapture").each(function() {
+       var jqForm = $(this);
+       var jsForm = this;
+       var action = jqForm.attr("action");
+       jqForm.submit(function(event) {
+         event.preventDefault();
+         _gaq.push(['_trackEvent', 'Project Online Trial Request Form', 'Submitted', action, , false]);
+         alert('click sent to google. Big brother is watching.');
+         setTimeout(function() {
+           jsForm.submit();
+           alert('submit complete');
+         },300);
+       });
+     });
+   </script>
+   <script src='/Scripts/twitter.js' type='text/javascript'></script>
     <script src='/jscript/jquery.easing.1.3.js' type='text/javascript'></script>
     <script src='/jscript/2/jquery.hslides.js' type='text/javascript'></script>
     <script src='/jscript/2/jquery.innerfade.js' type='text/javascript'></script>
