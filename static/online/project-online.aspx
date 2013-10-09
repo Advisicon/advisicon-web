@@ -262,29 +262,29 @@
         <form id="frmCapture" runat="server" action="project-online.aspx">
           <fieldset>
             <label>Full Name</label>
-                <asp:TextBox ID="txtFullName" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtFullName" runat="server" placeholder="Your name" required="true" type="text"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvtxtFullName" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Full name required" ControlToValidate="txtFullName"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="revtxtFullName" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Invalid name" ControlToValidate="txtFullName" ValidationExpression="^[A-z' ']+$"></asp:RegularExpressionValidator>
            </fieldset>
           <fieldset>
             <label>Company</label>
-                <asp:TextBox ID="txtCompanyName" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtCompanyName" runat="server" placeholder="Your company" required="true" type="text"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvtxtCompanyName" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Company required" ControlToValidate="txtCompanyName"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="revtxtCompanyName" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Invalid company name" ControlToValidate="txtCompanyName" ValidationExpression="^[A-z' ']+$"></asp:RegularExpressionValidator>
           </fieldset>
           <fieldset>
             <label>Email Address</label>
-                <asp:TextBox ID="txtEmailAddress" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtEmailAddress" runat="server" required="true" type="email"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvtxtEmailAddress" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Email address required" ControlToValidate="txtEmailAddress"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="revtxtEmailAddress" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Invalid email address" ControlToValidate="txtEmailAddress" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 <br />
             <label>Repeat Email Address</label>
-                <asp:TextBox ID="txtRepeatEmailAddress" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtRepeatEmailAddress" runat="server" required="true" type="email"></asp:TextBox>
                 <asp:CompareValidator ID="cmpEmailAddress" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ControlToValidate="txtEmailAddress" ErrorMessage="Email addresses must match" ControlToCompare="txtRepeatEmailAddress" Type="String"></asp:CompareValidator>
            </fieldset>
           <fieldset>
             <label>Phone Number</label>
-                <asp:TextBox ID="txtPhoneNumber" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPhoneNumber" runat="server" required="true" type="tel"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvtxtPhoneNumber" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Phone number required" ControlToValidate="txtPhoneNumber"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="revtxtPhoneNumber" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Invalid phone number" ControlToValidate="txtPhoneNumber" ValidationExpression="\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})"></asp:RegularExpressionValidator>
           </fieldset>
