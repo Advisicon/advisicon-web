@@ -296,7 +296,7 @@
         </form>        
         <p>Get started today either online or onsite with a Microsoft Certified expert. This demo will consist of an interactive session discovering all aspects of assessing and executing this new cloud based solution.</p>
         
-        <p>For more details regarding the Partner-Led Project Trial, please email <a href='mailto:project@advisicon.com?project%20online%20free%20trial' onclick="_gaq.push(['_trackEvent', 'Emails', 'Project Online Trial', 'Inquiry'])">project@advisicon.com</a>, call <a href='tel:+1-866-362-847' onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Project Online Trial']);">866 36 ADVIS</a> or <a href='#trial-request'>online contact form</a></p>
+        <p>For more details regarding the Partner-Led Project Trial, please email <a href='mailto:info@advisicon.com?project%20online%20free%20trial'>info</a>, call <a href='tel:+1-866-362-847'>866 36 ADVIS</a> or <a href='#trial-request'>online contact form</a></p>
       </section>
     </div>
     <footer>

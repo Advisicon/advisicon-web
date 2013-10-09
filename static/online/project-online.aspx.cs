@@ -96,9 +96,9 @@ public partial class _Default : System.Web.UI.Page
 
             System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
             //message.To.Add("Kristin.Raglione@Advisicon.com;Jeff.Jacobson@Advisicon.com;Stacey.Garner@Advisicon.com");
-            message.To.Add("info@advisicon.com");
+            message.To.Add("project@advisicon.com");
             message.Subject = "New Project Online Inquiry: " + txtFullName.Text;
-            message.From = new System.Net.Mail.MailAddress("info@advisicon.com");
+            message.From = new System.Net.Mail.MailAddress("project@advisicon.com");
             message.Body = html;
             System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("mail.advisicon.com");
             smtp.Send(message);
