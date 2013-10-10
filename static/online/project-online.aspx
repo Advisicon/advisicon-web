@@ -291,7 +291,7 @@
 
           
           <asp:Label ID="lblConfirmation" ForeColor="Blue" runat="server"></asp:Label><br />
-          <asp:Button ID="btnSubmit" OnClick="btnSubmit_Click" runat="server" ValidationGroup="FormCheck" Text="Request Free Trial" />                    
+          <asp:Button ID="btnSubmit" OnClick="btnSubmit_Click" OnClientClick="_gaq.push(['_trackEvent', 'Form Submit', 'Project Online Trial', 'Submit Attempt']);" runat="server" ValidationGroup="FormCheck" Text="Request Free Trial" />                    
           <br />
         </form>        
         <p>Get started today either online or onsite with a Microsoft Certified expert. This demo will consist of an interactive session discovering all aspects of assessing and executing this new cloud based solution.</p>
