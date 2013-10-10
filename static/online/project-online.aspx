@@ -274,17 +274,17 @@
           </fieldset>
           <fieldset>
             <label>Email Address</label>
-                <asp:TextBox ID="txtEmailAddress" runat="server" required="true" type="email"></asp:TextBox>
+                <asp:TextBox ID="txtEmailAddress" runat="server" placeholder="Your.Email@Example.com" required="true" type="email"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvtxtEmailAddress" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Email address required" ControlToValidate="txtEmailAddress"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="revtxtEmailAddress" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Invalid email address" ControlToValidate="txtEmailAddress" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 <br />
             <label>Repeat Email Address</label>
-                <asp:TextBox ID="txtRepeatEmailAddress" runat="server" required="true" type="email"></asp:TextBox>
+                <asp:TextBox ID="txtRepeatEmailAddress" runat="server" placeholder="Your.Email@Example.com" required="true" type="email"></asp:TextBox>
                 <asp:CompareValidator ID="cmpEmailAddress" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ControlToValidate="txtEmailAddress" ErrorMessage="Email addresses must match" ControlToCompare="txtRepeatEmailAddress" Type="String"></asp:CompareValidator>
            </fieldset>
           <fieldset>
             <label>Phone Number</label>
-                <asp:TextBox ID="txtPhoneNumber" runat="server" required="true" type="tel"></asp:TextBox>
+                <asp:TextBox ID="txtPhoneNumber" runat="server" placeholder="555.555.5555" required="true" type="tel"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvtxtPhoneNumber" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Phone number required" ControlToValidate="txtPhoneNumber"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="revtxtPhoneNumber" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Invalid phone number" ControlToValidate="txtPhoneNumber" ValidationExpression="\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})"></asp:RegularExpressionValidator>
           </fieldset>
