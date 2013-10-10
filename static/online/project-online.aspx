@@ -291,7 +291,7 @@
 
           
           <asp:Label ID="lblConfirmation" ForeColor="Blue" runat="server"></asp:Label><br />
-          <asp:Button ID="btnSubmit" OnClick="btnSubmit_Click" runat="server" ValidationGroup="FormCheck" Text="Request Free Trial" />                    
+          <asp:Button ID="btnSubmit" OnClick="btnSubmit_Click" OnClientClick="_gaq.push(['_trackEvent', 'Form Submit', 'Project Online Trial', 'Submit Attempt']); alert('click');" runat="server" ValidationGroup="FormCheck" Text="Request Free Trial" />                    
           <br />
         </form>        
         <p>Get started today either online or onsite with a Microsoft Certified expert. This demo will consist of an interactive session discovering all aspects of assessing and executing this new cloud based solution.</p>
@@ -333,23 +333,7 @@
     <script src='/js/plugins.js'></script>
     <script src='/js/script.js'></script>
     <script src='https://www.google.com/jsapi' type='text/javascript'></script>
-    <script type='text/javascript'>
-     $("form#frmCapture").each(function() {
-       var jqForm = $(this);
-       var jsForm = this;
-       var action = jqForm.attr("action");
-       jqForm.submit(function(event) {
-         event.preventDefault();
-         _gaq.push(['_trackEvent', 'Project Online Trial Request Form', 'Submitted', action, , false]);
-         alert('click sent to google. Big brother is watching.');
-         setTimeout(function() {
-           jsForm.submit();
-           alert('submit complete');
-         },300);
-       });
-     });
-   </script>
-   <script src='/Scripts/twitter.js' type='text/javascript'></script>
+    <script src='/Scripts/twitter.js' type='text/javascript'></script>
     <script src='/jscript/jquery.easing.1.3.js' type='text/javascript'></script>
     <script src='/jscript/2/jquery.hslides.js' type='text/javascript'></script>
     <script src='/jscript/2/jquery.innerfade.js' type='text/javascript'></script>
