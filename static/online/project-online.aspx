@@ -262,7 +262,7 @@
         <form id="frmCapture" runat="server" action="project-online.aspx">
           <fieldset>
             <label>Full Name</label>
-                <asp:TextBox ID="txtFullName" runat="server" placeholder="Your name" required="true" type="text"></asp:TextBox>
+                <asp:TextBox ID="txtFullName" runat="server" placeholder="Your name" required="true" type="text" autofocus="true"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvtxtFullName" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Full name required" ControlToValidate="txtFullName"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="revtxtFullName" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Invalid name" ControlToValidate="txtFullName" ValidationExpression="^[A-z' ']+$"></asp:RegularExpressionValidator>
            </fieldset>
