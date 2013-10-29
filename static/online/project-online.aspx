@@ -287,7 +287,7 @@
             <small>Please include your country code in your phone number</small>
                 <asp:TextBox ID="txtPhoneNumber" runat="server" placeholder="+1 555.555.5555" required="true" type="tel"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvtxtPhoneNumber" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Phone number required" ControlToValidate="txtPhoneNumber"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="revtxtPhoneNumber" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Invalid phone number" ControlToValidate="txtPhoneNumber" ValidationExpression="\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="revtxtPhoneNumber" Display="Dynamic" ValidationGroup="FormCheck" runat="server" ErrorMessage="Invalid phone number" ControlToValidate="txtPhoneNumber" ValidationExpression="^(?:\+?\d{1,3}?[-. ]?)?\(?(\d{3})\)?([ .-]?)(\d{3})\2(\d{4})"></asp:RegularExpressionValidator>
           </fieldset>
 
           
