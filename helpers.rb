@@ -14,4 +14,8 @@ module FrankHelpers
 =end
     #puts "<li>hello world</li>"
   end
+
+  def clean_course_title(title)
+    CGI::escapeHTML(title).gsub("'", %q(&#39;))
+  end
 end
