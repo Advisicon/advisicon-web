@@ -75,15 +75,15 @@ layout: base-alt/default.haml
         /.g2t_event_list_item
         .eb_event_list_item
           - @courseTitle = course['name']
-          - @registrationURL = "https://attendee.gototraining.com/78mx2/register/#{course['trainingKey']}"
+          - @registrationURL = "https://student.gototraining.com/r/#{course['trainingKey']}"
           /%span.g2t_event_list_title= course['name']
           - @date = DateTime.parse(course['times'][0]['startDate']).to_date
-          %span.eb_event_list_title= "<a href='#{@registrationURL}' title='Register on GoToTraining!' onclick='_gaq.push(['_trackEvent', 'view online course', '#{@courseTitle}', '#{@date}']);'>#{@courseTitle}</a>"
+          %span.eb_event_list_title= "<a href='#{@registrationURL}' title='Register on GoToTraining!' onclick='_gaq.push(['_trackEvent', 'view online course', '#{URI.escape(@courseTitle)}', '#{@date}']);'>#{@courseTitle}</a>"
           /%span.g2t_event_list_date= @date.to_s
           %span.eb_event_list_date= @date.to_s
           -# %p{ :style => 'float: left; clear: left;' }= course
   - elsif @g2t.any? == false
-    %iframe{ :src => "https://attendee.gototraining.com/78mx2/catalog/8775170764717674752", :width => "509" }
+    %iframe{ :src => "https://student.gototraining.com/2tj23/catalog/6699287318625635328", :width => "509" }
   - else
     %p No trainings are available at this time.
 
@@ -94,7 +94,7 @@ layout: base-alt/default.haml
 %h2 Webinars
 #webinars
   - require '../../GoToWebinar-Ruby/lib/go_to_webinar.rb'
-  - @g2w = GoToWebinar::Client.new('b7b4db05bdbe3d9f8e88aeccacec9863', '9071527632275453445').get_upcoming_webinars
+  - @g2w = GoToWebinar::Client.new('b5c0e5f05668a7e6f06c1479210746fe', '200000000001304589').get_upcoming_webinars
 
   - if @g2w != nil && @g2w.any? 
 
