@@ -78,7 +78,7 @@ layout: base-alt/default.haml
           - @registrationURL = "https://student.gototraining.com/r/#{course['trainingKey']}"
           /%span.g2t_event_list_title= course['name']
           - @date = DateTime.parse(course['times'][0]['startDate']).to_date
-          %span.eb_event_list_title= "<a href='#{@registrationURL}' title='Register on GoToTraining!' onclick='_gaq.push(['_trackEvent', 'view online course', '#{URI.escape(@courseTitle)}', '#{@date}']);'>#{@courseTitle}</a>"
+          %span.eb_event_list_title= "<a href='#{@registrationURL}' title='Register on GoToTraining!' onclick='_gaq.push(['_trackEvent', 'view online course', '#{clean_course_title(@courseTitle)}', '#{@date}']);'>#{@courseTitle}</a>"
           /%span.g2t_event_list_date= @date.to_s
           %span.eb_event_list_date= @date.to_s
           -# %p{ :style => 'float: left; clear: left;' }= course
@@ -106,9 +106,9 @@ layout: base-alt/default.haml
       - @g2w.each do |webinar|
         .eb_event_list_item
           - @webinarTitle = webinar['subject']
-          - @webinarURL = webinar['registrationUrl']
+          - @webinarURL = "https://www3.gotomeeting.com/register/#{webinar['webinarKey']}"
           - @webinarDate = DateTime.parse(webinar['times'][0]['startTime']).to_date
-          %span.eb_event_list_title= "<a href='#{@webinarURL}' title='Register on GoToWebinar!' onclick='_gaq.push(['_trackEvent', 'view webinar', '#{@webinarTitle}', '#{@webinarDate}']);'>#{@webinarTitle}</a>"
+          %span.eb_event_list_title= "<a href='#{@webinarURL}' title='Register on GoToWebinar!' onclick='_gaq.push(['_trackEvent', 'view webinar', '#{clean_course_title(@webinarTitle)}', '#{@webinarDate}']);'>#{@webinarTitle}</a>"
           %span.eb_event_list_date= @webinarDate.to_s
   - else
 
