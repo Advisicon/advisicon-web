@@ -60,7 +60,7 @@ layout: base-alt/default.haml
     Find all of our public online [courses at GoToTraining][GoToTraining-catalog].
   
   - require '../../GoToTraining-Ruby/lib/go_to_training.rb'
-  - @g2t = GoToTraining::Client.new('ccd6b830c54436e074f0cc9cdb8931f2', '7863484309822919941', '2221055618378781957').get_trainings('')
+  - @g2t = GoToTraining::Client.new('5a2f4f1cdbea97e45cfcd997421c744', '200000000000294967', '200000000001304589').get_trainings('')
 
   - if @g2t != nil && @g2t.any?
 
