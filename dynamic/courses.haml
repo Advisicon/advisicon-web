@@ -71,6 +71,8 @@ layout: base-alt/default.haml
     /.g2t_event_list
     .eb_event_list
 
+      - @g2t = @g2t.sort_by { |course| course['times'][0]['startDate'] }
+
       - @g2t.each do |course|
         /.g2t_event_list_item
         .eb_event_list_item
@@ -102,6 +104,8 @@ layout: base-alt/default.haml
       %span.head_title Webinar
       %span.head_date Date
     .eb_event_list
+      
+      - @g2w = @g2w.sort_by { |webinar| webinar['times'][0]['startTime'] }
 
       - @g2w.each do |webinar|
         .eb_event_list_item
