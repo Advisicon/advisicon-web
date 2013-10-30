@@ -1,7 +1,11 @@
+#!/bin/env ruby
+#encoding: utf-8
+
 module FrankHelpers
   # helpers go here
   require 'httparty'
   require 'json'
+  require 'cgi'
   def grab_events
 =begin
     response = HTTParty.get('http://blog.advisicon.com/tag/event/?json=1')
@@ -16,6 +20,6 @@ module FrankHelpers
   end
 
   def clean_course_title(title)
-    CGI::escapeHTML(title).gsub("'", %q(&#39;))
+    CGI::escapeHTML(title).gsub(/['’]/, '&#39;')
   end
 end

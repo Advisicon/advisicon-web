@@ -62,7 +62,10 @@ layout: base-alt/default.haml
   - require '../../GoToTraining-Ruby/lib/go_to_training.rb'
   - @g2t = GoToTraining::Client.new('5a2f4f1cdbea97e45cfcd997421c744', '200000000000294967', '200000000001304589').get_trainings('')
 
-  - if @g2t != nil && @g2t.any?
+  - if @g2t['errorCode']
+    %p No public virtual courses are available at this time.
+
+  - elsif @g2t != nil && @g2t.any?
 
     #g2t_event_header
       %span.head_title Course
@@ -98,7 +101,10 @@ layout: base-alt/default.haml
   - require '../../GoToWebinar-Ruby/lib/go_to_webinar.rb'
   - @g2w = GoToWebinar::Client.new('b5c0e5f05668a7e6f06c1479210746fe', '200000000001304589').get_upcoming_webinars
 
-  - if @g2w != nil && @g2w.any? 
+  - if @g2w['errorCode']
+    %p No public webinars are available at this time.
+
+  - elsif @g2w != nil && @g2w.any? 
 
     #g2t_event_header
       %span.head_title Webinar
