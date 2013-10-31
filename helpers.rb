@@ -20,6 +20,7 @@ module FrankHelpers
   end
 
   def clean_course_title(title)
-    CGI::escapeHTML(title).gsub(/['’]/, '&#39;')
+    CGI::escapeHTML(title).gsub(/['’®]/, '\'' => '&#39;', '’' => '&rsquo;',
+                               '®' => '&reg;')
   end
 end

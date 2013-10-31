@@ -62,10 +62,7 @@ layout: base-alt/default.haml
   - require '../../GoToTraining-Ruby/lib/go_to_training.rb'
   - @g2t = GoToTraining::Client.new('5a2f4f1cdbea97e45cfcd997421c744', '200000000000294967', '200000000001304589').get_trainings('')
 
-  - if @g2t['errorCode']
-    %p No public virtual courses are available at this time.
-
-  - elsif @g2t != nil && @g2t.any?
+  - if @g2t != nil && @g2t.any?
 
     #g2t_event_header
       %span.head_title Course
@@ -79,11 +76,11 @@ layout: base-alt/default.haml
       - @g2t.each do |course|
         /.g2t_event_list_item
         .eb_event_list_item
-          - @courseTitle = course['name']
+          - @courseTitle = clean_course_title(course['name'])
           - @registrationURL = "https://student.gototraining.com/r/#{course['trainingKey']}"
           /%span.g2t_event_list_title= course['name']
           - @date = DateTime.parse(course['times'][0]['startDate']).to_date
-          %span.eb_event_list_title= "<a href='#{@registrationURL}' title='Register on GoToTraining!' onclick='_gaq.push(['_trackEvent', 'view online course', '#{clean_course_title(@courseTitle)}', '#{@date}']);'>#{@courseTitle}</a>"
+          %span.eb_event_list_title= "<a href='#{@registrationURL}' title='Register on GoToTraining!' onclick='_gaq.push(['_trackEvent', 'view online course', '#{@courseTitle}', '#{@date}']);'>#{@courseTitle}</a>"
           /%span.g2t_event_list_date= @date.to_s
           %span.eb_event_list_date= @date.to_s
           -# %p{ :style => 'float: left; clear: left;' }= course
@@ -101,10 +98,7 @@ layout: base-alt/default.haml
   - require '../../GoToWebinar-Ruby/lib/go_to_webinar.rb'
   - @g2w = GoToWebinar::Client.new('b5c0e5f05668a7e6f06c1479210746fe', '200000000001304589').get_upcoming_webinars
 
-  - if @g2w['errorCode']
-    %p No public webinars are available at this time.
-
-  - elsif @g2w != nil && @g2w.any? 
+  - if @g2w != nil && @g2w.any? 
 
     #g2t_event_header
       %span.head_title Webinar
@@ -115,10 +109,10 @@ layout: base-alt/default.haml
 
       - @g2w.each do |webinar|
         .eb_event_list_item
-          - @webinarTitle = webinar['subject']
+          - @webinarTitle = clean_course_title(webinar['subject'])
           - @webinarURL = "https://www3.gotomeeting.com/register/#{webinar['webinarKey']}"
           - @webinarDate = DateTime.parse(webinar['times'][0]['startTime']).to_date
-          %span.eb_event_list_title= "<a href='#{@webinarURL}' title='Register on GoToWebinar!' onclick='_gaq.push(['_trackEvent', 'view webinar', '#{clean_course_title(@webinarTitle)}', '#{@webinarDate}']);'>#{@webinarTitle}</a>"
+          %span.eb_event_list_title= "<a href='#{@webinarURL}' title='Register on GoToWebinar!' onclick='_gaq.push(['_trackEvent', 'view webinar', '#{@webinarTitle}', '#{@webinarDate}']);'>#{@webinarTitle}</a>"
           %span.eb_event_list_date= @webinarDate.to_s
   - else
 
