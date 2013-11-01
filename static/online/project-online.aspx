@@ -174,6 +174,11 @@
                 <img alt='Our Microsoft Pinpoint listing' border='0' height='40' onclick="_gaq.push(['_trackEvent', 'Pinpoint', 'Advisicon', 'Follow Advisicon']);" src='/pix/icons/pinpoint.jpg' title='Pinpoint' width='40' />
               </a>
             </li>
+             <li>
+              <a href='http://www.eventbrite.com/org/2432615942?ref=eorgbtn' target='_blank'>
+                <img border='0' height='40' onclick="_gaq.push(['_trackEvent', 'Social Button', 'Eventbrite', 'Advisicon Organization Page']);" src='https://ebmedia.eventbrite.com/s3-s3/static/images/icons/eb-icon_large.png' title='Eventbrite' width='40' />
+              </a>
+            </li>
             <li>
               <div class='g-plusone'></div>
             </li>
