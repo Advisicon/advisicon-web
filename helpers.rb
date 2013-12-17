@@ -6,6 +6,7 @@ module FrankHelpers
   require 'httparty'
   require 'json'
   require 'cgi'
+  require 'uri'
   def grab_events
 =begin
     response = HTTParty.get('http://blog.advisicon.com/tag/event/?json=1')
