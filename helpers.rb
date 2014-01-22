@@ -7,19 +7,6 @@ module FrankHelpers
   require 'json'
   require 'cgi'
   require 'uri'
-  def grab_events
-=begin
-    response = HTTParty.get('http://blog.advisicon.com/tag/event/?json=1')
-    response_array = JSON.parse(response.body)
-
-    response_array.each do |post|
-      "<li>" + post.title + "</li>"
-    end
-
-=end
-    #puts "<li>hello world</li>"
-  end
-
   def clean_course_title(title)
     CGI::escapeHTML(title).gsub(/['’®]/, '\'' => '&#39;', '’' => '&rsquo;',
                                '®' => '&reg;')
@@ -42,5 +29,22 @@ module FrankHelpers
                 "<span itemprop='addressRegion'>#{region}</span>" +
               "</span>" +
             "</span>"
+  end
+  def track_event(category, action, options = {})
+    options[:label] ||= nil
+    options[:value] ||= nil
+    options[:noninteraction] ||= nil
+
+    @tracker = "_gaq.push(['_trackEvent', '#{category}', '#{action}'"
+    if options[:label]
+      @tracker += ", '#{options[:label]}'"
+      if options[:value].is_a? Integer
+        @tracker += ", '#{options[:value]}'"
+        if options[:noninteraction].is_a? Boolean
+          @tracker += ", '#{options[:noninteraction]}'"
+        end
+      end
+    end
+    @tracker += "]);"
   end
 end
