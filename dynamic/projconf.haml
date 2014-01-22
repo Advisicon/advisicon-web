@@ -44,8 +44,8 @@ layout: base-alt/default.haml
     executives or PMO staff can drive decision making that truly includes all 
     the work of the business.
   .extras
-    %a{ :href => '#' }Download PPT
-    %a{ :href => '#' }Bonus BLOG!
+    %a{ href: '#', onclick: track_event('Project Conf 2014', 'Download PPT',   label: 'Three Approaches to Managing Operational Work in the Portfolio of Projects') }Download PPT
+    %a{ href: '#', onclick: track_event('Project Conf 2014', 'View blog post', label: 'Cindy Lewis') }Bonus BLOG!
  
 %div{ :itemscope => 'itemscope', :itemtype => 'http://schema.org/Event' }
   %h3{ :itemprop => 'name' }
@@ -65,19 +65,19 @@ layout: base-alt/default.haml
     savings will be explored. Tad and Cindy will take a fun fresh look at this 
     important trend and topic.
   .extras    
-    %a{ :href => '#' }Download PPT
-    %a{ :href => '#' }Supplemental Reading List
+    %a{ href: '#', onclick: track_event('Project Conf 2014', 'Download PPT', label: 'ROI: Accelerating your time to value with Project Online') }Download PPT
+    %a{ href: '#', onclick: track_event('Project Conf 2014', 'View recommended reading', label: 'Cindy Lewis') }Supplemental Reading List
            
 %h4 Reach Cindy @ Conf
-%a.twitter_button{ :href => '#', :title => 'Twitter' }Twitter
-%a.linkedin_button{ :href => '#', :title => 'LinkedIn' }LinkedIn
-%a.blog_button{ :href => '#', :title => 'Blog' }Blog
+%a.twitter_button{ href: 'http://twitter.com/LewisCindy', title: 'Twitter', onclick: track_event('Project Conf 2014', 'View tweets', label: 'Cindy Lewis') }Twitter
+%a.linkedin_button{ href: 'http://www.linkedin.com/in/cindylewis2', title: 'LinkedIn', onclick: track_event('Project Conf 2014', 'View LinkedIn profile', label: 'Cindy Lewis') }LinkedIn
+%a.blog_button{ href: 'http://blog.advisicon.com/author/cindy-lewis', title: 'Blog', onclick: track_event('Project Conf 2014', 'View blog posts', label: 'Cindy Lewis') }Blog
 %p
   E-mail: 
-  %a{ :href => 'mailto:cindy.lewis@advisicon.com' }Cindy.Lewis@advisicon.com
+  %a{ href: 'mailto:cindy.lewis@advisicon.com', onclick: track_event('Project Conf 2014', 'Email', label: 'Cindy Lewis') }Cindy.Lewis@advisicon.com
 %p
   Phone: 
-  %a{ :href => 'tel:+1-616-446-8569' }616.446.8569
+  %a{ href: 'tel:+1-616-446-8569', onclick: track_event('Project Conf 2014', 'Phone', label: 'Cindy Lewis') }616.446.8569
 
 
 
@@ -114,12 +114,12 @@ layout: base-alt/default.haml
       Online, while keeping your technical teams focussed in the environment they 
       are familiar with.
   .extras       
-    %a{ :href => '#' }Download PPT
+    %a{ href: '#', onclick: track_event('Project Conf 2014', 'Download PPT', label: 'Development World Meets Project Management. Leveraging Project Server with Team Foundation Server') }Download PPT
            
 %h4 Reach Tim @ Conf
 %p
   E-mail: 
-  %a{ :href => 'mailto:tim.runcie@advisicon.com' }Tim.Runcie@advisicon.com
+  %a{ href: 'mailto:tim.runcie@advisicon.com', onclick: track_event('Project Conf 2014', 'Download PPT', label: 'Tim Runcie') }Tim.Runcie@advisicon.com
 %p
   Phone: 
-  %a{ :href => 'tel:+1-503-799-5343' }503.799.5343
+  %a{ href: 'tel:+1-503-799-5343', onclick: track_event('Project Conf 2014', 'Phone', label: 'Tim Runcie') }503.799.5343
