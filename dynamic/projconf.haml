@@ -8,20 +8,21 @@ layout: base-alt/default.haml
 %h1 Project Conference Landing Page
 %h2 Cindy Lewis, PMP, PMI-SP, MS, MCTS, MCT, MVP
   
-%div{ :itemscope => 'itemscope', :itemtype => 'http://schema.org/Event' }
-  %h3{ :itemprop => 'name' }
+%div{ itemscope: true, itemtype: 'http://schema.org/Event' }
+  %h3{ itemprop: 'name' }
     Three Approaches to Managing Operational Work in the Portfolio of Projects 
-  %meta{ :itemprop => 'startDate', :content => '2014-02-03T11:15' }
-  %meta{ :itemprop => 'endDate',   :content => '2014-02-03T12:30' }
+  %meta{ itemprop: 'startDate', content: '2014-02-03T11:15' }
+  %meta{ itemprop: 'endDate',   content: '2014-02-03T12:30' }
   %p
     Date: Monday, February 3
     %br
     Time: 11:15 AM - 12:30 PM
     %br
-    %span{ :itemprop => 'location', :itemscope => 'itemscope', :itemtype => 'http://schema.org/Place' }
+    %span{ itemprop: 'location', itemscope: true, 
+           itemtype: 'http://schema.org/Place' }
       Room: 201 C    
    
-  %p{ :itemprop => 'description' }
+  %p{ itemprop: 'description' }
     Customers frequently struggle with the best approach to manage operational 
     work while maintaining the integrity and details of their project work. 
     Operational work can include things like vacation time, sick time, training, 
@@ -44,20 +45,25 @@ layout: base-alt/default.haml
     executives or PMO staff can drive decision making that truly includes all 
     the work of the business.
   .extras
-    %a{ href: '#', onclick: track_event('Project Conf 2014', 'Download PPT',   label: 'Three Approaches to Managing Operational Work in the Portfolio of Projects') }Download PPT
-    %a{ href: '#', onclick: track_event('Project Conf 2014', 'View blog post', label: 'Cindy Lewis') }Bonus BLOG!
+    %a{ href: '#', 
+        onclick: track_event('Project Conf 2014', 'Download PPT',   
+                              label: 'Three Approaches to Managing Operational Work in the Portfolio of Projects') }Download PPT
+    %a{ href: '#', 
+        onclick: track_event('Project Conf 2014', 'View blog post', 
+                              label: 'Cindy Lewis') }Bonus BLOG!
  
-%div{ :itemscope => 'itemscope', :itemtype => 'http://schema.org/Event' }
-  %h3{ :itemprop => 'name' }
+%div{ itemscope: true, itemtype: 'http://schema.org/Event' }
+  %h3{ itemprop: 'name' }
     ROI: Accelerating your time to value with Project Online 
-  %meta{ :itemprop => 'startDate', :content => '2014-02-05T10:30' }
-  %meta{ :itemprop => 'endDate',   :content => '2014-02-05T11:45' }
+  %meta{ itemprop: 'startDate', content: '2014-02-05T10:30' }
+  %meta{ itemprop: 'endDate',   content: '2014-02-05T11:45' }
   %p
     Date: Wednesday, February 5 
     %br
     Time: 10:30 AM - 11:45 AM
     %br
-    %span{ :itemprop => 'location', :itemscope => 'itemscope', :itemtype => 'http://schema.org/Place' }
+    %span{ itemprop: 'location', itemscope: true, 
+           itemtype: 'http://schema.org/Place' }
     Room: 202 AB    
   %p
     Get on the fast track to multiplying business value with Project Online. 
@@ -65,36 +71,52 @@ layout: base-alt/default.haml
     savings will be explored. Tad and Cindy will take a fun fresh look at this 
     important trend and topic.
   .extras    
-    %a{ href: '#', onclick: track_event('Project Conf 2014', 'Download PPT', label: 'ROI: Accelerating your time to value with Project Online') }Download PPT
-    %a{ href: '#', onclick: track_event('Project Conf 2014', 'View recommended reading', label: 'Cindy Lewis') }Supplemental Reading List
+    %a{ href: '#', 
+        onclick: track_event('Project Conf 2014', 'Download PPT', 
+                             label: 'ROI: Accelerating your time to value with Project Online') }Download PPT
+    %a{ href: '#', 
+        onclick: track_event('Project Conf 2014', 'View recommended reading', 
+                              label: 'Cindy Lewis') }Supplemental Reading List
            
 %h4 Reach Cindy @ Conf
-%a.twitter_button{ href: 'http://twitter.com/LewisCindy', title: 'Twitter', onclick: track_event('Project Conf 2014', 'View tweets', label: 'Cindy Lewis') }Twitter
-%a.linkedin_button{ href: 'http://www.linkedin.com/in/cindylewis2', title: 'LinkedIn', onclick: track_event('Project Conf 2014', 'View LinkedIn profile', label: 'Cindy Lewis') }LinkedIn
-%a.blog_button{ href: 'http://blog.advisicon.com/author/cindy-lewis', title: 'Blog', onclick: track_event('Project Conf 2014', 'View blog posts', label: 'Cindy Lewis') }Blog
+%a.twitter_button{ href: 'http://twitter.com/LewisCindy', title: 'Twitter', 
+                   onclick: track_event('Project Conf 2014', 'View tweets', 
+                   label: 'Cindy Lewis') }Twitter
+%a.linkedin_button{ href: 'http://www.linkedin.com/in/cindylewis2', 
+                    title: 'LinkedIn', 
+                    onclick: track_event('Project Conf 2014', 'View LinkedIn profile', 
+                                          label: 'Cindy Lewis') }LinkedIn
+%a.blog_button{ href: 'http://blog.advisicon.com/author/cindy-lewis', 
+                title: 'Blog', 
+                onclick: track_event('Project Conf 2014', 'View blog posts', 
+                                      label: 'Cindy Lewis') }Blog
 %p
   E-mail: 
-  %a{ href: 'mailto:cindy.lewis@advisicon.com', onclick: track_event('Project Conf 2014', 'Email', label: 'Cindy Lewis') }Cindy.Lewis@advisicon.com
+  %a{ href: 'mailto:cindy.lewis@advisicon.com', 
+      onclick: track_event('Project Conf 2014', 'Email', 
+                            label: 'Cindy Lewis') }Cindy.Lewis@advisicon.com
 %p
   Phone: 
-  %a{ href: 'tel:+1-616-446-8569', onclick: track_event('Project Conf 2014', 'Phone', label: 'Cindy Lewis') }616.446.8569
+  %a{ href: 'tel:+1-616-446-8569', 
+      onclick: track_event('Project Conf 2014', 'Phone', 
+                            label: 'Cindy Lewis') }616.446.8569
 
 
 
 %h2 Tim Runcie, PMP, MCP, MCTS, V-TSP, MVP
-%div{ :itemscope => 'itemscope', :itemtype => 'http://schema.org/Event' }
-  %h3{ :itemprop => 'name' }
+%div{ itemscope: true, itemtype: 'http://schema.org/Event' }
+  %h3{ itemprop: 'name' }
     Development World Meets Project Management. Leveraging Project Server with Team Foundation Server
-  %meta{ :itemprop => 'startDate', :content => '2014-02-03T11:15' }
-  %meta{ :itemprop => 'endDate',   :content => '2014-02-03T12:30' }
+  %meta{ itemprop: 'startDate', content: '2014-02-03T11:15' }
+  %meta{ itemprop: 'endDate',   content: '2014-02-03T12:30' }
   %p
     Date: Monday, February 3
     %br
     Time: 2:00 PM - 3:15 PM
     %br
-    %span{ :itemprop => 'location', :itemscope => 'itemscope', :itemtype => 'http://schema.org/Place' }
+    %span{ itemprop: 'location', itemscope: true, itemtype: 'http://schema.org/Place' }
       Room: 201 A    
-  %div{ :itemprop => 'description' }
+  %div{ itemprop: 'description' }
     %p 
       In most organizations capturing and managing details within agile or 
       development teams proves difficult for project managers.  In many cases 
@@ -114,12 +136,18 @@ layout: base-alt/default.haml
       Online, while keeping your technical teams focussed in the environment they 
       are familiar with.
   .extras       
-    %a{ href: '#', onclick: track_event('Project Conf 2014', 'Download PPT', label: 'Development World Meets Project Management. Leveraging Project Server with Team Foundation Server') }Download PPT
+    %a{ href: '#', 
+        onclick: track_event('Project Conf 2014', 'Download PPT', 
+                              label: 'Development World Meets Project Management. Leveraging Project Server with Team Foundation Server') }Download PPT
            
 %h4 Reach Tim @ Conf
 %p
   E-mail: 
-  %a{ href: 'mailto:tim.runcie@advisicon.com', onclick: track_event('Project Conf 2014', 'Download PPT', label: 'Tim Runcie') }Tim.Runcie@advisicon.com
+  %a{ href: 'mailto:tim.runcie@advisicon.com', 
+      onclick: track_event('Project Conf 2014', 'Download PPT', 
+                            label: 'Tim Runcie') }Tim.Runcie@advisicon.com
 %p
   Phone: 
-  %a{ href: 'tel:+1-503-799-5343', onclick: track_event('Project Conf 2014', 'Phone', label: 'Tim Runcie') }503.799.5343
+  %a{ href: 'tel:+1-503-799-5343', 
+      onclick: track_event('Project Conf 2014', 'Phone', 
+                            label: 'Tim Runcie') }503.799.5343
