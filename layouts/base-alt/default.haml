@@ -49,13 +49,7 @@
       %aside#secondaryContent
         = render_partial '/partials/social_media_profiles'
         = render_partial '/partials/advert_project'
-        .rPopBox
-          %h3 Recent Blog Posts
-          %ul#feedContent
-            - if (employee_name != nil) && (employee_name != '') && defined?(employee_name)
-              %li{ :author => "#{employee_name}"} Visit the <a href="http://blog.advisicon.com/author/#{employee_name}" title="view posts by #{employee_name} on the Advisicon blog">Advisicon blog</a> to view more posts by #{employee_name}.
-            - else
-              %li Visit the Visit the <a href="http://blog.advisicon.com/" title="view the Advisicon blog">Advisicon blog</a> to see our most recent blog posts.
+        = render_partial '/partials/recent_blog_posts'
         = render_partial '/partials/featured_tools'
         -if title != ('Events'||'Project Online Trial')
           = render_partial '/partials/news_and_events'

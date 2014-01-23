@@ -1,0 +1,10 @@
+.rPopBox
+  %h3 Recent Blog Posts
+  %ul#feedContent
+    - if defined?(employee_name)
+      - puts "Employee Name #{employee_name}"
+      %li{ author: employee_name }
+        Visit the <a href="http://blog.advisicon.com/author/#{employee_name.chomp.gsub(/\s+/, '-')}" title="view posts by #{employee_name} on the Advisicon blog">Advisicon blog</a> to view more posts by #{employee_name}.
+    - else
+      %li
+        Visit the <a href="http://blog.advisicon.com/" title="view the Advisicon blog">Advisicon blog</a> to see our most recent blog posts.
