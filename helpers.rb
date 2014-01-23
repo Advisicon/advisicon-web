@@ -13,6 +13,13 @@ module FrankHelpers
                                 '’'  => '&rsquo;',
                                 '®'  => '&reg;')
   end
+  def full_title(title)
+    if defined?(title) && title != nil && title.downcase != "advisicon"
+      "#{title} | Advisicon"
+    else
+      "Advisicon"
+    end
+  end
   require './helpers/microdata'
   require './helpers/google_analytics'
 end
