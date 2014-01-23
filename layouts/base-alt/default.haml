@@ -17,7 +17,7 @@
   %meta{ :name => 'keywords', :content => "#{keywords}"  }
   %meta{ :itemprop => 'name', :content => "Advisicon: #{title}" }
   %meta{ :name => 'description', :itemprop => 'description', :content => "#{description}" }
-  %title= "#{title} | Advisicon"
+  %title #{full_title(title)}
   / Mobile viewport optimized: h5bp.com/viewport
   %meta{ :name => 'viewport', :content => 'width=device-width' }
   / Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons
