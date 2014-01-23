@@ -8,8 +8,10 @@ module FrankHelpers
   require 'cgi'
   require 'uri'
   def clean_course_title(title)
-    CGI::escapeHTML(title).gsub(/['’®]/, '\'' => '&#39;', '’' => '&rsquo;',
-                               '®' => '&reg;')
+    CGI::escapeHTML(title).gsub(/['’®]/, 
+                                '\'' => '&#39;', 
+                                '’'  => '&rsquo;',
+                                '®'  => '&reg;')
   end
   require './helpers/microdata'
   require './helpers/google_analytics'
