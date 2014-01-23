@@ -13,9 +13,11 @@ module FrankHelpers
                                 '’'  => '&rsquo;',
                                 '®'  => '&reg;')
   end
-  def full_title(title)
-    if defined?(title) && title != nil && title.downcase != "advisicon"
-      "#{title} | Advisicon"
+  def full_title(options ={})
+    if defined?(options[:job_title]) && options[:job_title] != nil
+      "Advisicon job: #{options[:job_title]}"
+    elsif defined?(options[:title]) && options[:title] != nil && options[:title].downcase != "advisicon"
+      "#{options[:title]} | Advisicon"
     else
       "Advisicon"
     end

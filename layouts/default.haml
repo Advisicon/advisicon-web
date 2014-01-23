@@ -15,9 +15,14 @@
     More info: h5bp.com/i/378
   %meta{ 'http-equiv' => 'X-UA-Compatible', content: 'IE=edge,chrome=1' }
   %meta{ name: 'keywords', content: keywords  }
-  %meta{ itemprop: 'name', content: full_title(title) }
+  - title_hash = {}
+  - if defined?(title)
+    - title_hash[:title] = title
+  - elsif defined?(job_title)
+    - title_hash[:job_title] = job_title
+  %meta{ itemprop: 'name', content: full_title(title_hash) }
   %meta{ name: 'description', itemprop: 'description', content: description }
-  %title #{full_title(title)}
+  %title #{full_title(title_hash)}
   -# Mobile viewport optimized: h5bp.com/viewport
   %meta{ name: 'viewport', content: 'width=device-width' }
   -# 
