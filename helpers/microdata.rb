@@ -19,3 +19,6 @@ def location(locality, region)
             "</span>" +
           "</span>"
 end
+def base_salary(amount)
+  "<span itemprop='baseSalary'>#{amount}</span>"
+end
