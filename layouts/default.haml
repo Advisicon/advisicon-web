@@ -82,6 +82,8 @@
         <section id='main' itemscope itemtype='http://schema.org/LocalBusiness'>
       - elsif defined?(job_title)
         <section id='main' itemscope itemtype='http://schema.org/JobPosting'>
+      - elsif defined?(case_study) && case_study == true
+        <section id='main' itemscope itemtype='http://schema.org/Article'>
       - else
         <section id='main'>
 
