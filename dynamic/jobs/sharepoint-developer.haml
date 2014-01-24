@@ -1,227 +1,130 @@
-<!doctype html itemscope itemtype="http://schema.org/JobPosting">
-<!--
-                                                `                                                   
-                                               +m`                                                  
-                                              :MMd`                                                 
-                                             -NMMMh                                                 
-                                            .NMMMMMs                                                
-                                           `mMMMMMMM+                                               
-                                           dMMMMMMMMM/                                              
-                                          yMMMMMMMMMMM-                                             
-                                         oMMMMMMMMMMMMN.                                            
-                                        +MMMMMMMMMMMMMMm`                                           
-                                       :MMMMMMMm+MMMMMMMd`                                          
-                                      -NMMMMMMN. oMMMMMMMh                                          
-                                     .NMMMMMMM:   yMMMMMMMs                                         
-                                    `mMMMMMMM+     dMMMMMMM+                                        
-                                    dMMMMMMMs      `mMMMMMMM/                                       
-                                   yMMMMMMMh        -NMMMMMMM-                                      
-                                  sMMMMMMMm`         :MMMMMMMN.                                     
-                                 +MMMMMMMN.           +MMMMMMMm`                                    
-            `..---:::::::::---.....--:/+o-             sMMMMMMMd`                                   
-      .:/osssssssoo+++/////////++++oosso+//:-..`        hMMMMMMMh                                   
-   `/ssssso/-.`               .soo++/::``..--:/++++/:-.``+shmMMMMs                                  
-   ossss:`                   `mMMMMMMMh            `.-:/++/:..:+ym+                                 
-   +sss/                     dMMMMMMMm`                   `.:/++:-.          ````                   
-    :sso`               -   yMMMMMMMN.        ..`          /ds+-.-/+/-           `....              
-      -+o:`             ./-oMMMMMMMM:        //-.-.         sMMMMds/.-//-            `-::.          
-        `-//-`            sMMMMMMMM+         -++//`          hMMMMMMMd. ./-              -++-       
-            `--..`       :MMMMMMMMs            ``            `dMMMMMMMm`  `-               :ss/`    
-                 `..``` :MMMMMMMMh/++:-`                      `mMMMMMMMd                    osss.   
-                       -NMMMMMMMd`   .-/++/:-.`                -NMMMMMMMy                 `/ssss+   
-                      `mMMMMMMMm`          .-:/++++/:--..`      /MMMMMMMMs            `.:+sssss+`   
-                     `dMMMMMMMN-                  `.--:/++oooo+++dMMMMMMMMo::::///+oosssssso/-`     
-                     hMMMMMMMM:                              ``..-hMMMMMMMMy++++////::--.`          
-                    sMMMMMMMM+                                    `mMMMMMMMN-                       
-                   oMMMMMMMMs                                      .NMMMMMMMN.                      
-                  /MMMMMMMMh                                        :MMMMMMMMm`                     
-                 -MMMMMMMMd`                                         +MMMMMMMMd`                    
-                .NMMMMMMMN.                                           sMMMMMMMMh                    
-                -////////.                                             /////////.                   
-                                                                                                    
-                                                                                             ---`   
-     ``        ..`       ``   .      ``       `-.       .        `..       `-.        .   . .:---   
-     sm`       m/+h:     -m  -m      h/      ho:/-      m-      +h//.     +y:+h`      mo  m  `.`    
-    `m++       m` :d      d: s+      h/     `m-         m-     `N        `M`  yo      ms- m         
-    +o`d       m` .N      /y m`      h/      `os/       m-     .d        -M   sy      N`h`m         
-    mo+m:      m` :d       m+o       h/         ss      m-     `N`       `M`  yo      N`-ym         
-   :d``:h      m+oh-       +N.       h/      o:/h:      m-      oh//.     +y/+h`      N` +d         
-   ``   .      ..`          .        ``      `..        .        `..       `..        .   .         
-                                                                                                    
--->
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/JobPosting"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-	<meta name="google-site-verification" content="jdLTywbexVH-8P7WmQp_agAuQGsl84-3bwwHwlrAtbs" />
-	<meta name="verify-v1" content="Mn4HP1CuzeMuTt3AIDZiBOhx9QSkzo2pDByQ1HaTMKk=" />
+job_title: SharePoint Developer
+keywords: Job, Career, Developer, SharePoint, Microsoft
+description: Develop and deploy SharePoint Services applications used by project management and technical project teams, and provide administrator support for SharePoint Services.
+live: true
+layout: default.haml
+--------------------------------------------------------META
 
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/i/378 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="keywords" content="Job, Career, Developer, SharePoint, Microsoft" />
+- @advisicon  = hiringOrganization('Advisicon')
+- @industry   = industry('professional services consulting')
+- @location   = location('Vancouver', 'Washington')
 
-	<title>SharePoint Developer | Careers | Advisicon</title>
-	<meta itemprop="name" content="SharePoint Developer job posting" /> <!-- for G+ button, keep this in the header -->
-	<meta name="description" itemprop="description" content="Your job: develop and deploy SharePoint Services applications used by project management and technical project teams, and provide administrator support for SharePoint Services." /> <!-- for G+ button, keep this in the header -->
-
-  <!-- Mobile viewport optimized: h5bp.com/viewport -->
-  <meta name="viewport" content="width=device-width">
-
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-	<link rel="stylesheet" href="/styles/css/style.css" />
-
-  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-
-  <!-- All JavaScript at the bottom, except this Modernizr build.
-       Modernizr enables HTML5 elements & feature detects for optimal performance.
-       Create your own custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="/js/libs/modernizr-2.5.3.min.js"></script> <!-- Modernizr. Super sweet. Keep this in the head. -->
-  <script src="/js/libs/css3-mediaqueries.js"></script>
-
-</head>
-<body>
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-  <!--[if lt IE 8]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-  <header>
-
-  </header>
-  <div role="main">
-	<div id="content">
-		<img border="0"  src="/pix/advisicon_banner-012709.jpg" alt="Advisicon, Inc." id="advisiconBanner" width="950" height="110" usemap="#Map" />
-		<!-- #include virtual="/include/topNavTrial.htm" -->
-		<!-- #include virtual="/include/navAndCred.htm" -->
-		<aside id="secondaryContent">
-			<!-- #include virtual="/include/socialMediaProfiles.htm" -->
-			<!-- #include virtual="/include/newsEvents.htm" -->
-			<!-- #include virtual="/include/courseListings.htm" -->
-			<!-- #include virtual="/include/featuredBooks.htm" -->
-		</aside>
-		<section id="main"> 
-			<h1 itemprop="title">SharePoint Developer</h1>
-				<p><span itemprop="hiringOrganization" itemscope itemtype="http://schema.org/Organization"><span itemprop="name">Advisicon</span></span>, a <span itemprop="industry">professional services consulting</span> company based in <span itemprop="jobLocation" itemscope itemtype="http://schema.org/Place"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Vancouver</span>, <span itemprop="addressRegion">Washington</span></span></span> seeks candidates for a SharePoint Developer.</p>
-				<p><em>Salary:</em> $<span itemprop="baseSalary">65000</span> to $85000 DOE.</p>
-			<h2>Summary</h2>
-				<p>We are looking for an experienced SharePoint Developer. You will be responsible for developing and deploying SharePoint Services applications used by project management and technical project teams, and provide administrator support for SharePoint Services.</p>
-				<p>Primary responsibilities will be to :</p>
-					<ul itemprop="responsibilities">
-						<li>Work in collaboration with content owners to establish sites.</li>
-						<li>Convert and migrate content from other websites to establish the intranet portal as the primary collaboration tool for the user community.</li>
-						<li>Integrate &amp; customize commercial applications as required. Primarily applications in:
-							<ul>
-								<li>Project management</li>
-								<li>Workflows</li>
-								<li>Document management</li>
-								<li>Shared work spaces for project teams
-							</ul>
-						</li>
-						<li>You will also evaluate technologies in the emerging portal industry, SharePoint trends and related technologies and recommend implementation of new technologies as appropriate.</li>
-					</ul>
-				<p>Non-Technical responsibilities include:</p>
-					<ul itemprop="responsibilities">
-						<li>The need to develop and maintain best practices and standards for operation of the portal.</li>
-					</ul>
-				<p>Additional responsibilities will include:</p>
-					<ul itemprop="responsibilities">
-						<li>Cross training other IT staff in the administration of the SharePoint server, portal sites and pages.</li>
-					</ul>
-				
-				<p>Must have ability to:</p>
-					<ul itemprop="responsibilities">
-						<li>Design, implement and maintain high quality, scalable and extendable SharePoint solutions.</li>
-						<li>Migrate and implement plans that address both tactical and strategic needs.</li>
-						<li>Design and implement of workflows to support business processes.</li>
-						<li>Code, test and implement solutions in a SharePoint environment.</li>
-						<li>Analyze technologies, technical processes and/or functions, document findings, identify areas for improvement and create specifications.</li>
-						<li>Unit test all assigned deliverables.</li>
-						<li>Work from high level requirements through detailed specifications, prototype, software deployment and administration.</li>
-						<li>Design and implement custom Web Parts and other programs that leverage the SharePoint object model.</li>
-					</ul>
-
-			<h2>Professional Experience</h2>
-				<ul itemprop="experienceRequirements">
-					<li>Web Page development and design experience.</li>
-				</ul>
-				
-			<h2>Core Professional Skills</h2>
-				<ul itemprop="skills">
-					<li>SharePoint 2010, 2007 Development</li>
-					<li>HTML 5</li>
-					<li>CSS</li>
-					<li>SSRS</li>
-					<li>C#, XSL</li>
-					<li>JavaScript/JQuery</li>
-					<li>SQL-Server</li>
-					<li>.Net Framework</li>
-					<li>SharePoint Designer</li>
-				</ul>
-			<h2>Bonus Skills</h2>
-				<ul>
-					<li>Project Server/Performance Point Server</li>
-					<li>Integration
-						<ul>
-							<li>Dynamics Platform</li>
-							<li>ERP (SAP or PeopleSoft)</li>
-							<li>QuickBooks</li>
-						</ul>
-					</li>
-					<li>Microsoft office product development
-						<ul>
-							<li>MS Access, Excel</li>
-							<li>Macro or Office Apps</li>
-						</ul>
-					</li>
-				</ul>
-			<h2>Personal Qualifications</h2>
-				<ul itemprop="qualifications">
-					<li>Excellent communication skills &ndash; verbal and written &ndash; to facilitate working with the clients in determining requirements</li>
-					<li>Ability to interact with business users at all levels</li>
-					<li>US citizenship or green card</li>
-				</ul>
-			<h2>How to Apply</h2>
-				<p>Submit your resume to <a href="mailto:careers@advisicon.com?subject=Application:%20SharePoint%20Developer" title="Apply to be our next SharePoint Developer" class="email" onclick="_gaq.push(['_trackEvent', 'Emails', 'SharePoint Developer Position', 'via careers@advisicon.com']);">careers@advisicon.com</a>.</p>
-		</section>
-	</div> <!-- END #content -->
-
-  </div>
-  <footer>
-	<!-- #include virtual="/include/footer.htm" -->
-
-  </footer>
-<map name="Map" id="Map">
-  <area shape="rect" coords="858,21,936,99" href="/" alt="Advisicon Home" />
-  <area shape="rect" coords="860,22,861,24" href="#" alt="Advisicon" />
-</map>
+%h1{ itemprop: 'title' } #{job_title}
+%p
+  #{@advisicon}, a #{@industry} company based in #{@location} seeks candidates 
+  for a #{job_title}.
+  <em>Salary:</em> $#{base_salary(65000)} to $85000 DOE.
 
 
-  <!-- JavaScript at the bottom for fast page loading -->
+%h2 Position Description Summary
+%p{ itemprop: 'description' }
+  We are looking for an experienced #{job_title}. You will be responsible for 
+  developing and deploying SharePoint Services applications used by project 
+  management and technical project teams, and provide administrator support for 
+  SharePoint Services.
+%p
+  Primary responsibilities will be to:
+%ul{ itemprop: 'responsibilities' }
+  %li 
+    Work in collaboration with content owners to establish sites.
+  %li 
+    Convert and migrate content from other websites to establish the intranet 
+    portal as the primary collaboration tool for the user community.
+  %li
+    Integrate &amp; customize commercial applications as required. Primarily 
+    applications in:
+    %ul
+      %li Project management
+      %li Workflows
+      %li Document management
+      %li Shared work spaces for project teams
+  %li
+    You will also evaluate technologies in the emerging portal industry, 
+    SharePoint trends and related technologies and recommend implementation of 
+    new technologies as appropriate.
 
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.6.0.min.js"><\/script>')</script>
+%p Non-Technical responsibilities include:
+%ul{ itemprop: 'responsibilities' }
+  %li
+    The need to develop and maintain best practices and standards for operation 
+    of the portal.
 
-  <!-- scripts concatenated and minified via build script -->
-  <script src="/js/plugins.js"></script>
-  <script src="/js/script.js"></script>
-	<script src="/Scripts/twitter.js" type="text/javascript"></script> <!-- loads tweets. Since this is *kinda* producing content, leaving in the head too. Now moved to bottom -->
-<script src="/jscript/jquery.easing.1.3.js" type="text/javascript"></script> <!-- I believe this is for animating the slides in that (ridiculous) header -->
-<script src="/jscript/2/jquery.hslides.js" type="text/javascript"></script> <!-- Part of the slide control in the header -->
-<!-- <script src="jscript/2/jquery.hoverintent.js" type="text/javascript"></script> --> <!-- Not really sure why we are using this. Doesn't seem to apply to anything we've got going on this page at the moment. Likely useless. -->
-<script src="/jscript/2/jquery.innerfade.js" type="text/javascript"></script> <!-- Animates the fade in/fade out of book in the "Featured Books section" -->
-<script src="/Scripts/frontPageSlideshowHeader.js" type="text/javascript"></script> <!-- Controls the display of that silly banner at the top of the index page. It sizes all of the slides the same [Jeff] -->
-<script src="/Scripts/featuredProducts.js" type="text/javascript"></script> <!-- Controls the slideshow action of fading from book to book in the "Featured Books" section of the index page [Jeff] -->
-<script src="/Scripts/googlePlusOneButton.js" type="text/javascript"></script><!-- Render call for the google +1 link [Jeff] -->
-  <!-- end scripts -->
+%p Additional responsibilities will include:
+%ul{ itemprop: 'responsibilities' }
+  %li
+    Cross training other IT staff in the administration of the SharePoint server, 
+    portal sites and pages.
 
-  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-       mathiasbynens.be/notes/async-analytics-snippet -->
-	<script src="/Scripts/rootGoogleAnalytics.js" type="text/javascript"></script>
-	
-</body>
-</html>
+%p Must have ability to:
+%ul{ itemprop: 'responsibilities' }
+  %li
+    Design, implement and maintain high quality, scalable and extendable 
+    SharePoint solutions.
+  %li
+    Migrate and implement plans that address both tactical and strategic needs.
+  %li
+    Design and implement of workflows to support business processes.
+  %li
+    Code, test and implement solutions in a SharePoint environment.
+  %li
+    Analyze technologies, technical processes and/or functions, document 
+    findings, identify areas for improvement and create specifications.
+  %li
+    Unit test all assigned deliverables.
+  %li
+    Work from high level requirements through detailed specifications, prototype, 
+    software deployment and administration.
+  %li
+    Design and implement custom Web Parts and other programs that leverage the 
+    SharePoint object model.
+
+
+%h2 Professional Experience
+%ul{ itemprop: 'experienceRequirements' }
+  %li Web Page development and design experience.
+
+
+%h2 Core Professional Skills
+%ul{ itemprop: 'skills' }
+  %li SharePoint 2010, 2007 Development
+  %li HTML 5
+  %li CSS
+  %li SSRS
+  %li C#, XSL
+  %li JavaScript/JQuery
+  %li SQL-Server
+  %li .Net Framework
+  %li SharePoint Designer
+
+
+%h2 Bonus Skills
+%ul{ itemprop: 'skills' }
+  %li 
+    Project Server/Performance Point Server
+  %li 
+    Integration
+    %ul
+      %li Dynamics Platform
+      %li ERP (SAP or PeopleSoft)
+      %li QuickBooks
+  %li 
+    Microsoft office product development
+    %ul
+      %li MS Access, Excel
+      %li Macro or Office Apps
+
+
+%h2 Personal Qualifications
+%ul{ itemprop: 'qualifications' }
+  %li 
+    Excellent communication skills &ndash; verbal and written &ndash; to 
+    facilitate working with the clients in determining requirements
+  %li
+    Ability to interact with business users at all levels
+  %li
+    US citizenship or green card
+
+
+%h3 How to Apply
+%p
+  Submit your resume to #{track_job_application('careers@advisicon.com', job: job_title)}.
