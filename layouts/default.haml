@@ -60,8 +60,10 @@
                             usemap: '#Map' }
       .navbar
         = render_partial '/partials/main_navigation'
-        - if defined?(title)
+        - if defined?(title) && title == nil
           = render_partial '/partials/slideshow'
+        - else
+          = render_partial '/partials/highlights_navigation'
       = render_partial '/partials/secondary_nav_and_credentials'
       %aside#secondaryContent
         = render_partial '/partials/social_media_profiles'
@@ -72,9 +74,16 @@
           = render_partial '/partials/recent_blog_posts'
         = render_partial '/partials/featured_tools'
         = render_partial '/partials/featured_books'
-      %section#main{ itemscope: true, itemtype: 'http://schema.org/LocalBusiness' }
+      - if defined?(title) && title == nil
+        <section id='main' itemscope itemtype='http://schema.org/LocalBusiness'>
+      - elsif defined?(job_title)
+        <section id='main' itemscope itemtype='http://schema.org/JobPosting'>
+      - else
+        <section id='main'>
 
-        =yield
+      =yield
+        
+      </section>
     %footer
       = render_partial '/partials/footer'
     %map#Map{ name: 'Map' }
