@@ -6,8 +6,8 @@ layout: default.haml
 --------------------------------------------------------META
 
 %h1{ itemprop: 'headline' }
-  %span{ itemprop: 'genre' }= "Case Study"
-  : Microsoft Project Server 2010 Integration with SAP
+  <span itemprop='genre'>Case Study</span>:
+  Microsoft Project Server 2010 Integration with SAP
 %div{ itemprop: 'articleBody' }
   %div#abstract
     %h2 Abstract
@@ -93,7 +93,7 @@ layout: default.haml
       Customer loved the Project Professional 2010 interface that allows them 
       to build grouping, views and reports in minutes and respond to Senior 
       Managements need for graphical reporting
-  %div id="softwareAndServices">
+  #softwareAndServices
     %h2 Software and Services
     %img{ alt: 'Project 2010', src: '/pix/projectserver2010.png', width: '238', height: '47' }
     %img{ alt: 'SharePoint 2010', src: '/pix/sharepoint2010.png', width: '229', height: '53' }
@@ -134,20 +134,21 @@ layout: default.haml
     %li PMOs
   %h2 Full White Paper
   %p
-    You can <a href="http://technet.microsoft.com/en-us/library/hh770392.aspx" title="Read the complete white paper on Microsoft's site" itemprop="url">read the full white paper online at Microsoft&rsquo;s TechNet site</a> or download a copy of our case study (in Microsoft 
-    Word or Adobe Acrobat format) below.
+    You can <a href="http://technet.microsoft.com/en-us/library/hh770392.aspx" 
+    title="Read the complete white paper on Microsoft's site" 
+    itemprop="url">read the full white paper online at Microsoft&rsquo;s TechNet site</a> 
+    or download a copy of our case study (in Microsoft Word or Adobe Acrobat 
+    format) below.
   %div.downloadables
     %a.download{ href: 'http://go.microsoft.com/fwlink/p/?LinkId=238714', 
                  title: 'Download the full SAP case study in Microsoft Word format', 
                  itemprop: 'url',
                  onclick: track_event('Download', 
                                       'White Paper', 
-                                      label: 'SAP Case Study .docx file') 
-    }DOCX Download
+                                       label: 'SAP Case Study .docx file') }DOCX Download
     %a.download{ href: 'http://go.microsoft.com/fwlink/p/?LinkId=238716',
-        title: 'Download the full SAP case study in Adobe Acrobat format',
-        itemprop: 'url',
-        onclick: track_event('Download',
-                             'White Paper',
-                             label: 'SAP Case Study .pdf file')
-    }PDF Download
+                 title: 'Download the full SAP case study in Adobe Acrobat format',
+                 itemprop: 'url',
+                 onclick: track_event('Download',
+                                      'White Paper',
+                                       label: 'SAP Case Study .pdf file') }PDF Download
