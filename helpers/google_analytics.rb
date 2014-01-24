@@ -20,13 +20,14 @@ def track_event(category, action, options = {})
 end
 def track_job_application(text, options={})
   options[:job] ||= nil
+  options[:email] ||= 'careers@advisicon.com'
 
   @class = 'email'
-  @href  = "mailto:careers@advisicon.com?subject=Application:%20#{URI.encode(options[:job])}"
+  @href  = "mailto:#{options[:email]}?subject=Application:%20#{URI.encode(options[:job])}"
   @title = "Apply to be our next #{options[:job]}"
   @onclick = track_event('Emails', 
                          "Apply to #{options[:job]} position", 
-                          label: 'via careers@advisicon.com')
+                          label: "via #{options[:email]}")
 
   "<a class='#{@class}' href='#{@href}' title='#{@title}' onclick='#{@onclick}'>#{text}</a>"
 end
