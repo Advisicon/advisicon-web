@@ -137,9 +137,4 @@ layout: default.haml
 
 %h3 How to Apply
 %p
-  Submit your resume to 
-  %a.email{ href: "mailto:careers@advisicon.com?subject=Application:%20#{URI.encode(job_title)}", 
-            title: "Apply to be our next #{job_title}", 
-            onclick: track_event('Emails', 
-                                 "Apply to #{job_title} position", 
-                                 label: 'via careers@advisicon.com') }careers@advisicon.com
+  Submit your resume to #{track_job_application('careers@advisicon.com', job: job_title)}.
