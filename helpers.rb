@@ -7,12 +7,15 @@ module FrankHelpers
   require 'json'
   require 'cgi'
   require 'uri'
+  require 'nokogiri'
+
   def clean_course_title(title)
     CGI::escapeHTML(title).gsub(/['’®]/, 
                                 '\'' => '&#39;', 
                                 '’'  => '&rsquo;',
                                 '®'  => '&reg;')
   end
+
   def full_title(options ={})
     if defined?(options[:job_title]) && options[:job_title] != nil
       "Advisicon job: #{options[:job_title]}"
@@ -22,6 +25,7 @@ module FrankHelpers
       "Advisicon"
     end
   end
+  
   require './helpers/microdata'
   require './helpers/google_analytics'
 end

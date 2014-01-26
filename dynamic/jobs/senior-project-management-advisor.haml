@@ -1,0 +1,57 @@
+job_title: Senior Project Management Advisor
+keywords: Job, Career, Senior, Microsoft, PMO, Project Management, Program Management, Portfolio Management, Microsoft Project Server, Project Server, Microsoft SharePoint, training, consulting, EPM
+description: Provide the customer with a blend of skills around EPM, technology, and strategic business analysis.
+live: true
+layout: default.haml
+--------------------------------------------------------META
+
+- @advisicon  = hiringOrganization('Advisicon')
+- @industry   = industry('professional services consulting')
+- @location   = location('Vancouver', 'Washington')
+
+%h1{ itemprop: 'title' } #{job_title}
+%p
+  #{@advisicon}, a #{@industry} company based in #{@location} seeks candidates 
+  for a #{job_title} position.
+%p
+  NOTE: <strong itemprop="experienceRequirements">Automotive industry experience required</strong>.
+
+
+%h2 Position Description Summary
+%p{ itemprop: 'description' }
+  A #{job_title} will provide the customer with a blend of skills around 
+  <abbr title="Enterprise Project Management">EPM</abbr>, technology, and 
+  strategic business analysis. The Senior PM Advisor will 
+  <span itemprop="responsibilities">engage in managing large scale EPM 
+  deployments</span>.
+%p
+  The Senior PM Advisor will <span itemprop="responsibilities">identify 
+  customer business problems</span>, <span itemprop="responsibilities">map 
+  customer business problems to a solution</span>, <span itemprop="responsibilities">
+  manage stakeholder expectations</span>, <span itemprop="responsibilities">
+  manage on-site and remote deployment team activities</span>, 
+  <span itemprop="responsibilities">track deployment progress</span>, 
+  <span itemprop="responsibilities">conduct on-going risk analysis and issue 
+  management</span>, <span itemprop="responsibilities">assist in knowledge 
+  transfer</span>, and <span itemprop="responsibilities">facilitate the 
+  deployment of the services and technology described in the proposed solution</span>.
+%ul{ itemprop: 'experienceRequirements' }
+  %li
+    Experience in the automotive industry is required to be considered for 
+    this position.
+  %li
+    Experience with Microsoft EPM (2007 or 2010) and 
+    <abbr title="Project Management Professional">PMP</abbr> credential is 
+    highly desired.
+  %li
+    Preference will be given to candidates located in the Detroit, MI area, or 
+    to candidates who are willing to relocate or travel frequently to site.
+%p
+  Advisicon delivers strategic project control solutions using advanced project 
+  and portfolio management methodologies, custom application development and 
+  consultative training. 
+
+
+%h3 How to Apply
+%p
+  Submit your resume to #{track_job_application('careers@advisicon.com', job: job_title)}.
