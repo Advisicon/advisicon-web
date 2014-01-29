@@ -244,9 +244,15 @@ td { vertical-align: top; }
     color: rgba(@rgba-red, @rgba-green, @rgba-blue, @rgba-alpha);
   }
   .advisiconFont(@height: 12) { /* sets font size, leading, and family */
-    font-family: 'Calibri', Arial, San-Serif;
+    font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
     font-size: @height * 1pt;
     line-height: 1.125;
+  }
+  .advisiconHeader(@height: 12) {
+    .advisiconFont(@height * 1.5);
+    font-family: 'FuturaStd-Condensed', 'Futura Std Bold Condensed', 'Futura Std', Futura, 'Segoe UI Light','Segoe UI Light', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
   }
   .caseStudyHeader {
     background-color: #0f6b99;
@@ -435,8 +441,6 @@ td { vertical-align: top; }
                 margin-left: -1em;
                 padding-bottom: 1em;
                 h3 {
-                  margin-left: 1em / .75;
-                  .advisiconFont(9);
                 }
                 li {
                   margin-left: 1em;
@@ -572,12 +576,13 @@ td { vertical-align: top; }
         padding-bottom: 24em;
       //  float: left;
         h1 {
-          .advisiconFont(18); 
+          .advisiconHeader(18);
           color: @black;
           text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+          margin-top: 12px;
         }
         h2 {
-          .advisiconFont (16);
+          .advisiconHeader(16);
           color: @black;
           padding-top: 1em;
           clear: left;
@@ -608,6 +613,7 @@ td { vertical-align: top; }
           }
         }
         h3 {
+          font-weight: 400;
           a {
             text-decoration: none;
             &:link {
@@ -1186,7 +1192,7 @@ td { vertical-align: top; }
   body{
     margin: 0px;
     padding: 0; 
-    font-family: 'Calibri', Arial, San-Serif;
+    font-family: 'Segoe UI', 'Calibri', Arial, San-Serif;
     font-size: small;
     color:#444;
     background: fixed;
@@ -1473,12 +1479,10 @@ td { vertical-align: top; }
           div {
             &.rPopBox {
               margin:0em 3px 1em 0em;
-              border: 1px solid #bbbbbb;
+              border-left: 1px solid #bbbbbb;
               width:220px;    
               float: right;
               display: block;
-              .rounded-corners(5);
-              .boxShadow(0, 1px, 5px, 1px, #ddd);
               .advisiconFont(10);
               line-height: 1.4;
               a {
@@ -1512,11 +1516,7 @@ td { vertical-align: top; }
                   width: 220px;
                   margin-left: inherit;
                   padding-bottom: inherit;
-                  .rounded-corners(5);
                   h3 {
-                    font-size: medium;
-                    margin: .3em 5px .5em;
-                    color: #000000;
                     width: 200px;
                   }
                   li {
@@ -1524,10 +1524,14 @@ td { vertical-align: top; }
                   }
                 }
               h3 {
-                font-size: medium;
-                margin: .3em 5px .5em;
-                color: #000000;
+                margin: 0 5px .5em 0;
+                padding-left: .3em;
+                color: #eeeeee;
                 width: 200px;
+                .advisiconHeader(12);
+                font-weight: 400;
+                background-color: #333333;
+                letter-spacing: 1px;
               }
               ul {
                 padding-bottom: 2.5em;
@@ -1578,7 +1582,7 @@ td { vertical-align: top; }
                   }
                 }
                 li {
-                  font-weight: bolder;
+                  font-weight: 400;
                   float: left;
                   height: auto;
                   padding-bottom: 1em;
@@ -2446,7 +2450,7 @@ td { vertical-align: top; }
           height: 30px;
           vertical-align: middle;
           text-align: center;
-          font-family:'Calibri', Arial, sans-serif;   
+          font-family: 'Segoe UI Light', 'Calibri', Arial, sans-serif;   
           border-collapse: collapse;
           font-size:medium;
           margin-top: 0;
