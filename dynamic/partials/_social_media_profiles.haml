@@ -17,29 +17,33 @@
                                               label: 'Advisicon Company Profile') }
     %li
       %a.facebook.icon{ target: '_blank', 
-                        href: 'http://www.facebook.com/Advisicon/', 
-                        title: 'Advisicon on Facebook',
+                        href:   'http://www.facebook.com/Advisicon/', 
+                        title:  'Advisicon on Facebook',
                         onclick: track_event('Social Button', 
                                              'Facebook', 
                                               label: 'Advisicon Fan Page') }
     %li
-      %a{ :target => '_blank', :href => 'http://pinpoint.microsoft.com/en-US/partners/Advisicon-Inc-4295604986', :onclick => "_gaq.push(['_trackEvent', 'Social Button', 'Pinpoint', 'Advisicon Listing']);" }
-        %img{ :border => '0', 
-              :src => '/pix/icons/pinpoint.jpg', 
-              :alt => 'Our Microsoft Pinpoint listing', 
-              :width => '40', 
-              :height => '40', 
-              :title => 'Pinpoint' }
+      %a.pinpoint.icon{ target: '_blank', 
+                        href:   'http://pinpoint.microsoft.com/en-US/partners/Advisicon-Inc-4295604986', 
+                        title:  'Advisicon on Pinpoint',
+                        onclick: track_event('Social Button', 
+                                             'Pinpoint', 
+                                              label: 'Advisicon Listing') }
     %li
-      %a{ :target => '_blank', :href => 'http://www.eventbrite.com/org/2432615942?ref=eorgbtn', :onclick => "_gaq.push(['_trackEvent', 'Social Button', 'Eventbrite', 'Advisicon Organization Page']);" }
-        %img{ :border => '0', 
-              :src => 'https://ebmedia.eventbrite.com/s3-s3/static/images/icons/eb-icon_large.png', 
-              :width => '40', 
-              :height => '40', 
-              :title => 'Eventbrite' } 
-              
+      %a.eventbrite.icon{ target: '_blank', 
+                          href:   'http://www.eventbrite.com/org/2432615942?ref=eorgbtn', 
+                          title:  'Advisicon on Eventbrite',
+                          onclick: track_event('Social Button', 
+                                               'Eventbrite', 
+                                                label: 'Advisicon Organization Page') }
     %li
-      .g-plusone
+      %a.googleplus.icon{ target: '_blank',
+                          href: 'https://plus.google.com/+Advisicon/posts',
+                          title: 'Advisicon on Google+',
+                          onclick: track_event('Social Button',
+                                               'Google+',
+                                                label: 'Advisicon g+ page') }
+      -# .g-plusone
       -# <g:plusone></g:plusone> <!-- ALERT: gotta troubleshoot this. Validator is giving me the following error:
       -# Unsafe JavaScript attempt to access frame with URL http://www.advisicon.com/ from frame with URL https://plusone.google.com/_/+1/fastbutton?url=http%3A%2F%2Fwww.advisicon.com%2F&size=standard&count=true&annotation=&hl=en-US&jsh=m%3B%2F_%2Fapps-static%2F_%2Fjs%2Fwidget%2F__features__%2Frt%3Dj%2Fver%3DTrdcjlW0oPo.en_US.%2Fsv%3D1%2Fam%3D!W_gXXLnZrrYgVlks%2Fd%3D1%2F#id=I1_1321645173676&parent=http%3A%2F%2Fwww.advisicon.com&rpctoken=191793283&_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe. Domains, protocols and ports must match.
       -# Button does not load in iPhone 3G Safari browser or the iPhone 3G Opera Mini browser.
