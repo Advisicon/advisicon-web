@@ -2,29 +2,26 @@
   %h3 Follow Us At
   %ul.otherCommsList
     %li
-      %a{ :target => '_blank', :href => 'http://twitter.com/Advisicon', :onclick => "_gaq.push(['_trackEvent', 'Social Button', 'Twitter', 'User: Advisicon']);" }
-        %img{ :border => '0', 
-              :src => '/pix/twitter.png', 
-              :alt => 'Advisicon on Twitter', 
-              :width => '40', 
-              :height => '40', 
-              :title => 'Twitter' }
+      %a.twitter.icon{ target: '_blank', 
+                       href:   'http://twitter.com/Advisicon', 
+                       title:  'Advisicon on Twitter',
+                       onclick: track_event('Social Button', 
+                                            'Twitter', 
+                                             label: 'User: Advisicon') }
     %li
-      %a{ :target => '_blank', :href => 'http://www.linkedin.com/companies/advisicon', :onclick => "_gaq.push(['_trackEvent', 'Social Button', 'LinkedIn', 'Advisicon Company Profile']);" }
-        %img{ :border => '0', 
-              :src => '/pix/linkedinicon.png', 
-              :alt => 'Advisicon on LinkedIn', 
-              :width => '40', 
-              :height => '40', 
-              :title => 'LinkedIn' } 
+      %a.linkedin.icon{ target: '_blank', 
+                        href:   'http://www.linkedin.com/companies/advisicon', 
+                        title:  'Advisicon on LinkedIn', 
+                        onclick: track_event('Social Button', 
+                                             'LinkedIn', 
+                                              label: 'Advisicon Company Profile') }
     %li
-      %a{ :target => '_blank', :href => 'http://www.facebook.com/Advisicon/', :onclick => "_gaq.push(['_trackEvent', 'Social Button', 'Facebook', 'Advisicon Fan Page']);" }
-        %img{ :border => '0', 
-              :src => '/pix/facebook.png', 
-              :alt => 'Advisicon on facebook', 
-              :width => '40', 
-              :height => '40', 
-              :title => 'Facebook' }
+      %a.facebook.icon{ target: '_blank', 
+                        href: 'http://www.facebook.com/Advisicon/', 
+                        title: 'Advisicon on Facebook',
+                        onclick: track_event('Social Button', 
+                                             'Facebook', 
+                                              label: 'Advisicon Fan Page') }
     %li
       %a{ :target => '_blank', :href => 'http://pinpoint.microsoft.com/en-US/partners/Advisicon-Inc-4295604986', :onclick => "_gaq.push(['_trackEvent', 'Social Button', 'Pinpoint', 'Advisicon Listing']);" }
         %img{ :border => '0', 
