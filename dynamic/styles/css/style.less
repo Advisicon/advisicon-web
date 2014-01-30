@@ -250,7 +250,7 @@ td { vertical-align: top; }
   }
   .advisiconHeader(@height: 12) {
     .advisiconFont(@height * 1.5);
-    font-family: 'FuturaStd-Condensed', 'Futura Std Bold Condensed', 'Futura Std', Futura, 'Segoe UI Light','Segoe UI Light', Arial, sans-serif;
+    font-family: 'FuturaStd-Condensed', 'Futura Std Condensed', 'Futura Std', Futura, 'Segoe UI Light','Segoe UI Light', Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 400;
   }
@@ -421,6 +421,7 @@ td { vertical-align: top; }
                 color: #ffffff;
                 .rounded-corners(10);
               }
+              &.bold { font-family: 'Segoe UI bold', Calibri, Arial, sans-serif; }
             }
           }
         }
@@ -1171,9 +1172,6 @@ td { vertical-align: top; }
 
 
 
-
-
-
 /* ==|== media queries ======================================================
    EXAMPLE Media Query for Responsive Design.
    This example overrides the primary ('mobile first') styles
@@ -1436,33 +1434,6 @@ td { vertical-align: top; }
                   color: @red;
                   .boxShadow(0, -1px, 5px, 0, #ccc);
                 }
-              }
-              &.highlightedNavButton {
-                color: #ffffff;
-                color: rgba(254, 254, 254, .75);
-                &:link {
-                  background: #860c0c url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8cmFkaWFsR3JhZGllbnQgaWQ9Imc4NTMiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBjeD0iNTAlIiBjeT0iMCUiIHI9IjUwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNEMTczNzMiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM4NjBDMEMiIG9mZnNldD0iMSIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjZzg1MykiIC8+Cjwvc3ZnPg==) repeat 0 0;
-                  color: #ffffff;
-                  color: rgba(254, 254, 254, .75);
-                }
-                &:visited {
-                  color: #ffffff;
-                  color: rgba(254, 254, 254, .75);
-                }
-                &:hover {
-                  background: #d17373 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8cmFkaWFsR3JhZGllbnQgaWQ9Imc4NzgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBjeD0iNTAlIiBjeT0iMTAwJSIgcj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNEMTczNzMiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM4NjBDMEMiIG9mZnNldD0iMSIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjZzg3OCkiIC8+Cjwvc3ZnPg==) repeat 0 0;
-                  color: #ffffff;
-                  color: rgba(254, 254, 254, .75);
-                  .boxShadow(0, -1px, 5px, 0, #ccc);
-                }
-                &:active {
-                  background: #d17373 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8cmFkaWFsR3JhZGllbnQgaWQ9Imc4NzgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBjeD0iNTAlIiBjeT0iMTAwJSIgcj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNEMTczNzMiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM4NjBDMEMiIG9mZnNldD0iMSIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjZzg3OCkiIC8+Cjwvc3ZnPg==) repeat 0 0;
-                  color: #ffffff;
-                  color: rgba(254, 254, 254, .75);
-                  .boxShadow(0, -1px, 5px, 0, #ccc);
-                }
-              }
-              &.longText {
               }
             }
           }
