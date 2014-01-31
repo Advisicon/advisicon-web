@@ -8,76 +8,84 @@ layout: default.haml
 %h1 Advisicon Careers
 %p Current Openings
 
-:plain
-  <%
+%h2
+  %a{ href: '/jobs/contract-senior-project-advisor.html' }
+    Contract Senior Project Advisor
+%p
+  The Contract Senior Project Advisor will provide the customer with a blend 
+  of skills round enterprise project management, technology, and strategic 
+  business analysis. This position will engage in business and technology 
+  discussions related to business value and end-to-end Microsoft technology 
+  solutions. They will identity customer business problems, map them to a 
+  solution, and facilitate the deployment of the services and technology 
+  described in the recommended solution. This position must also be able to 
+  train individuals on how to use the technology in a corporate and public 
+  environment.
+%p
+  %a{ href: '/jobs/contract-senior-project-advisor.html' }
+    [See details]
 
-  Dim strConnectionJob, connJob, rsJob, strSQLJob 
 
-  strConnectionJob = "Provider=SQLOLEDB;Server=ADVISICON-COLO;Database=AdvisiconCareers;User Id=webuser; password=webuser;encrypt=true" 
+%h2
+  %a{ href: '/jobs/project-consulting-scheduler.html' }
+    Project Consulting Scheduler
+%p
+  The Project Consulting Scheduler will provide clients with a blend of skills 
+  centered on enterprise project management and technology. This position will 
+  engage in business and technology discussions related to enterprise end user 
+  value, including end-to-end Microsoft technology solutions. Candidate will 
+  aid senior Project Advisors in identifying client business problems, aid in 
+  mapping them to a solution, and facilitate the deployment of services and 
+  technology described in the recommended solution. 
+%p
+  %a{ href: '/jobs/project-consulting-scheduler.html' }
+    [See details]
 
-  Set connJob = Server.CreateObject("ADODB.Connection")
 
-  connJob.Open strConnectionJob
+%h2
+  %a{ href: '/jobs/contract-project-scheduler.html' }
+    Contract Project Scheduler
+%p
+  The Project Advisor will provide the customer with a blend of skills centered 
+  on enterprise project management, technology, and strategic business analysis. 
+  This contract position will engage in business and technology discussions 
+  related to enterprise value and end-to-end Microsoft project &amp; team 
+  collaboration technology solutions. Incumbent will identify client business 
+  problems, map them to a solution, and facilitate the deployment of services 
+  and technology described in the recommended solution.
+%p
+  %a{ href: '/jobs/contract-project-scheduler.html' }
+    [See details]
 
-  Set rsJob = Server.CreateObject("ADODB.recordset")
-  strSQLJob = "SELECT dbo.Careers.CareerTitle AS Title, dbo.Careers.CareerDesc AS Description, dbo.Careers.CareerLink AS Link, dbo.Careers.CurrentStatus FROM dbo.Careers WHERE dbo.Careers.CurrentStatus = 'True'"
-  rsJob.open strSQLJob, connJob, 3,3
 
-  %>
+%h2
+  %a{ href: '/jobs/sharepoint-developer.html' }
+    SharePoint Developer
+%p
+  We are looking for an experienced SharePoint Developer. You will be 
+  responsible for developing and deploying SharePoint Services applications 
+  used by project management and technical project teams, and provide 
+  administrator support for SharePoint Services. 
+%p
+  %a{ href: '/jobs/sharepoint-developer.html' }
+    [See details]
 
-  <% do until rsJob.EOF %>
 
-  <%
-    for each x in rsJob.Fields
-      Select Case x.name
-        Case "Title"
-          dim jobTitle
-          jobTitle = x.value
-        Case "Description"
-          dim jobDescription
-          jobDescription = x.value
-        Case "Link"
-          dim detailsLink
-          detailsLink = x.value
-            response.write("<div itemscope itemtype='http://schema.org/JobPosting'><h2 itemprop='title'><a href='/" & detailsLink & "' title='view details about the " & jobTitle & " position'>" & jobTitle & "</a></h2>")
-            response.write("<p itemprop='description'>" & jobDescription & " ")
-            response.write("[See <a href='/" & detailsLink & "' title='view details about the " & jobTitle & " position' itemprop='url'>details</a>]</div>")
-      End Select
-    next
-  %>
-  <% rsJob.MoveNext %>
-  <% loop %>
-  <%rsJob.close%>
--#
-  / %div{ :itemscope => true, :itemtype => 'http://schema.org/JobPosting' }
-  /   %h2{ :itemprop => 'title' }
-  /     %a{ :href => '/jobs/it-integration-advisor.htm', :title => 'view details about the IT Integration Advisor/System Administrator position' }
-  /       IT Integration Advisor/System Administrator
-  /   %p{ :itemprop => 'description' }
-  /     This is a full time, growth opportunity to work with a dynamic team and the opportunity to be on the cutting edge, working on future releases of Microsoft technologies and helping customers get the most out of the tools/technology (new or old).
-  /     [See <a href='/jobs/it-integration-advisor.htm' title='view details about the IT Integration Advisor/System Advisor position' itemprop='url'>details</a>]
-  / %div{ :itemscope => true, :itemtype => 'http://schema.org/JobPosting' }
-  /   %h2{ :itemprop => 'title' }
-  /     %a{ :href => '/jobs/javascript-developer.htm', :title => 'view details about the JavaScript Developer position' }
-  /       JavaScript Developer
-  /   %p{ :itemprop => 'description' }
-  /     We are seeking local, bright, energetic and eager to learn resources that have experience in, as well as welcome the challenges in delivering outstanding customer solutions and developing highly useful applications.
-  /   %p
-  /     Primary responsibilities will be to design and develop new applications using current technologies (Javascript, Jscript, .NET, SQL) and work in various environments including SharePoint and the new Microsoft Marketplace.
-  /     [See <a href='/jobs/javascript-developer.htm' title='view details about the JavaScript Developer position' itemprop='url'>details</a>]
-  / %div{ :itemscope => true, :itemtype => 'http://schema.org/JobPosting' }
-  /   %h2{ :itemprop => 'title' }
-  /     %a{ :href => '/jobs/sharepoint-developer.htm', :title => 'view details about the SharePoint Developer position' }
-  /       SharePoint Developer
-  /   %p{ :itemprop => 'description' }
-  /     We are looking for an experienced SharePoint Developer. You will be responsible for developing and deploying SharePoint Services applications used by project management and technical project teams, and provide administrator support for SharePoint Services.
-  /     [See <a href='/jobs/sharepoint-developer.htm' title='view details about the SharePoint Developer position' itemprop='url'>details</a>]
-  / %div{ :itemscope => true, :itemtype => 'http://schema.org/JobPosting' }
-  /   %h2{ :itemprop => 'title' }
-  /     %a{ :href => '/jobs/senior-project-management-advisor.htm', :title => 'view details about the Senior Project Management Advisor position' }
-  /       Senior Project Management Advisor
-  /   %p{ :itemprop => 'description' }
-  /     A Senior Project Management (PM) Advisor will provide the customer with a blend of skills around enterprise project management (EPM), technology, and strategic business analysis. The Senior PM Advisor will engage in managing large scale EPM deployments.
-  /   %p
-  /     The Senior PM Advisor will identify customer business problems, map them to a solution, manage stakeholder expectations, manage on-site and remote deployment team activities, track deployment progress, conduct on-going risk analysis and issue management, assist in knowledge transfer, and facilitate the deployment of the services and technology described in the proposed solution.
-  /     [See <a href='/jobs/senior-project-management-advisor.htm' title='view details about the Senior Project Management Advisor position' itemprop='url'>details</a>]
+%h2
+  %a{ href: '/jobs/sharepoint-developer.html' }
+    Senior Project Management Advisor
+%p
+  A Senior Project Management (PM) Advisor will provide the customer with a 
+  blend of skills around enterprise project management (EPM), technology, and 
+  strategic business analysis. The Senior PM Advisor will engage in managing 
+  large scale EPM deployments.
+%p
+  The Senior PM Advisor will identify customer business problems, map them to 
+  a solution, manage stakeholder expectations, manage on-site and remote 
+  deployment team activities, track deployment progress, conduct on-going risk 
+  analysis and issue management, assist in knowledge transfer, and facilitate 
+  the deployment of the services and technology described in the proposed 
+  solution. 
+%p
+  %a{ href: '/jobs/sharepoint-developer.html' }
+    [See details]
