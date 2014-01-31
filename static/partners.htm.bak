@@ -287,7 +287,7 @@ Centergy Group provides professional project management services to organization
 <map name="Map2" id="Map2">
   <area shape="rect" coords="1,-2,244,309" href="project_management.htm" onmouseover="MM_swapImage('Image1','','pix/VPhome1.gif',1)" onmouseout="MM_swapImgRestore()" />
   <area shape="rect" coords="244,-54,487,311" href="microsoft_project_office.htm" onmouseover="MM_swapImage('Image1','','pix/VPhome2.gif',1)" onmouseout="MM_swapImgRestore()" />
-  <area shape="rect" coords="487,-49,728,311" href="application_development.htm" onmouseover="MM_swapImage('Image1','','pix/VPhome3.gif',1)" onmouseout="MM_swapImgRestore()" />
+  <area shape="rect" coords="487,-49,728,311" href="application-development.html" onmouseover="MM_swapImage('Image1','','pix/VPhome3.gif',1)" onmouseout="MM_swapImgRestore()" />
 </map>
 </body>
 </html>
