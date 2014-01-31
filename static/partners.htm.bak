@@ -69,7 +69,7 @@ function MM_swapImage() { //v3.0
 <div id="nav">
 <table class="navbarmini">
 <tr>
-  <td width="103" style="padding-top: 2px; padding-bottom: 2px; padding-left: 10px;"><div align="left"><a href="aboutus.htm" class="special style2"><img src="pix/smiley.gif" width="18" height="18" align="absmiddle" border="0" /> About Us</a></div></td>
+  <td width="103" style="padding-top: 2px; padding-bottom: 2px; padding-left: 10px;"><div align="left"><a href="about-us.html" class="special style2"><img src="pix/smiley.gif" width="18" height="18" align="absmiddle" border="0" /> About Us</a></div></td>
   <td width="106" style="padding-top: 2px; padding-bottom: 2px;"><div align="left" style="color:#666666;"><a href="contactus.htm" class="special style2"><img src="pix/phone.gif" width="18" height="18" align="absmiddle" border="0"/> Contact Us</a></div></td>
 <td width="80" style="padding-top: 2px; padding-bottom: 2px;"><div align="left"><a href="index.htm" class="special style2"><img src="pix/home.gif" width="18" height="18" align="absmiddle" border="0"/> Home</a></div></td>
 <td width="78" style="padding-top: 2px; padding-bottom: 2px;"><div align="left"></div></td>

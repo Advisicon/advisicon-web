@@ -100,7 +100,7 @@
       <div class='navbar'>
         <nav id='mainNavigation'>
           <a href='/' id='homepage' title='Advisicon main page'>Home</a>
-          <a href='/aboutus.htm' id='about' title='about Advisicon'>About Us</a>
+          <a href='/about-us.html' id='about' title='about Advisicon'>About Us</a>
           <a href='/contactus.htm' id='contactUs' title='contact Adviscion'>Contact Us</a>
           <a href='http://www.advisiconblog.com' id='blog' target='_blank' title='Advisicon blog'>Blog</a>
           <a href='http://store.advisicon.com' id='advisiconStore' target='_blank' title='Advisicon store'>Store</a>
