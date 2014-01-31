@@ -104,7 +104,7 @@
           <a href='/contactus.htm' id='contactUs' title='contact Adviscion'>Contact Us</a>
           <a href='http://www.advisiconblog.com' id='blog' target='_blank' title='Advisicon blog'>Blog</a>
           <a href='http://store.advisicon.com' id='advisiconStore' target='_blank' title='Advisicon store'>Store</a>
-          <a href='/careers.htm' id='advisiconJobs' title='careers at Advisicon'>Careers</a>
+          <a href='/careers.html' id='advisiconJobs' title='careers at Advisicon'>Careers</a>
           <a class='tel' href='tel:+1-866-362-3847' id='callUs' onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Toll Free']);" title='call us at 1-866-362-3847'>1.866.36.ADVIS</a>
         </nav>
         <nav id='highlightsNavigation'>
