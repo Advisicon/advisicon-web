@@ -206,7 +206,7 @@ table.navbarmini /*This is for the footer navigation [Jeff]*/ {
    font-size:medium;
    margin:auto;
 }
-	/*BEGIN styles from index.htm [Jeff]*/
+	/*BEGIN styles from index.html [Jeff]*/
 	table.navbarmini a {
 	   display: block;
 	   font-size: small;
@@ -220,7 +220,7 @@ table.navbarmini /*This is for the footer navigation [Jeff]*/ {
 		   padding-right: 10px;
 		   float: right;
 		}
-	/*END styles from index.htm [Jeff]*/
+	/*END styles from index.html [Jeff]*/
 
 table.navbarminipad{
    width: 950px;

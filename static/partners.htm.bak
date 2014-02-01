@@ -62,7 +62,7 @@ function MM_swapImage() { //v3.0
   <div id="header">
   <div align="center"><img src="pix/advisiconheader.jpg" width="950" height="133" border="0" usemap="#Map" />
 <map name="Map" id="Map">
-  <area shape="rect" coords="842,30,930,118" href="index.htm" />
+  <area shape="rect" coords="842,30,930,118" href="/" />
 </map></div>
 </div>
 
@@ -71,7 +71,7 @@ function MM_swapImage() { //v3.0
 <tr>
   <td width="103" style="padding-top: 2px; padding-bottom: 2px; padding-left: 10px;"><div align="left"><a href="about-us.html" class="special style2"><img src="pix/smiley.gif" width="18" height="18" align="absmiddle" border="0" /> About Us</a></div></td>
   <td width="106" style="padding-top: 2px; padding-bottom: 2px;"><div align="left" style="color:#666666;"><a href="contact-us.html" class="special style2"><img src="pix/phone.gif" width="18" height="18" align="absmiddle" border="0"/> Contact Us</a></div></td>
-<td width="80" style="padding-top: 2px; padding-bottom: 2px;"><div align="left"><a href="index.htm" class="special style2"><img src="pix/home.gif" width="18" height="18" align="absmiddle" border="0"/> Home</a></div></td>
+<td width="80" style="padding-top: 2px; padding-bottom: 2px;"><div align="left"><a href="/" class="special style2"><img src="pix/home.gif" width="18" height="18" align="absmiddle" border="0"/> Home</a></div></td>
 <td width="78" style="padding-top: 2px; padding-bottom: 2px;"><div align="left"></div></td>
 <td width="234" style="padding-top: 2px; padding-bottom: 2px;"><div align="left"></div></td>
 <td width="187" style="padding-top: 2px; padding-bottom: 2px;"><div align="right" class="style1 style2">503.253.0331</div></td>
@@ -113,7 +113,7 @@ function MM_swapImage() { //v3.0
 	<div><table width="100%"><tr><td>&nbsp;</td></tr>
 	<tr><td align="center"></td>
 	</tr>
-	<tr><td align="center"><a href="index.htm" class="specialhome" onclick="MM_openBrWindow('http://www.advisicon.com.mx','','')">Advisicon Mexico</a></td>
+	<tr><td align="center"><a href="/" class="specialhome" onclick="MM_openBrWindow('http://www.advisicon.com.mx','','')">Advisicon Mexico</a></td>
 	</tr></table></div>
 		  
 		<p><a href="goldcert.htm"><img src="pix/Cert_GoldPrt_gold.gif" alt="Microsoft Certified Gold Partner" width="150" height="60" border="0" style="border-width: 0px;"/></a></p>
