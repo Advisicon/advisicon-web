@@ -18,7 +18,7 @@
   								</tr>
   								<tr>
   									<td>
-  										<a href="http://advisicon.com/partners.htm" onmouseover="MM_swapImage('Image7','','../pix/qlpartnersbuttonhover.gif',1)" onmouseout="MM_swapImgRestore()">
+  										<a href="http://advisicon.com/partners.html" onmouseover="MM_swapImage('Image7','','../pix/qlpartnersbuttonhover.gif',1)" onmouseout="MM_swapImgRestore()">
   											<img src="../pix/qlpartnersbuttonlink.gif" name="Image7" id="Image7" border="0" alt="Partners" />
   										</a>
   									</td>

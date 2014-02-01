@@ -119,7 +119,7 @@
   <nav id='secondaryNav'>
     <a class='secondaryNavButton' href='/case-studies.html' title='see case studies'>Case Studies</a>
     <a class='secondaryNavButton' href='/clients.html' title='see our clients'>Clients</a>
-    <a class='secondaryNavButton' href='/partners.htm' title='see our partners'>Partners</a>
+    <a class='secondaryNavButton' href='/partners.html' title='see our partners'>Partners</a>
     <a class='secondaryNavButton' href='/training.htm' title='view our training offerings'>Training</a>
     <a class='secondaryNavButton' href='http://store.advisicon.com' title='shop our products in our store'>Store</a>
     <a class='secondaryNavButton longText' href='/professional-associations.htm' title='see our professional associations'>Professional Associations</a>
@@ -134,7 +134,7 @@
     </a>
   </li>
   <li>
-    <a href='/our-certifications.htm' title='Learn more about our competencies as a Microsoft Certified Partner'>
+    <a href='/our-certifications.html' title='Learn more about our competencies as a Microsoft Certified Partner'>
       <img alt='Microsoft Certified Gold Partner in Project and Portfolio Management, Silver Partner in Midmarket Solution Provider' border='0' height='54' src='/pix/microsoft-partner.png' width='150' />
     </a>
   </li>
