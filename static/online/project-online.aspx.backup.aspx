@@ -117,7 +117,7 @@
       </div>
       <div id='navAndCred'>
   <nav id='secondaryNav'>
-    <a class='secondaryNavButton' href='/case-studies.htm' title='see case studies'>Case Studies</a>
+    <a class='secondaryNavButton' href='/case-studies.html' title='see case studies'>Case Studies</a>
     <a class='secondaryNavButton' href='/clients.htm' title='see our clients'>Clients</a>
     <a class='secondaryNavButton' href='/partners.htm' title='see our partners'>Partners</a>
     <a class='secondaryNavButton' href='/training.htm' title='view our training offerings'>Training</a>
