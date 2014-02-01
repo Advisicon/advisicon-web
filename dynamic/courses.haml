@@ -56,8 +56,6 @@ layout: default.haml
 
     #{render_partial '/partials/references'}
 
-    Find all of our public online [courses at GoToTraining][GoToTraining-catalog].
-  
   - require '../../GoToTraining-Ruby/lib/go_to_training.rb'
   - @g2t = GoToTraining::Client.new('5a2f4f1cdbea97e45cfcd997421c744', '200000000000294967', '200000000001304589').get_trainings('')
 
@@ -83,10 +81,16 @@ layout: default.haml
           /%span.g2t_event_list_date= @date.to_s
           %span.eb_event_list_date= @date.to_s
           -# %p{ :style => 'float: left; clear: left;' }= course
-  - elsif @g2t.any? == false
-    %iframe{ :src => "https://student.gototraining.com/2tj23/catalog/6699287318625635328", :width => "509" }
   - else
     %p No trainings are available at this time.
+    %p Course subjects include:
+    %ul
+      %li Project Management
+      %li Microsoft Project
+      %li Microsoft Project Server and Microsoft Project Online
+      %li Microsoft SharePoint
+      %li Business Intelligence
+      %li Leadership &amp; Communication
 
   -#
     %p ALTERNATELY...
