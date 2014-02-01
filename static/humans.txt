@@ -3,10 +3,10 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+  Technical Communications Advisor: Jeff Jacobson-Swartfager
+  Site: http://changecase.net
+  Twitter: @changecase
+  Location: Portland, Oregon
 
 /* THANKS */
   Names (& URL):
