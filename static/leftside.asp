@@ -1,5 +1,5 @@
 ﻿<p class="style11">
-	<a href="courses.htm"><img src="pix/button_public_class_schedule.gif" alt="Advisicon's Public Classes" width="141" height="72" border="0" /></a>
+	<a href="courses.html"><img src="pix/button_public_class_schedule.gif" alt="Advisicon's Public Classes" width="141" height="72" border="0" /></a>
 </p>
 <p class="style11">
 	<a href="online_courses.htm"><img src="pix/btn_online_course.gif" alt="Advisicon's Online Courses" width="141" height="72" border="0" /></a>
@@ -19,5 +19,5 @@
  <br />
  
  <p class="style11">
- 	<a href="contactus.htm"><img src="pix/ContactUsbutton.jpg" alt="Contact Advisicon!" border="0" id="Image14" style="border-width: 0px;" onmouseover="MM_swapImage('Image14','','pix/ContactUsbutton_mouseover.jpg',1)" onmouseout="MM_swapImgRestore()"/></a>
+ 	<a href="contact-us.html"><img src="pix/ContactUsbutton.jpg" alt="Contact Advisicon!" border="0" id="Image14" style="border-width: 0px;" onmouseover="MM_swapImage('Image14','','pix/ContactUsbutton_mouseover.jpg',1)" onmouseout="MM_swapImgRestore()"/></a>
 </p>

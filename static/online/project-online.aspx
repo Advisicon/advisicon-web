@@ -101,7 +101,7 @@
         <nav id='mainNavigation'>
           <a href='/' id='homepage' title='Advisicon main page'>Home</a>
           <a href='/about-us.html' id='about' title='about Advisicon'>About Us</a>
-          <a href='/contactus.htm' id='contactUs' title='contact Adviscion'>Contact Us</a>
+          <a href='/contact-us.html' id='contactUs' title='contact Adviscion'>Contact Us</a>
           <a href='http://www.advisiconblog.com' id='blog' target='_blank' title='Advisicon blog'>Blog</a>
           <a href='http://store.advisicon.com' id='advisiconStore' target='_blank' title='Advisicon store'>Store</a>
           <a href='/careers.html' id='advisiconJobs' title='careers at Advisicon'>Careers</a>
@@ -124,8 +124,8 @@
     <a class='secondaryNavButton' href='http://store.advisicon.com' title='shop our products in our store'>Store</a>
     <a class='secondaryNavButton longText' href='/professional-associations.htm' title='see our professional associations'>Professional Associations</a>
     <a class='secondaryNavButton' href='/news.htm' title='Advisicon news and events'>News &amp; Events</a>
-    <a class='secondaryNavButton highlightedNavButton' href='/courses.htm' title='view our public course schedule'>Advisicon Public Course Schedule</a>
-    <a class='secondaryNavButton highlightedNavButton' href='/contactus.htm' title='view our contact info'>Contact Us!</a>
+    <a class='secondaryNavButton highlightedNavButton' href='/courses.html' title='view our public course schedule'>Advisicon Public Course Schedule</a>
+    <a class='secondaryNavButton highlightedNavButton' href='/contact-us.html' title='view our contact info'>Contact Us!</a>
   </nav>
   <ul id='credentials'>
   <li>
