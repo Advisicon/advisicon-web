@@ -73,7 +73,7 @@
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta content='width=device-width' name='viewport' />
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-  <link href='/styles/css/style.css' rel='stylesheet' />
+  <link href='/css/style.css' rel='stylesheet' />
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
   <!--
     All JavaScript at the bottom, except this Modernizr build.
