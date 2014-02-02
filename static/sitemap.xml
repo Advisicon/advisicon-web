@@ -49,7 +49,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.advisicon.com/training.htm</loc>
+  <loc>http://www.advisicon.com/training.html</loc>
   <lastmod>2009-09-14T18:26:40+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
@@ -115,13 +115,7 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.advisicon.com/web_demos.htm</loc>
-  <lastmod>2009-09-04T18:38:33+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.advisicon.com/public_classes.htm</loc>
+  <loc>http://www.advisicon.com/courses.html</loc>
   <lastmod>2009-09-14T18:46:48+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>

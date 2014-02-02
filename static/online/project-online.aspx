@@ -111,7 +111,7 @@
           <a href='/project-management.html' title='view our Project Management services'>Project Management</a>
           <a href='/microsoft-project-office.html' title='view our Microsoft Project and Microsoft Project Server consulting and training services'>Microsoft Project Server</a>
           <a href='/sharepoint.html'>Microsoft SharePoint</a>
-          <a href='/training.htm'>Training</a>
+          <a href='/training.html'>Training</a>
           <a href='/application-development.html'>Application Development</a>
         </nav>
       </div>
@@ -120,7 +120,7 @@
     <a class='secondaryNavButton' href='/case-studies.html' title='see case studies'>Case Studies</a>
     <a class='secondaryNavButton' href='/clients.html' title='see our clients'>Clients</a>
     <a class='secondaryNavButton' href='/partners.html' title='see our partners'>Partners</a>
-    <a class='secondaryNavButton' href='/training.htm' title='view our training offerings'>Training</a>
+    <a class='secondaryNavButton' href='/training.html' title='view our training offerings'>Training</a>
     <a class='secondaryNavButton' href='http://store.advisicon.com' title='shop our products in our store'>Store</a>
     <a class='secondaryNavButton longText' href='/professional-associations.html' title='see our professional associations'>Professional Associations</a>
     <a class='secondaryNavButton' href='/news.html' title='Advisicon news and events'>News &amp; Events</a>
