@@ -320,7 +320,7 @@
             <a href='/site_map.htm' title='view the site map'>Site Map</a>
           </li>
           <li>
-            <a href='/privacy-policy.htm' title='view our privacy policy'>Privacy Policy</a>
+            <a href='/privacy-policy.html' title='view our privacy policy'>Privacy Policy</a>
           </li>
           <li>
             <a class='tel' href='tel:+1-866-362-3847' onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Toll Free']);" title='call us at 1-866-362-3847'>1.866.36.ADVIS</a>
