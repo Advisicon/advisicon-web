@@ -279,6 +279,13 @@ td { vertical-align: top; }
   -ms-transform: rotate(@degrees * 1deg);     /* IE */
   -o-transform: rotate(@degrees * 1deg);      /* Opera */
   }
+  .saturate(@p: 100%) {
+    filter: ~"saturate(@{p})";
+    -webkit-filter: ~"saturate(@{p})";
+    -moz-filter: ~"saturate(@{p})";
+    -o-filter: ~"saturate(@{p})";
+    -ms-filter: ~"saturate(@{p})";
+  }
     
   /* ===================== END less includes/mixin awesomeness */
 
@@ -1469,6 +1476,8 @@ td { vertical-align: top; }
             display: block;
             li {
               height: auto;
+              .saturate(0%);
+              &:hover, &:focus { .saturate(100%); }
             }
           }
         }
