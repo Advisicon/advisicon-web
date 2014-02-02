@@ -108,7 +108,7 @@
           <a class='tel' href='tel:+1-866-362-3847' id='callUs' onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Toll Free']);" title='call us at 1-866-362-3847'>1.866.36.ADVIS</a>
         </nav>
         <nav id='highlightsNavigation'>
-          <a href='/project-management.htm' title='view our Project Management services'>Project Management</a>
+          <a href='/project-management.html' title='view our Project Management services'>Project Management</a>
           <a href='/microsoft-project-office.html' title='view our Microsoft Project and Microsoft Project Server consulting and training services'>Microsoft Project Server</a>
           <a href='/sharepoint.html'>Microsoft SharePoint</a>
           <a href='/training.htm'>Training</a>
