@@ -122,7 +122,7 @@
     <a class='secondaryNavButton' href='/partners.html' title='see our partners'>Partners</a>
     <a class='secondaryNavButton' href='/training.htm' title='view our training offerings'>Training</a>
     <a class='secondaryNavButton' href='http://store.advisicon.com' title='shop our products in our store'>Store</a>
-    <a class='secondaryNavButton longText' href='/professional-associations.htm' title='see our professional associations'>Professional Associations</a>
+    <a class='secondaryNavButton longText' href='/professional-associations.html' title='see our professional associations'>Professional Associations</a>
     <a class='secondaryNavButton' href='/news.html' title='Advisicon news and events'>News &amp; Events</a>
     <a class='secondaryNavButton highlightedNavButton' href='/courses.html' title='view our public course schedule'>Advisicon Public Course Schedule</a>
     <a class='secondaryNavButton highlightedNavButton' href='/contact-us.html' title='view our contact info'>Contact Us!</a>
