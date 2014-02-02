@@ -286,7 +286,7 @@
       <div id='nav'>
         <ul class='navbarmini'>
           <li>
-            <a href='/site_map.htm' title='view the site map'>Site Map</a>
+            <a href='/site-map.html' title='view the site map'>Site Map</a>
           </li>
           <li>
             <a href='/privacy-policy.html' title='view our privacy policy'>Privacy Policy</a>
