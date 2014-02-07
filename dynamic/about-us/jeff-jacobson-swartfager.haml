@@ -34,8 +34,17 @@ layout: default.haml
   %h2.repair Contact
 
   %p
-    Email <a href="mailto:info@advisicon.com?subject=Question for Jeff Jacobson-Swartfager" class="email" onclick="_gaq.push(['_trackEvent', 'Emails', 'Jeff', 'via info@advisicon.com']);">Jeff Jacobson-Swartfager</a>
+    Email 
+    %a.email{ href: 'mailto:info@advisicon.com?subject=Question%20for%20Jeff%20Jacobson-Swartfager',
+              onclick: track_event( 'Emails',
+                                    'Jeff Jacobson-Swartfager',
+                                     label: 'via info@advisicon.com' ) }Jeff Jacobson-Swartfager
   %p
-    Jeff is voice behind <a href="http://twitter.com/#!/advisicon" class="url twitter" title="Jeff (aka @Advisicon)on twitter" onclick="_gaq.push(['_trackEvent', 'Twitter', 'User: Advisicon', 'User stream']);">@Advisicon</a>
+    Jeff is the voice behind 
+    %a.url.twitter{ href: 'http://twitter.com/#!/changecase', 
+                    title: 'Jeff (aka @changecase)on twitter',
+                    onclick: track_event( 'Twitter', 
+                                          'Jeff Jacobson-Swartfager', 
+                                           label: 'User stream') }@changecase
   %p
-    <a href="http://h2vx.com/vcf/advisicon.com/staff_bios/jeff-jacobson-swartfager.htm">Add Jeff to your Address Book</a>
+    <a href="http://h2vx.com/vcf/advisicon.com/about-us/jeff-jacobson-swartfager.html">Add Jeff to your Address Book</a>
