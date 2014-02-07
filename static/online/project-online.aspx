@@ -105,11 +105,10 @@
     <a class='secondaryNavButton' href='/case-studies.html' title='see case studies'>Case Studies</a>
     <a class='secondaryNavButton' href='/clients.html' title='see our clients'>Clients</a>
     <a class='secondaryNavButton' href='/partners.html' title='see our partners'>Partners</a>
-    <a class='secondaryNavButton' href='/training.html' title='view our training offerings'>Training</a>
+    <a class='secondaryNavButton bold' href='/training.html' title='view our training offerings'>Training</a>
     <a class='secondaryNavButton' href='http://store.advisicon.com' title='shop our products in our store'>Store</a>
     <a class='secondaryNavButton' href='/professional-associations.html' title='see our professional associations'>Professional Associations</a>
     <a class='secondaryNavButton' href='/news.html' title='Advisicon news'>News</a>
-    <a class='secondaryNavButton bold' href='/courses.html' title='view our public course schedule'>Advisicon Public Course Schedule</a>
     <a class='secondaryNavButton' href='/contact-us.html' title='view our contact info'>Contact Us!</a>
   </nav>
   <ul id='credentials'>
