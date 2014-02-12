@@ -8,6 +8,7 @@ module FrankHelpers
   require 'cgi'
   require 'uri'
   require 'nokogiri'
+  require 'open-uri'
 
   def clean_course_title(title)
     CGI::escapeHTML(title).gsub(/['’®]/, 
@@ -28,4 +29,5 @@ module FrankHelpers
   
   require './helpers/microdata'
   require './helpers/google_analytics'
+  require './helpers/process_wordpress'
 end
