@@ -9,7 +9,12 @@ layout: default.haml
 
 %h2 Microsoft Project and Project Server 2010
 %p
-  %a{ :target => '_blank', :href => '/PDF/Gartner%20MQ2010%20FINAL.pdf', :title => 'download the June 2010 Magic Quadrant for IT Project and Portfolio Management', :onclick => "_gaq.push(['_trackEvent', 'PDF Downloads', 'Download', 'Magic Quadrant 7 June 2010']);" } The 2010 Magic Quadrant
+  %a{ target: '_blank', 
+      href: '/PDF/Gartner%20MQ2010%20FINAL.pdf', 
+      title: 'download the June 2010 Magic Quadrant for IT Project and Portfolio Management', 
+      onclick: track_event('PDF Downloads', 
+                           'Download', 
+                            label: 'Magic Quadrant 7 June 2010') } The 2010 Magic Quadrant
   by researcher
   %a{ :href => 'http://www.gartner.com/AnalystBiography?authorId=11760', :title => 'Daniel B. Stang&rsquo;s Analyst Profile' } Daniel B. Stang
   has been released. Microsoft Project Server 2010 is in the leadership quadrant, embodying a completeness of vision and an ability to execute! We at Advisicon are energized by Microsoft&rsquo;s innovative and leading products in 2010, as they compliment our solutions and focus.

@@ -5,8 +5,9 @@ def track_event(category, action, options = {})
   options[:label] ||= nil
   options[:value] ||= nil
   options[:noninteraction] ||= nil
+  options[:hit_type] ||= 'event'
 
-  @tracker = "_gaq.push(['_trackEvent', '#{category}', '#{action}'"
+  @tracker = "ga('send', '#{options[:hit_type]}', '#{category}', '#{action}'"
   if options[:label]
     @tracker += ", '#{options[:label]}'"
     if options[:value].is_a? Integer
@@ -16,7 +17,7 @@ def track_event(category, action, options = {})
       end
     end
   end
-  @tracker += "]);"
+  @tracker += ");"
 end
 def track_job_application(text, options={})
   options[:job] ||= nil

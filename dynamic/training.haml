@@ -77,7 +77,7 @@ layout: default.haml
           - @registrationURL = "https://student.gototraining.com/r/#{course['trainingKey']}"
           /%span.g2t_event_list_title= course['name']
           - @date = DateTime.parse(course['times'][0]['startDate']).to_date
-          %span.eb_event_list_title= "<a href='#{@registrationURL}' title='Register on GoToTraining!' onclick='_gaq.push(['_trackEvent', 'view online course', '#{@courseTitle}', '#{@date}']);'>#{@courseTitle}</a>"
+          %span.eb_event_list_title= "<a href='#{@registrationURL}' title='Register on GoToTraining!' onclick='#{track_event('view online course', @courseTitle, label: @date)}'>#{@courseTitle}</a>"
           /%span.g2t_event_list_date= @date.to_s
           %span.eb_event_list_date= @date.to_s
           -# %p{ :style => 'float: left; clear: left;' }= course
@@ -103,7 +103,7 @@ layout: default.haml
           - @webinarTitle = clean_course_title(webinar['subject'])
           - @webinarURL = "https://www3.gotomeeting.com/register/#{webinar['webinarKey']}"
           - @webinarDate = DateTime.parse(webinar['times'][0]['startTime']).to_date
-          %span.eb_event_list_title= "<a href='#{@webinarURL}' title='Register on GoToWebinar!' onclick='_gaq.push(['_trackEvent', 'view webinar', '#{@webinarTitle}', '#{@webinarDate}']);'>#{@webinarTitle}</a>"
+          %span.eb_event_list_title= "<a href='#{@webinarURL}' title='Register on GoToWebinar!' onclick='#{track_event('view webinar', @webinarTitle, label: @webinarDate)}'>#{@webinarTitle}</a>"
           %span.eb_event_list_date= @webinarDate.to_s
   - else
 
@@ -127,9 +127,11 @@ layout: default.haml
 %h2{ :id => "meeting-room" } Our Meeting Room
 %p Our meeting room is for rent!
 / <iframe src="http://rtvpix.com/tour/src/tour_java_only.php?utl=BU-5037-9QK11Y-01&h=339&w=500" height="339" width="500" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-%a{ :href => "http://rtvpix.com/rst/BU-5037-9QK11Y-01?h=500&w=700", :title => "take a virtual tour", :target => "_blank", :onclick => "_gaq.push(['_trackEvent', 'virtual tour', 'flash 3d']);" }
+%a{ href: "http://rtvpix.com/rst/BU-5037-9QK11Y-01?h=500&w=700", 
+    title: "take a virtual tour", 
+    target: "_blank", onclick: track_event('virtual tour', 'flash 3d') }
   %img{ :src => "/pix/advisicon-virtual-tour.jpg", :alt => "take a virtual tour", :width => "100%" }
-%p Click the image above to take a virtual tour of the Advisicon Headquarters or visit our facebook page to see an <a href="http://www.facebook.com/media/set/?set=a.10150709101698512.393774.136755573511&type=3" title="pictures of the Advisicon Headquarters building" onclick="_gaq.push(['_trackEvent', 'Facebook', 'User: Advisicon', 'HQ image gallery']);">image gallery of shots of our headquarters building</a>. To obtain a quote for renting our meeting room, please contact us at <a href="mailto:info@advisicon.com?subject=Meeting Room Quote Request">info@Advisicon.com</a>.
+%p Click the image above to take a virtual tour of the Advisicon Headquarters or visit our facebook page to see an <a href="http://www.facebook.com/media/set/?set=a.10150709101698512.393774.136755573511&type=3" title="pictures of the Advisicon Headquarters building" onclick="#{track_event('Facebook', 'User: Advisicon', label: 'HQ image gallery')}">image gallery of shots of our headquarters building</a>. To obtain a quote for renting our meeting room, please contact us at <a href="mailto:info@advisicon.com?subject=Meeting Room Quote Request">info@Advisicon.com</a>.
 
 :maruku
 

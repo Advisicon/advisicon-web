@@ -44,8 +44,25 @@ layout: default.haml
 
     h2(repair). Contact
 
-    <p>Email <a href="mailto:info@advisicon.com?subject=Question for Tim Runcie" class="email" onclick="_gaq.push(['_trackEvent', 'Emails', 'Tim', 'via info@advisicon.com']);">Tim Runcie</a></p>
-    <p>Follow <a href="http://twitter.com/#!/projectmvp" class="url twitter" title="Tim (aka @projectmvp)on twitter" onclick="_gaq.push(['_trackEvent', 'Twitter', 'User: projectmvp', 'User stream']);">Tim on Twitter</a></p>
-    <p>Find <a href="http://www.linkedin.com/pub/tim-runcie-mcts-mcp-pmp-mvp/1/130/922" class="url linkedin" title="Tim's LinkedIn account" onclick="_gaq.push(['_trackEvent', 'LinkedIn', 'User: Tim Runcie', 'Personal Profile']);">Tim on LinkedIn</a></p>
-    <p><a href="http://h2vx.com/vcf/advisicon.com/staff_bios/tim-runcie.htm">Add Tim to your Address Book</a></p>
-
+  %p
+    Email 
+    %a.email{ href: 'mailto:info@advisicon.com?subject=Question%20for%020Tim%20Runcie', 
+              onclick: track_event('Emails', 
+                                   'Tim', 
+                                    label: 'via info@advisicon.com')}Tim Runcie
+  %p
+    Follow 
+    %a.url.twitter{ href: 'http://twitter.com/#!/projectmvp', 
+                    title: 'Tim (aka @projectmvp) on twitter', 
+                    onclick: track_event('Twitter', 
+                                         'User: projectmvp', 
+                                          label: 'User stream')}Tim on Twitter
+  %p
+    Find 
+    %a.url.linkedin{ href: 'http://www.linkedin.com/pub/tim-runcie-mcts-mcp-pmp-mvp/1/130/922', 
+                     title: 'Tim\'s LinkedIn account', 
+                     onclick: track_event('LinkedIn', 
+                                          'User: Tim Runcie', 
+                                           label: 'Personal Profile')}Tim on LinkedIn
+  %p 
+    %a{ href: 'http://h2vx.com/vcf/advisicon.com/staff_bios/tim-runcie.htm' }Add Tim to your Address Book

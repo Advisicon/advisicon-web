@@ -30,7 +30,7 @@ layout: default.haml
 / </li>
 
 .downloadables
-  <a href="/download/skill-tracker/skill-tracker-titans-user-guide.pdf" onclick="_gaq.push(['_trackEvent', 'PDF Downloads', 'Download', 'Skill Tracker TITANS user guide']);" title="Download the Skill Tracker User's Guide!" class="download">User&rsquo;s Guide</a>
+  <a href="/download/skill-tracker/skill-tracker-titans-user-guide.pdf" onclick="#{track_event('PDF Downloads', 'Download', label: 'Skill Tracker TITANS user guide')}" title="Download the Skill Tracker User's Guide!" class="download">User&rsquo;s Guide</a>
 
 :textile
 
@@ -89,4 +89,4 @@ layout: default.haml
 
   h2(#how-to-get-skill-tracker). How Can I Get It?
 
-  For more information or access to s 30-day trial (localized to your environment), please contact Advisicon toll free at <a href="tel:+1-866-362-3847" class="tel" title="call us at 1-866-362-3847" onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Toll Free']);">1.866.36.ADVIS</a>.
+  For more information or access to s 30-day trial (localized to your environment), please contact Advisicon toll free at <a href="tel:+1-866-362-3847" class="tel" title="call us at 1-866-362-3847" onclick="#{track_event('Phone Calls', 'Headquarters', label: 'Toll Free')}">1.866.36.ADVIS</a>.

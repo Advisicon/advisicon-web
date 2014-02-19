@@ -17,12 +17,12 @@ $.each(data.results, function() {
 						tweetCount = tweetCount + 1;
 					tweet.html('<div class="content">' + 
 						tweet.html()
-						.replace(/((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi,'<a href="$1" onclick="_gaq.push([\'_trackEvent\', \'Twitter\', \'From user: ' + this.from_user + '\', \'URL\']);">$1</a>')
-						.replace(/(^|\s)#(\w+)/g,'$1<a href="http://search.twitter.com/search?q=%23$2" onclick="_gaq.push([\'_trackEvent\', \'Twitter\', \'From user: ' + this.from_user + '\', \'#$2\']);">#$2</a>')
-						.replace(/(^|\s)@(\w+)/g,'$1<a href="http://twitter.com/$2" onclick="_gaq.push([\'_trackEvent\', \'Twitter\', \'From user: ' + this.from_user + '\', \'At user: $2\']);">@$2</a>')
-						+ '<br /><a href="http://www.twitter.com/' + this.from_user + '/status/' + this.id_str + '" class="view" target="_blank" onclick="_gaq.push([\'_trackEvent\', \'Twitter\', \'From user: ' + this.from_user + '\', \'post: http://www.twitter.com/' + this.from_user + '/status/' + this.id_str + '\']);">' + $.timeSinceTweet(this.created_at) + '</a></div>'
+						.replace(/((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi,'<a href="$1" onclick="ga(\'send\', \'event\', \'Twitter\', \'From user: ' + this.from_user + '\', \'URL\');">$1</a>')
+						.replace(/(^|\s)#(\w+)/g,'$1<a href="http://search.twitter.com/search?q=%23$2" onclick="ga(\'send\', \'event\', \'Twitter\', \'From user: ' + this.from_user + '\', \'#$2\');">#$2</a>')
+						.replace(/(^|\s)@(\w+)/g,'$1<a href="http://twitter.com/$2" onclick="ga(\'send\', \'event\', \'Twitter\', \'From user: ' + this.from_user + '\', \'At user: $2\');">@$2</a>')
+						+ '<br /><a href="http://www.twitter.com/' + this.from_user + '/status/' + this.id_str + '" class="view" target="_blank" onclick="ga(\'send\', \'event\', \'Twitter\', \'From user: ' + this.from_user + '\', \'post: http://www.twitter.com/' + this.from_user + '/status/' + this.id_str + '\');">' + $.timeSinceTweet(this.created_at) + '</a></div>'
 						)
-						.prepend('<a href="http://www.twitter.com/' + this.from_user + '" target="_blank" title="' + this.from_user + '&rsquo;s twitter feed" class="twitterProfilePic"><img src="' + this.profile_image_url + '" width="48" height="48" border="0" onclick="_gaq.push([\'_trackEvent\', \'Twitter\', \'From user: ' + this.from_user + '\', \'User stream\']);" /></a>')
+						.prepend('<a href="http://www.twitter.com/' + this.from_user + '" target="_blank" title="' + this.from_user + '&rsquo;s twitter feed" class="twitterProfilePic"><img src="' + this.profile_image_url + '" width="48" height="48" border="0" onclick="ga(\'send\', \'event\', \'Twitter\', \'From user: ' + this.from_user + '\', \'User stream\');" /></a>')
 						// sticks the profile picture before the tweet
 						.appendTo('#tweets')
 						.fadeIn();

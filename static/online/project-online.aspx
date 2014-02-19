@@ -90,7 +90,7 @@
           <a href='http://www.advisiconblog.com' id='blog' target='_blank' title='Advisicon blog'>Blog</a>
           <a href='http://store.advisicon.com' id='advisiconStore' target='_blank' title='Advisicon store'>Store</a>
           <a href='/careers.html' id='advisiconJobs' title='careers at Advisicon'>Careers</a>
-          <a class='tel' href='tel:+1-866-362-3847' id='callUs' onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Toll Free']);" title='call us at 1-866-362-3847'>1.866.36.ADVIS</a>
+          <a class='tel' href='tel:+1-866-362-3847' id='callUs' onclick="ga(['send', 'event', 'Phone Calls', 'Headquarters', 'Toll Free');" title='call us at 1-866-362-3847'>1.866.36.ADVIS</a>
         </nav>
         <nav id='highlightsNavigation'>
           <a href='/project-management.html' title='view our Project Management services'>Project Management</a>
@@ -140,22 +140,22 @@
           <h3>Follow Us At</h3>
           <ul class='otherCommsList'>
             <li>
-              <a class='twitter icon' href='http://twitter.com/Advisicon' onclick="_gaq.push(['_trackEvent', 'Social Button', 'Twitter', 'User: Advisicon']);" target='_blank' title='Advisicon on Twitter'></a>
+              <a class='twitter icon' href='http://twitter.com/Advisicon' onclick="ga('send', 'event', 'Social Button', 'Twitter', 'User: Advisicon');" target='_blank' title='Advisicon on Twitter'></a>
             </li>
             <li>
-              <a class='linkedin icon' href='http://www.linkedin.com/companies/advisicon' onclick="_gaq.push(['_trackEvent', 'Social Button', 'LinkedIn', 'Advisicon Company Profile']);" target='_blank' title='Advisicon on LinkedIn'></a>
+              <a class='linkedin icon' href='http://www.linkedin.com/companies/advisicon' onclick="ga(['send', 'event', 'Social Button', 'LinkedIn', 'Advisicon Company Profile');" target='_blank' title='Advisicon on LinkedIn'></a>
             </li>
             <li>
-              <a class='facebook icon' href='http://www.facebook.com/Advisicon/' onclick="_gaq.push(['_trackEvent', 'Social Button', 'Facebook', 'Advisicon Fan Page']);" target='_blank' title='Advisicon on Facebook'></a>
+              <a class='facebook icon' href='http://www.facebook.com/Advisicon/' onclick="ga('send', 'event', 'Social Button', 'Facebook', 'Advisicon Fan Page');" target='_blank' title='Advisicon on Facebook'></a>
             </li>
             <li>
-              <a class='pinpoint icon' href='http://pinpoint.microsoft.com/en-US/partners/Advisicon-Inc-4295604986' onclick="_gaq.push(['_trackEvent', 'Social Button', 'Pinpoint', 'Advisicon Listing']);" target='_blank' title='Advisicon on Pinpoint'></a>
+              <a class='pinpoint icon' href='http://pinpoint.microsoft.com/en-US/partners/Advisicon-Inc-4295604986' onclick="ga('send', 'event', 'Social Button', 'Pinpoint', 'Advisicon Listing');" target='_blank' title='Advisicon on Pinpoint'></a>
             </li>
             <li>
-              <a class='eventbrite icon' href='http://www.eventbrite.com/org/2432615942?ref=eorgbtn' onclick="_gaq.push(['_trackEvent', 'Social Button', 'Eventbrite', 'Advisicon Organization Page']);" target='_blank' title='Advisicon on Eventbrite'></a>
+              <a class='eventbrite icon' href='http://www.eventbrite.com/org/2432615942?ref=eorgbtn' onclick="ga('send', 'event', 'Social Button', 'Eventbrite', 'Advisicon Organization Page');" target='_blank' title='Advisicon on Eventbrite'></a>
             </li>
             <li>
-              <a class='googleplus icon' href='https://plus.google.com/+Advisicon/posts' onclick="_gaq.push(['_trackEvent', 'Social Button', 'Google+', 'Advisicon g+ page']);" target='_blank' title='Advisicon on Google+'></a>
+              <a class='googleplus icon' href='https://plus.google.com/+Advisicon/posts' onclick="ga('send', 'event', 'Social Button', 'Google+', 'Advisicon g+ page');" target='_blank' title='Advisicon on Google+'></a>
             </li>
           </ul>
         </div>
@@ -266,12 +266,12 @@
 
           
           <asp:Label ID="lblConfirmation" ForeColor="Blue" runat="server"></asp:Label><br />
-          <asp:Button ID="btnSubmit" OnClientClick="_gaq.push(['_trackEvent', 'Form Submit', 'Project Online Trial', 'Submit Attempt']);" OnClick="btnSubmit_Click" runat="server" ValidationGroup="FormCheck" Text="Request Free Trial" />                    
+          <asp:Button ID="btnSubmit" OnClientClick="ga('send', 'event', 'Form Submit', 'Project Online Trial', 'Submit Attempt');" OnClick="btnSubmit_Click" runat="server" ValidationGroup="FormCheck" Text="Request Free Trial" />                    
           <br />
         </form>        
         <p>Get started today either online or onsite with a Microsoft Certified expert. This demo will consist of an interactive session discovering all aspects of assessing and executing this new cloud based solution.</p>
         
-        <p>For more details regarding the Partner-Led Project Trial, please email <a href='mailto:project@advisicon.com?project%20online%20free%20trial' onclick="_gaq.push(['_trackEvent', 'Emails', 'Project Online Trial', 'Inquiry'])">project@advisicon.com</a>, call <a href='tel:+1-866-362-847' onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Project Online Trial']);">866 36 ADVIS</a> or <a href='#trial-request'>online contact form</a></p>
+        <p>For more details regarding the Partner-Led Project Trial, please email <a href='mailto:project@advisicon.com?project%20online%20free%20trial' onclick="ga('send', 'event', 'Emails', 'Project Online Trial', 'Inquiry')">project@advisicon.com</a>, call <a href='tel:+1-866-362-847' onclick="ga('send', 'event', 'Phone Calls', 'Headquarters', 'Project Online Trial');">866 36 ADVIS</a> or <a href='#trial-request'>online contact form</a></p>
       </section>
     </div>
     <footer>
@@ -291,7 +291,7 @@
             <a href='/privacy-policy.html' title='view our privacy policy'>Privacy Policy</a>
           </li>
           <li>
-            <a class='tel' href='tel:+1-866-362-3847' onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Toll Free']);" title='call us at 1-866-362-3847'>1.866.36.ADVIS</a>
+            <a class='tel' href='tel:+1-866-362-3847' onclick="ga('send', 'event', 'Phone Calls', 'Headquarters', 'Toll Free');" title='call us at 1-866-362-3847'>1.866.36.ADVIS</a>
           </li>
         </ul>
       </div>

@@ -9,4 +9,8 @@
     %li
       %a{ :href => '/privacy-policy.html', :title => 'view our privacy policy' } Privacy Policy
     %li
-      %a{ :href => 'tel:+1-866-362-3847', :class => 'tel', :title => 'call us at 1-866-362-3847', :onclick => "_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Toll Free']);" } 1.866.36.ADVIS
+      %a.tel{ href: 'tel:+1-866-362-3847', 
+              title: 'call us at 1-866-362-3847', 
+              onclick: track_event('Phone Calls', 
+                                   'Headquarters', 
+                                    label: 'Toll Free') } 1.866.36.ADVIS

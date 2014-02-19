@@ -19,13 +19,16 @@ layout: default.haml
   .tel
     %p
       <span class="type" value="work">Toll Free</span>: 
-      <a class="value" href="tel:+1-866-362-3847" onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Toll Free']);">1-866-362-3847<</a>
+      <a class="value" href="tel:+1-866-362-3847" onclick="#{track_event('Phone Calls', 'Headquarters', label: 'Toll Free')}">1-866-362-3847</a>
     %p
       <span class="type">Local</span>: 
-      <a class="value" href="tel:+1-360-314-6702" onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Local']);">360-314-6702</a>
+      <a class="value" href="tel:+1-360-314-6702" onclick="#{track_event('Phone Calls', 'Headquarters', label: 'Local')}">360-314-6702</a>
   %p
     Email us at: 
-    %a.email{ :href => 'mailto:info@advisicon.com', :onclick => "_gaq.push(['_trackEvent', 'Emails', 'Corporate', 'via info@advisicon.com']);" } Info@Advisicon.com
+    %a.email{ href: 'mailto:info@advisicon.com', 
+              onclick: track_event('Emails', 
+                                   'Corporate', 
+                                    label: 'via info@advisicon.com') } Info@Advisicon.com
       
   %iframe{ :width => '100%', :height => '350', :frameborder => '0', :scrolling => 'no', :marginheight => '0', :marginwidth => '0', :src => 'https://maps.google.com/maps?q=Advisicon,+5411+Northeast+107th+Avenue+%23200,+Vancouver,+WA&hl=en&sll=45.661652,-122.562247&sspn=0.024654,0.055747&gl=us&hq=advisicon+5411+northeast+107th+avenue+200&hnear=Vancouver,+Clark,+Washington&t=m&ie=UTF8&source=embed&z=13&iwloc=A&output=embed' }
   %br/
@@ -48,13 +51,19 @@ layout: default.haml
       %span.postal-code 49528-0108
   %p
     Branch Head: 
-    %a.fn.url{ :href => '/staff_bios/cindy-lewis.htm', :title => 'find out more about Cindy' } Cindy M. Lewis
+    %a.fn.url{ href: '/staff_bios/cindy-lewis.htm', title: 'find out more about Cindy' } Cindy M. Lewis
   %p.tel
     <span class="type">Cell</span>: 
-    %a.value{ :href => 'tel:+1-616-446-8569', :onclick => "_gaq.push(['_trackEvent', 'Phone Calls', 'Cindy', 'Cell']);" } 616-446-8569
+    %a.value{ href: 'tel:+1-616-446-8569', 
+              onclick: track_event('Phone Calls', 
+                                   'Cindy', 
+                                    label: 'Cell') } 616-446-8569
   %p
     Email: 
-    %a.email{ :href => 'mailto:Michigan@Advisicon.com', :onclick => "_gaq.push(['_trackEvent', 'Emails', 'Cindy', 'via michigan@advisicon.com']);" } Michigan@Advisicon.com
+    %a.email{ href: 'mailto:Michigan@Advisicon.com', 
+              onclick: track_event('Emails', 
+                                   'Cindy', 
+                                    label: 'via michigan@advisicon.com') } Michigan@Advisicon.com
   %iframe{ :width => '100%', :height => '350', :frameborder => '0', :scrolling => 'no', :marginheight => '0', :marginwidth => '0', :src => 'https://maps.google.com/maps?q=3665+28th+st+se,+grand+rapids,+mi+49512&amp;ie=UTF8&amp;z=14&output=embed' }
   %br/
   %p
@@ -72,10 +81,16 @@ layout: default.haml
     %p
       %span.type Local
       \: 
-      %a.value{ :href => 'tel:+52-55-9000-8075', :onclick => "_gaq.push(['_trackEvent', 'Phone Calls', 'Mexico', 'Local']);" } 55-9000-8075
+      %a.value{ href: 'tel:+52-55-9000-8075', 
+                onclick: track_event('Phone Calls', 
+                                     'Mexico', 
+                                      label: 'Local') } 55-9000-8075
   %p
     Email: 
-    %a.email{ :href => 'mailto:informacion@advisicon.com', :onclick => "_gaq.push(['_trackEvent', 'Emails', 'Mexico', 'via informacion@advisicon.com']);" }Informacion@Advisicon.com
+    %a.email{ href: 'mailto:informacion@advisicon.com', 
+              onclick: track_event('Emails', 
+                                   'Mexico', 
+                                    label: 'via informacion@advisicon.com') }Informacion@Advisicon.com
   %iframe{ :width => '100%', :height => '350', :frameborder => '0', :scrolling => 'no', :marginheight => '0', :marginwidth => '0', :src => 'https://maps.google.com/maps?q=col.+roma+norte,+mexico+city&ie=UTF8&hq=&gl=us&t=m&z=14&ll=19.420156,-99.175255&output=embed' }
 
 

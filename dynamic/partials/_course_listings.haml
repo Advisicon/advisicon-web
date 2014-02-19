@@ -68,4 +68,4 @@
           
           process_html2("http://www.eventbrite.com/rss/user_list_events/35721498302") 'point the subprocess to the webpage you want to access
           %>
-    %p For course information and schedules contact us by phone at <a href="tel:+1-360-314-6702" class="tel" title="call our Vancouver, WA office" onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Local']);">360.314.6702</a> or email us at <a href="mailto:info@advisicon.com?subject=Question%20about%20Courses" title="email us" onclick="_gaq.push(['_trackEvent', 'Emails', 'Corporate', 'Inquiry']);">info@advisicon.com</a>
+    %p For course information and schedules contact us by phone at <a href="tel:+1-360-314-6702" class="tel" title="call our Vancouver, WA office" onclick="#{track_event('Phone Calls', 'Headquarters', label: 'Local')}">360.314.6702</a> or email us at <a href="mailto:info@advisicon.com?subject=Question%20about%20Courses" title="email us" onclick="#{track_event('Emails', 'Corporate', label: 'Inquiry')}">info@advisicon.com</a>

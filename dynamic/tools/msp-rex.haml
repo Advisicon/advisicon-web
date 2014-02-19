@@ -9,9 +9,9 @@ layout: default.haml
   
   h1. MSP-Rex
   
-  <a href="/download/MSP-Rex/about-MSP-Rex.pdf" target="_blank" onclick="_gaq.push(['_trackEvent', 'PDF Downloads', 'Download', 'MSP-Rex Flyer']);" title="Download the MSP-Rex brochure!"><img src="/pix/MSP-Rex-Splash.jpg" width="100%" border="0" /></a>
+  <a href="/download/MSP-Rex/about-MSP-Rex.pdf" target="_blank" onclick="#{track_event('PDF Downloads', 'Download', label: 'MSP-Rex Flyer')}" title="Download the MSP-Rex brochure!"><img src="/pix/MSP-Rex-Splash.jpg" width="100%" border="0" /></a>
   <div class="downloadables">
-    <a href="/download/MSP-Rex/MSP-REX.msi" target="_blank" onclick="_gaq.push(['_trackEvent', 'Software Downloads', 'Download', 'MSP-Rex trial']);" title="Download a free 30-day trial of MSP-Rex!" class="download" >30-day Trial</a><a href="/download/MSP-Rex/about-MSP-Rex.pdf" target="_blank" onclick="_gaq.push(['_trackEvent', 'PDF Downloads', 'Download', 'MSP-Rex Flyer']);" title="Download the MSP-Rex brochure!" class="download">Brochure</a><a href="/download/MSP-Rex/MSP-Rex-user-guide.pdf" onclick="_gaq.push(['_trackEvent', 'PDF Downloads', 'Download', 'MSP-Rex User Guide']);" title="Download the MSP-Rex User's Guide!" class="download">User&rsquo;s Guide</a>
+    <a href="/download/MSP-Rex/MSP-REX.msi" target="_blank" onclick="#{track_event('Software Downloads', 'Download', label: 'MSP-Rex trial')}" title="Download a free 30-day trial of MSP-Rex!" class="download" >30-day Trial</a><a href="/download/MSP-Rex/about-MSP-Rex.pdf" target="_blank" onclick="#{track_event('PDF Downloads', 'Download', label: 'MSP-Rex Flyer')}" title="Download the MSP-Rex brochure!" class="download">Brochure</a><a href="/download/MSP-Rex/MSP-Rex-user-guide.pdf" onclick="#{track_event('PDF Downloads', 'Download', label: 'MSP-Rex User Guide')}" title="Download the MSP-Rex User's Guide!" class="download">User&rsquo;s Guide</a>
   </div>
   
 
@@ -62,6 +62,6 @@ layout: default.haml
 
   h2. How Can I Get It?
 
-  Want more details? Download the <a href="/PDF/MSP-REX User Guide.pdf" onclick="_gaq.push(['_trackEvent', 'PDF Downloads', 'Download', 'MSP-Rex User Guide']);" title="Download the MSP-Rex User's Guide!">User Guide</a> or give the free <a href="/download/MSP-Rex/MSP-REX.msi" target="_blank" onclick="_gaq.push(['_trackEvent', 'Software Downloads', 'Download', 'MSP-Rex trial']);" title="Download a free 30-day trial of MSP-Rex!" class="download" >30-day trial</a> version a spin!
+  Want more details? Download the <a href="/PDF/MSP-REX User Guide.pdf" onclick="#{track_event('PDF Downloads', 'Download', label: 'MSP-Rex User Guide')}" title="Download the MSP-Rex User's Guide!">User Guide</a> or give the free <a href="/download/MSP-Rex/MSP-REX.msi" target="_blank" onclick="#{track_event('Software Downloads', 'Download', label:'MSP-Rex trial')}" title="Download a free 30-day trial of MSP-Rex!" class="download" >30-day trial</a> version a spin!
 
-  For more information please contact Advisicon, toll free at <a href="tel:+1-866-362-3847" class="tel" title="call us at 1-866-362-3847" onclick="_gaq.push(['_trackEvent', 'Phone Calls', 'Headquarters', 'Toll Free']);">1.866.36.ADVIS</a>.
+  For more information please contact Advisicon, toll free at <a href="tel:+1-866-362-3847" class="tel" title="call us at 1-866-362-3847" onclick="#{track_event('Phone Calls', 'Headquarters', label: 'Toll Free')}">1.866.36.ADVIS</a>.
