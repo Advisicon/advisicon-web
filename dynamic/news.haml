@@ -8,4 +8,17 @@ layout: default.haml
 %p
   We love participating in our project management community. Visit our blog for a 
   %a{ :href => 'http://www.advisiconblog.com/tag/event/', :title => 'view all of our events on the blog' } full list of past and present Advisicon events.
-= process_wordpress('http://blog.advisicon.com', tag: 'event')
+- posts = posts_with_tag('http://blog.advisicon.com', 'event')
+- posts.each do |post|
+  %h2
+    %a{ href: post['url'], 
+      title: "read the full article, &ldquo;#{post['title']} on the blog" }= post['title']
+  %p
+    %strong
+      - @date = Date.parse post['date']
+      = @date.strftime('%B %e, %Y')
+    - @excerpt = post['excerpt']
+    - @excerpt.slice! '\n'
+    - @excerpt.slice! '[&hellip;]</p>
+    - @excerpt += " <a href='#{post['url']} title='#{post['title']}'>\[&hellip;\]</a>"
+    = @excerpt
