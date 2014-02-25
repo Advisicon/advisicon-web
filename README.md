@@ -75,7 +75,7 @@ The `description` is a brief (try to keep it under 72 characters) description
 of the job. This may be used by cross posting sites like facebook, linkedin, &
 google plus to pre-populate a description of the page.
 
-Set the `layout` to `base-alt/job-posting.haml`
+Set the `layout` to `default.haml`
 
 
 ## schema.org Awesomeness  ##
