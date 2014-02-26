@@ -97,6 +97,37 @@ Eventbrite.prototype = {
       html.push('</div>');
       return html.join('\n');
     },
+    'eventDates': function( evnts, callback, options){
+      var html = ['<ul>'];
+      if( evnts.events !== undefined ){
+        var len = evnts.events.length;
+        for( var i = 0; i < len; i++ ){
+          if(evnts.events[i].event !== undefined ){
+            html.push( callback( evnts.events[i].event, options ));
+          }
+        }
+      }else{
+        html.push('None available at this time.');
+      }
+      html.push('</ul>');
+      return html.join('\n');
+    },
+    'eventDate': function( evnt ){
+      var not_iso_8601 = /\d\d-\d\d-\d\d \d\d:\d\d:\d\d/;
+      var date_string = not_iso_8601.test( evnt.start_date ) ? evnt.start_date.replace(' ', 'T') : evnt.start_date;
+      var start_date = new Date( Date.parse( date_string ));
+      var venue_name = 'Online';
+      var time_string = Eventbrite.prototype.utils.formatTime( start_date );
+      var html = '';
+      date_string = start_date.toDateString();
+      if( evnt.venue !== undefined && evnt.venue.name !== undefined && evnt.venue.name !== ''){
+        venue_name = evnt.venue.name;
+      }
+      html = "<li>" +
+             "<a href='" + evnt.url + "'>" + date_string + "</a>" +
+             "</li>";
+      return html;
+    },
     'eventListRow': function( evnt ){
       var not_iso_8601 = /\d\d-\d\d-\d\d \d\d:\d\d:\d\d/;
       var date_string = '';
@@ -167,23 +198,11 @@ Eventbrite.prototype = {
     'abbrEventListRow': function( evnt ){
       var not_iso_8601 = /\d\d-\d\d-\d\d \d\d:\d\d:\d\d/;
       var date_string = '';
-      var date_array = [];
       var date_now = new Date();
       var compiled_date_string = '';
-      if ( evnt.repeats == 'yes' ){
-        $.each( evnt.repeat_schedule, function(occurance_index, occurance_value){
-          $.each( evnt.repeat_schedule[occurance_index], function(index, value){
-            occurance_date = new Date( Date.parse( value ) );
-            if (index == 'start_date' && occurance_date > date_now){
-              date_string = not_iso_8601.test( value ) ? value.replace(' ', 'T') : value;
-              date_array.push(date_string);
-            }
-          });
-        });
-      } else {
-        date_string = not_iso_8601.test( evnt.start_date ) ? evnt.start_date.replace(' ', 'T') : evnt.start_date;
-        date_array.push(date_string);
-      }
+
+      date_string = not_iso_8601.test( evnt.start_date ) ? evnt.start_date.replace(' ', 'T') : evnt.start_date;
+      date_array.push(date_string);
 
 
       $.each(date_array, function(da_item, da_value){
