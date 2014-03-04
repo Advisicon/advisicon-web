@@ -40,8 +40,13 @@ layout: default.haml
   * LINQ
   * MDX
   
-  Contact Advisicon today to explore how a custom installation, tool or application could help you accomplish your strategic business objectives.
-
-%p <a href="mailto:info@advisicon.com?subject=Question%20about%20application%20development" title="email Advisicon" onclick="#{track_event('Emails', 'Corporate', label: 'Inquiry')}">Contact Advisicon</a> today to explore how a custom tool or application could help you achieve your strategic business objectives.
+%p 
+  %a{ href: 'mailto:info@advisicon.com?subject=Question%20about%20application%20development', 
+      title: 'email Advisicon',
+      onclick: track_event('Emails', 
+                           'Corporate', 
+                            label: 'Inquiry') }Contact Advisicon 
+  today to explore how a custom tool or application could help you achieve your 
+  strategic business objectives.
 
 %p View an Advisicon Application Development <a href="case_studies/case_study_appdev_NCRAR.htm" >case study</a>.
