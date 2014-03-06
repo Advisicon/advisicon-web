@@ -97,7 +97,7 @@
           <a href='/microsoft-project-office.html' title='view our Microsoft Project and Microsoft Project Server consulting and training services'>Microsoft Project Server</a>
           <a href='/sharepoint.html'>Microsoft SharePoint</a>
           <a href='/training.html'>Training</a>
-          <a href='/custom-development.html'>Application Development</a>
+          <a href='/custom-development.html'>Custom Development</a>
         </nav>
       </div>
       <div id='navAndCred'>
