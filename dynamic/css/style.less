@@ -567,19 +567,6 @@ td { vertical-align: top; }
           }
         }
       }
-      #accordianAds {
-        // display: none;
-        .accordion1 {
-          li {
-            img {
-            }
-            p {
-              & + p {
-              }
-            }
-          }
-        }
-      }
       #main {
         padding-bottom: 24em;
       //  float: left;
@@ -1207,7 +1194,50 @@ td { vertical-align: top; }
   }
 }
 
-
+#accordianAds {
+  .accordion1 {
+    margin: 0;
+    padding-bottom: 0;
+  }
+  li {
+    list-style: none;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    background-color: #333333;
+    img { float: left; width: 40px; }
+    .slide-content {
+      width: 500px;
+      background-color: #eee;
+      background-color: rgba( 255, 255, 255, 0.8 );
+      padding: 1em;
+      float: left;
+    }
+    h1 {
+      .advisiconHeader;
+      .question { color: @red; }
+    }
+    p  {}
+    a.button {
+      text-decoration: none;
+      padding:.25em;
+      margin: -.25em;
+      background-color: #aaaaaa;
+      border: 1px solid #999999;
+      .rounded-corners(2);
+      color: #333333;
+      &:hover {
+        background-color: #999999;
+        border-color: #aaaaaa;
+        color: #444444;
+      }
+    }
+  }
+  .custom-development  { background-image: url(/pix/slideshow/custom-development.jpg); }
+  .training            { background-image: url(/pix/slideshow/training.jpg); }
+  .sharepoint          { background-image: url(/pix/slideshow/sharepoint.jpg); }
+  .project-server      { background-image: url(/pix/slideshow/project-server.jpg); }
+  .project-management  { background-image: url(/pix/slideshow/project-management.jpg); }
+}
 
 
 
@@ -1383,36 +1413,6 @@ td { vertical-align: top; }
               }
               &:active {
                 background: #000000 url(/pix/highlightsNavigation-hover.jpg) no-repeat 0 0;
-              }
-            }
-          }
-        }
-        #accordianAds {
-          padding: 5px 0 0;
-          display: block;
-          margin: 0;
-          height: 271px;
-          float: left;
-          positon: relative;
-          overflow: hidden;
-          .accordion1 {
-            margin: 0;
-            padding-bottom: 0;
-            float: left;
-            li {
-              padding-left: 5px;
-              list-style: none;
-            //  background-color: #000000;
-              img {
-                postion: absolute;
-                top:0;
-                left: 0;
-              }
-              p {
-                color: @gold;
-                & + p {
-                  color: #ffffff;
-                }
               }
             }
           }

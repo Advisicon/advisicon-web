@@ -1,53 +1,68 @@
 #accordianAds
   %ul.accordion1
-    %li.five
-      %img{ border: '0', 
-            src:    '/pix/slide5.jpg', 
-            alt:    'We offer custom Application Development', 
-            usemap: '#slide5' }
-    %li.two
-      %img{ border: '0',
-            src:    '/pix/slide4.jpg', 
-            alt:    'We offer comprehensive Training programs',
-            usemap: '#slide4' }
-    %li.one
-      %img{ border: '0',
-            src:    '/pix/slide3.jpg', 
-            alt:    'We specialize in SharePoint', 
-            usemap: '#slide3' }
-    %li.three
-      %img{ border: '0',
-            src:    '/pix/slide2.jpg', 
-            alt:    'We can set up Microsoft Project and Microsoft Project Server', 
-            usemap: '#slide2' }
-    %li.four
-      %img{ border: '0',
-            src:    '/pix/slide1.jpg',
-            alt:    'We deliver project, program, and portfolio management consulting services', 
-            usemap: '#slide1' }
-      %map{ name: 'slide1', id: 'slide1' }
-        %area{ shape:  'rect', 
-               coords: '303,203,399,245', 
-               href:   '/project-management.html', 
-               alt:    'project management slide' }
-      %map{ name: 'slide2', id: 'slide2' }
-        %area{ shape:  'rect', 
-               coords: '331,187,427,229', 
-               href:   '/microsoft-project-office.html', 
-               alt:    'microsoft project office slide' }
-      %map{ name: 'slide3', id: 'slide3' }
-        %area{ shape:  'rect', 
-               coords: '341,208,437,250', 
-               href:   '/sharepoint.html', 
-               alt:    'sharepoint slide' }
-      %map{ name: 'slide4', id: 'slide4' }
-        %area{ shape:  'rect', 
-               coords: '341,206,437,248', 
-               href:   '/training.html', 
-               alt:    'training slide' }
-      %map{ name: 'slide5', id: 'slide5' }
-        %area{ shape:  'rect', 
-               coords: '302,195,398,237', 
-               href:   '/custom-development.html', 
-               alt:    'custom development slide' }
+    %li.custom-development
+      %img{ src: '/pix/slideshow/select-custom-development.png',
+            alt: 'Custom Development' }
+      .slide-content
+        %h1 
+          %span.question Can't find the right software?
+          We offer custom Application Development
+        %p
+          Advisicon develops custom applications and code to help organizations
+          achieve their business objectives, from integrating EPM with other 
+          SQL-based systems, to custom code and databases, to custom ERP 
+          integrations.
+        %a.button{ href: '/custom-development.html' } Read More
+    %li.training
+      %img{ src: '/pix/slideshow/select-training.png',
+            alt: 'Training' }
+      .slide-content
+        %h1
+          %span.question Scratching your head?
+          We offer comprehensive Training programs
+        %p
+          Advisicon delivers customized, consultative instructor-led project
+          management training based on project management best practices on 
+          the following topics using Advisicon's proprietary course manuals, 
+          process flowcharts, and electronic tools and templates.
+        %a.button{ href: '/training.html' } Read More
+    %li.sharepoint
+      %img{ src: '/pix/slideshow/select-sharepoint.png',
+            alt: 'SharePoint' }
+      .slide-content
+        %h1
+          %span.question Get organized
+          We specialize in SharePoint
+        %p
+          Advisicon provides end-to-end Microsoft&reg; SharePoint consulting 
+          services. Based on our proven organizational work management approach,
+          we enable companies to configure, adopt and leverage the benefits of
+          a collaboration technology and project management methodology.
+        %a.button{ href: '/sharepoint.html' } Read More
+    %li.project-server
+      %img{ src: '/pix/slideshow/select-project-server.png',
+            alt: 'Project Server' }
+      .slide-content
+        %h1 
+          %span.question Setting up
+          Project &amp; Project Server
+        %p
+          Advisicon consultants and subject matter experts are uniquely qualified
+          to partner with companies that are deploying Microsoft Project, 
+          Microsoft Project/Portfolio Server and SharePoint in support of a 
+          Project Management Office (PMO).
+        %a.button{ href: '/microsoft-project-office.html' } Read More
+    %li.project-management
+      %img{ src: '/pix/slideshow/select-project-management.png',
+            alt: 'Project Management' }
+      .slide-content
+        %h1 
+          %span.question Is your business a 
+          Project Management Headache?
+        %p
+          Advisicon delivers professional best practices-based project, program,
+          and portfolio management consulting servies through-out the United 
+          States and Latin America to enable organizations to get control over 
+          work management.
+        %a.button{ href: '/project-management.html' } Read More
 
