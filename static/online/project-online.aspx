@@ -96,6 +96,7 @@
           <a href='/project-management.html' title='view our Project Management services'>Project Management</a>
           <a href='/microsoft-project-office.html' title='view our Microsoft Project and Microsoft Project Server consulting and training services'>Microsoft Project Server</a>
           <a href='/sharepoint.html'>Microsoft SharePoint</a>
+          <a href='/visio.html'>Visio</a>
           <a href='/training.html'>Training</a>
           <a href='/custom-development.html'>Custom Development</a>
         </nav>
@@ -143,7 +144,7 @@
               <a class='twitter icon' href='http://twitter.com/Advisicon' onclick="ga('send', 'event', 'Social Button', 'Twitter', 'User: Advisicon');" target='_blank' title='Advisicon on Twitter'></a>
             </li>
             <li>
-              <a class='linkedin icon' href='http://www.linkedin.com/companies/advisicon' onclick="ga(['send', 'event', 'Social Button', 'LinkedIn', 'Advisicon Company Profile');" target='_blank' title='Advisicon on LinkedIn'></a>
+              <a class='linkedin icon' href='http://www.linkedin.com/companies/advisicon' onclick="ga('send', 'event', 'Social Button', 'LinkedIn', 'Advisicon Company Profile');" target='_blank' title='Advisicon on LinkedIn'></a>
             </li>
             <li>
               <a class='facebook icon' href='http://www.facebook.com/Advisicon/' onclick="ga('send', 'event', 'Social Button', 'Facebook', 'Advisicon Fan Page');" target='_blank' title='Advisicon on Facebook'></a>
@@ -156,6 +157,12 @@
             </li>
             <li>
               <a class='googleplus icon' href='https://plus.google.com/+Advisicon/posts' onclick="ga('send', 'event', 'Social Button', 'Google+', 'Advisicon g+ page');" target='_blank' title='Advisicon on Google+'></a>
+            </li>
+            <li>
+              <a class='youtube icon' href='http://www.youtube.com/channel/UCzcAEnYWfm14KhSv4Y6H3bA' onclick="ga('send', 'event', 'Social Button', 'Youtube', 'Advisicon youtube channel');" target='_blank' title='Advisicon on Youtube'></a>
+            </li>
+            <li>
+              <a class='slideshare icon' href='http://www.slideshare.net/Advisicon' onclick="ga('send', 'event', 'Social Button', 'Slideshare', 'Advisicon slideshare profile');" target='_blank' title='Advisicon on Slideshare'></a>
             </li>
           </ul>
         </div>
