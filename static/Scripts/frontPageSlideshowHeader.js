@@ -12,7 +12,7 @@
 			totalWidth: 950, 
 			totalHeight: 261, 
 			minPanelWidth: 40, 
-			maxPanelWidth: 782
+			maxPanelWidth: 750
 		});			
 	}
 	);
