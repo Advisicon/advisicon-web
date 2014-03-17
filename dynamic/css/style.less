@@ -426,7 +426,6 @@ td { vertical-align: top; }
               &:active {
                 background-color: @transparentRed;
                 color: #ffffff;
-                .rounded-corners(10);
               }
               &.bold { font-family: 'Segoe UI bold', Calibri, Arial, sans-serif; }
             }
@@ -1457,34 +1456,26 @@ td { vertical-align: top; }
                 color: #333333;
                 line-height: 25px;
                 margin-bottom: 3px;
-                .rounded-corners(10);
+                .rounded-corners(2);
                 border: 1px solid #dddddd;
                 overflow: hidden;
-                .boxShadow(0, 1px, 5px, 1px, #ddd);
                 &:nth-child(odd) {clear: both;}
                 &:nth-child(even) {clear: both;}
                 &:link {
                   color: #333333;
-                  background: #eeeeee url(/pix/secondary-nav-button.png) repeat -1px -1px;
-                  background: #eeeeee url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc4OTUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM5OTk5OTkiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c4OTUpIiAvPgo8L3N2Zz4=) repeat 0 0;
-                  .linearGradient(top, #ffffff, 5%, #eeeeee, 95%, #999999);
+                  background-color: #ddd;
                 }
                 &:visited {
                   color: #333333;
                 }
                 &:hover {
-                  background-image: url(http://advisicon.com/pix/secondary-nav-button-hover.png);
-                  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc5MyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzk5OTk5OSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0VFRUVFRSIgb2Zmc2V0PSIxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZzkzKSIgLz4KPC9zdmc+);
-                  .linearGradient(top, #999999, 3%, #aaaaaa, 97%, #eeeeee);
-                  color: @red;
-                  .boxShadow(0, -1px, 5px, 0, #ccc);
+                  color: #ddd;
+                  background-color: @red;
                 }
                 &:active {
-                  background-image: url(http://advisicon.com/pix/secondary-nav-button-hover.png);
-                  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc5MyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzk5OTk5OSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0VFRUVFRSIgb2Zmc2V0PSIxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZzkzKSIgLz4KPC9zdmc+);
-                  .linearGradient(top, #999999, 3%, #aaaaaa, 97%, #eeeeee);
                   color: @red;
-                  .boxShadow(0, -1px, 5px, 0, #ccc);
+                  background-color: #eee;
+                  border-color: @transparentRed;
                 }
               }
             }
