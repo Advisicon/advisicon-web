@@ -94,8 +94,8 @@
         </nav>
         <nav id='highlightsNavigation'>
           <a href='/project-management.html' title='view our Project Management services'>Project Management</a>
-          <a href='/microsoft-project-office.html' title='view our Microsoft Project and Microsoft Project Server consulting and training services'>Microsoft Project Server</a>
-          <a href='/sharepoint.html'>Microsoft SharePoint</a>
+          <a href='/microsoft-project-office.html' title='view our Microsoft Project and Microsoft Project Server consulting and training services'>Project Server</a>
+          <a href='/sharepoint.html'>SharePoint</a>
           <a href='/visio.html'>Visio</a>
           <a href='/training.html'>Training</a>
           <a href='/custom-development.html'>Custom Development</a>
