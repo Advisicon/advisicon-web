@@ -1,6 +1,6 @@
 Eventbrite({'app_key': "P47XBRPQTVS7YF64Z5"}, 
   function(eb){
-    var event_title = $('h1').text().replace(/\s+/g, ' AND ').toLowerCase();
+    var event_title = $('h1').text().replace(/\s+/g, ' AND ');
     var options = {
       'organizer'  : 'Advisicon',
       'keywords'   : event_title
