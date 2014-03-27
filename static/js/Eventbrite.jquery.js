@@ -53,13 +53,6 @@ Eventbrite.prototype = {
       params.access_token = this.auth_tokens.access_token;
     }
     
-    (function($, oldFunction){
-      $.param = function( a, traditional ) {
-        var s = oldFunction.apply(oldFunction,[a,traditional]);
-        return s.replace( '+', '%20' );
-      };
-    })(jQuery,jQuery.param);
-    
     $.ajax({
       url: this.api_host + method,
       data: params,
@@ -72,7 +65,6 @@ Eventbrite.prototype = {
         if(params.access_token !== undefined){
           xhrObj.setRequestHeader("Authorization","Bearer "+params.access_token);
         }
-        console.log(this.url);
       },
       success: function (resp) {
         if(resp.contents !== undefined){
