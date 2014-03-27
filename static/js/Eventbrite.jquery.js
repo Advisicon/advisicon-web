@@ -53,6 +53,13 @@ Eventbrite.prototype = {
       params.access_token = this.auth_tokens.access_token;
     }
     
+    (function($, oldFunction){
+      $.param = function( a, traditional ) {
+        var s = oldFunction.apply(oldFunction,[a,traditional]);
+        return s.replace( '+', '%20' );
+      };
+    })(jQuery,jQuery.param);
+    
     $.ajax({
       url: this.api_host + method,
       data: params,
@@ -65,6 +72,7 @@ Eventbrite.prototype = {
         if(params.access_token !== undefined){
           xhrObj.setRequestHeader("Authorization","Bearer "+params.access_token);
         }
+        console.log(this.url);
       },
       success: function (resp) {
         if(resp.contents !== undefined){
@@ -196,25 +204,29 @@ Eventbrite.prototype = {
       return html.join('\n');
     },
     'abbrEventListRow': function( evnt ){
-      var not_iso_8601 = /\d\d-\d\d-\d\d \d\d:\d\d:\d\d/;
-      var date_string = '';
-      var date_now = new Date();
+      var date_array = [];
       var compiled_date_string = '';
 
-      date_string = not_iso_8601.test( evnt.start_date ) ? evnt.start_date.replace(' ', 'T') : evnt.start_date;
-      date_array.push(date_string);
-
-
-      $.each(date_array, function(da_item, da_value){
-        var start_date = new Date( Date.parse( da_value ));
-        compiled_date_string += " (" + start_date.toDateString() + ")";
-      });
-
+      // Define a regular expression to find out if a string is an ISO date
+      var not_iso_8601 = /\d\d-\d\d-\d\d \d\d:\d\d:\d\d/;
       
+      // Turn the event's start date into an ISO compliant format
+      var date_string = not_iso_8601.test( evnt.start_date ) ? evnt.start_date.replace(' ', 'T') : evnt.start_date;
+      
+      // Use the ISO compliant date string to create a Date object
       var start_date = new Date( Date.parse( date_string ));
-      date_string = start_date.toDateString();
       var time_string = Eventbrite.prototype.utils.formatTime( start_date );
       var html = '';
+
+      // Build an array out of the date_string... but only one date string?
+      date_array.push(date_string);
+
+      $.each(date_array, function(da_item, da_value){
+        start_date = new Date( Date.parse( da_value ));
+        compiled_date_string += " (" + start_date.toDateString() + ")";
+      });
+      
+      date_string = start_date.toDateString();
 
       html = "<li id='evnt_div_" + evnt.id + "'>" + 
              "<a href='" + evnt.url + "' title='Register on eventbrite!'>" + evnt.title + "</a>" +
