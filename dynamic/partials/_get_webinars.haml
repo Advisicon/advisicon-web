@@ -1,0 +1,23 @@
+- require '../../GoToWebinar-Ruby/lib/go_to_webinar.rb'
+- @g2w = GoToWebinar::Client.new('b5c0e5f05668a7e6f06c1479210746fe', '200000000001304589').get_upcoming_webinars
+
+- if @g2w != nil && @g2w.any? 
+
+  #g2t_event_header
+    %span.head_title Webinar
+    %span.head_date Date
+  .eb_event_list
+    
+    - @g2w = @g2w.sort_by { |webinar| webinar['times'][0]['startTime'] }
+
+    - @g2w.each do |webinar|
+      .eb_event_list_item
+        - @webinarTitle = clean_course_title(webinar['subject'])
+        - @webinarURL = "https://www3.gotomeeting.com/register/#{webinar['webinarKey']}"
+        - @webinarDate = DateTime.parse(webinar['times'][0]['startTime']).to_date
+        %span.eb_event_list_title= "<a href='#{@webinarURL}' title='Register on GoToWebinar!' onclick='#{track_event('view webinar', @webinarTitle, label: @webinarDate)}'>#{@webinarTitle}</a>"
+        %span.eb_event_list_date= @webinarDate.to_s
+- else
+
+  %p No webinars are available at this time.
+

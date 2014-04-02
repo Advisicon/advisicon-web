@@ -72,90 +72,36 @@ layout: default.haml
 
   </div>
 
-  Virtual Course Offerings {#online-learning}
+  Virtual Course Offerings 
   ------------------------
 
-#online-learning
+  <div id="online-learning" markdown="1">
+  #{ render_partial 'partials/get_trainings' }
+  </div>
 
-  :maruku
+  Online Webinars
+  ---------------
+  <div id="webinars" markdown="1">
+  #{ render_partial 'partials/get_webinars' }
+  </div>
 
-    #{render_partial '/partials/references'}
+  Partner Courses { #partner-courses }
+  ---------------
+  <div id="partner-lead-learning" markdown="1">
+  #{ render_partial 'partials/get_partner_courses' }
+  </div>
 
-  - require '../../GoToTraining-Ruby/lib/go_to_training.rb'
-  - @g2t = GoToTraining::Client.new('5a2f4f1cdbea97e45cfcd997421c744', '200000000000294967', '200000000001304589').get_trainings('')
+  Our Meeting Room { #meeting-room }
+  ----------------
+  
+  Our meeting room is for rent!
+  
+  #{ render_partial 'partials/display_meeting_room_tour' }
 
-  - if @g2t != nil && @g2t.any?
+  Click the image above to take a virtual tour of the Advisicon Headquarters 
+  or visit our facebook page to see an <a href="http://www.facebook.com/media/set/?set=a.10150709101698512.393774.136755573511&amp;type=3" title="pictures of the Advisicon Headquarters building" onclick="#{track_event('Facebook', 'User: Advisicon', label: 'HQ image gallery')}">image gallery of shots of our headquarters building</a>. 
 
-    #g2t_event_header
-      %span.head_title Course
-      /%span.head_location Location
-      %span.head_date Date
-    /.g2t_event_list
-    .eb_event_list
+  To obtain a quote for renting our meeting room, please contact us at 
+  <a href="mailto:info@advisicon.com?subject=Meeting%20Room%20Quote%20Request">info@Advisicon.com</a>.
 
-      - @g2t = @g2t.sort_by { |course| course['times'][0]['startDate'] }
-
-      - @g2t.each do |course|
-        /.g2t_event_list_item
-        .eb_event_list_item
-          - @courseTitle = clean_course_title(course['name'])
-          - @registrationURL = "https://student.gototraining.com/r/#{course['trainingKey']}"
-          /%span.g2t_event_list_title= course['name']
-          - @date = DateTime.parse(course['times'][0]['startDate']).to_date
-          %span.eb_event_list_title= "<a href='#{@registrationURL}' title='Register on GoToTraining!' onclick='#{track_event('view online course', @courseTitle, label: @date)}'>#{@courseTitle}</a>"
-          /%span.g2t_event_list_date= @date.to_s
-          %span.eb_event_list_date= @date.to_s
-          -# %p{ :style => 'float: left; clear: left;' }= course
-  - else
-    %p No trainings are available at this time.
-
-%h2 Webinars
-#webinars
-  - require '../../GoToWebinar-Ruby/lib/go_to_webinar.rb'
-  - @g2w = GoToWebinar::Client.new('b5c0e5f05668a7e6f06c1479210746fe', '200000000001304589').get_upcoming_webinars
-
-  - if @g2w != nil && @g2w.any? 
-
-    #g2t_event_header
-      %span.head_title Webinar
-      %span.head_date Date
-    .eb_event_list
-      
-      - @g2w = @g2w.sort_by { |webinar| webinar['times'][0]['startTime'] }
-
-      - @g2w.each do |webinar|
-        .eb_event_list_item
-          - @webinarTitle = clean_course_title(webinar['subject'])
-          - @webinarURL = "https://www3.gotomeeting.com/register/#{webinar['webinarKey']}"
-          - @webinarDate = DateTime.parse(webinar['times'][0]['startTime']).to_date
-          %span.eb_event_list_title= "<a href='#{@webinarURL}' title='Register on GoToWebinar!' onclick='#{track_event('view webinar', @webinarTitle, label: @webinarDate)}'>#{@webinarTitle}</a>"
-          %span.eb_event_list_date= @webinarDate.to_s
-  - else
-
-    %p No webinars are available at this time.
--#
-  %h2{ :id => "partner-courses" } Partner Courses
-  #partner-lead-learning
-    #partner_event_header
-      %span.head_title Course
-      %span.head_location Location
-      %span.head_date Date
-    .eb_event_list
-      .eb_event_list_item
-        %span.eb_event_list_title
-          %a{ :href => "http://www.campusce.net/Clark/Course/Course.aspx?c=1348", title => "Register at Clark College!" } Practical Project Management
-        %span.eb_event_list_location
-          Clark Community College
-        %span.eb_event_list_date
-          2013-10-22
-
-%h2{ :id => "meeting-room" } Our Meeting Room
-%p Our meeting room is for rent!
-/ <iframe src="http://rtvpix.com/tour/src/tour_java_only.php?utl=BU-5037-9QK11Y-01&h=339&w=500" height="339" width="500" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-%a{ href: "http://rtvpix.com/rst/BU-5037-9QK11Y-01?h=500&w=700", 
-    title: "take a virtual tour", 
-    target: "_blank", onclick: track_event('virtual tour', 'flash 3d') }
-  %img{ :src => "/pix/advisicon-virtual-tour.jpg", :alt => "take a virtual tour", :width => "100%" }
-%p Click the image above to take a virtual tour of the Advisicon Headquarters or visit our facebook page to see an <a href="http://www.facebook.com/media/set/?set=a.10150709101698512.393774.136755573511&type=3" title="pictures of the Advisicon Headquarters building" onclick="#{track_event('Facebook', 'User: Advisicon', label: 'HQ image gallery')}">image gallery of shots of our headquarters building</a>. To obtain a quote for renting our meeting room, please contact us at <a href="mailto:info@advisicon.com?subject=Meeting Room Quote Request">info@Advisicon.com</a>.
-
-
+  #{ render_partial 'partials/footnotes' }

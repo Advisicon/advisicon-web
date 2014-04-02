@@ -1,14 +1,27 @@
-:erb
-  -
-    require '../../GoToTraining-Ruby/lib/go_to_training.rb'
-    @g2t = GoToTraining::Client.new('ccd6b830c54436e074f0cc9cdb8931f2', '7863484309822919941', '2221055618378781957').get_trainings('')
+- require '../../GoToTraining-Ruby/lib/go_to_training.rb'
+- @g2t = GoToTraining::Client.new('5a2f4f1cdbea97e45cfcd997421c744', '200000000000294967', '200000000001304589').get_trainings('')
 
+- if @g2t != nil && @g2t.any?
 
-    @g2t_head = "<div id='g2t_event_header'><span class='head_title'>Course</span><span class='head_date'>Date</span>"
-    @g2t_list = "<div class='eb_event_list'>"
-    @g2t.each do |course|
-      @courseTitle = course['name']
-      @registrationURL = "https://attendee.gototraining.com/78mx2/register/#{course['trainingKey']}"
-      @date = DateTime.parse(course['times'][0]['startDate']).to_date
-      @g2t_list += "<div class='eb_event_list_item'><span class='eb_event_list_title'><a href='#{@registrationURL}' title='Register on GoToTraining!' onclick='#{track_event('view online course', @courseTitle, label: @date)}'>#{@courseTitle}</a></span><span class='eb_event_list_date'>#{@date.to_s}</span></div>"
+  #g2t_event_header
+    %span.head_title Course
+    /%span.head_location Location
+    %span.head_date Date
+  /.g2t_event_list
+  .eb_event_list
 
+    - @g2t = @g2t.sort_by { |course| course['times'][0]['startDate'] }
+
+    - @g2t.each do |course|
+      /.g2t_event_list_item
+      .eb_event_list_item
+        - @courseTitle = clean_course_title(course['name'])
+        - @registrationURL = "https://student.gototraining.com/r/#{course['trainingKey']}"
+        /%span.g2t_event_list_title= course['name']
+        - @date = DateTime.parse(course['times'][0]['startDate']).to_date
+        %span.eb_event_list_title= "<a href='#{@registrationURL}' title='Register on GoToTraining!' onclick='#{track_event('view online course', @courseTitle, label: @date)}'>#{@courseTitle}</a>"
+        /%span.g2t_event_list_date= @date.to_s
+        %span.eb_event_list_date= @date.to_s
+        -# %p{ :style => 'float: left; clear: left;' }= course
+- else
+  %p No trainings are available at this time.
