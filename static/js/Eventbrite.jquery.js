@@ -98,35 +98,40 @@ Eventbrite.prototype = {
       return html.join('\n');
     },
     'eventDates': function( evnts, callback, options){
-      var html = ['<ul>'];
+      var events_list = [];
       if( evnts.events !== undefined ){
         var len = evnts.events.length;
         for( var i = 0; i < len; i++ ){
           if(evnts.events[i].event !== undefined ){
-            html.push( callback( evnts.events[i].event, options ));
+            events_list.push( callback( evnts.events[i].event, options ));
           }
         }
       }else{
-        html.push('None available at this time.');
+        //html.push('None available at this time.');
       }
-      html.push('</ul>');
-      return html.join('\n');
+      //html.push('</ul>');
+      return events_list;
     },
     'eventDate': function( evnt ){
+      function EventObj( title, url, date) {
+        this.title = title;
+        this.url   = url;
+        this.date  = date;
+      }
       var not_iso_8601 = /\d\d-\d\d-\d\d \d\d:\d\d:\d\d/;
       var date_string = not_iso_8601.test( evnt.start_date ) ? evnt.start_date.replace(' ', 'T') : evnt.start_date;
       var start_date = new Date( Date.parse( date_string ));
       var venue_name = 'Online';
       var time_string = Eventbrite.prototype.utils.formatTime( start_date );
-      var html = '';
+      var advisicon_event = new EventObj();
       date_string = start_date.toDateString();
       if( evnt.venue !== undefined && evnt.venue.name !== undefined && evnt.venue.name !== ''){
         venue_name = evnt.venue.name;
       }
-      html = "<li>" +
-             "<a href='" + evnt.url + "'>" + date_string + "</a>" +
-             "</li>";
-      return html;
+      advisicon_event.title = evnt.title;
+      advisicon_event.url   = evnt.url;
+      advisicon_event.date  = date_string;
+      return advisicon_event;
     },
     'eventListRow': function( evnt ){
       var not_iso_8601 = /\d\d-\d\d-\d\d \d\d:\d\d:\d\d/;
