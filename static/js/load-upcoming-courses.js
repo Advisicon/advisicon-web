@@ -9,6 +9,8 @@ Eventbrite({'app_key': "P47XBRPQTVS7YF64Z5"},
       var dates = eb.utils.eventDates( response, eb.utils.eventDate);
       if (dates.length > 10){ // counts characters ( 10 == <ul>\n</ul> )
         $('section#main').append('<h2>Upcoming Public Dates</h2>' + dates);
+        var $footnotes = $('section#main .footnotes');
+        $('section#main').append( $footnotes );
       } 
     });
   });
