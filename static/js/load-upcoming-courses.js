@@ -24,7 +24,10 @@ Eventbrite({'app_key': "P47XBRPQTVS7YF64Z5"},
           $('section#main').append(
             '<ul>' +
             '<li>' +
-            '<a href="' + adv_event.url + '" title="' + adv_event.title + '">' +
+            '<a href="' + adv_event.url + '" title="' + adv_event.title + '" ' + 
+            'onclick="ga(\'send\', \'event\', \'eventbrite\', ' + 
+            '\'view date: ' + adv_event.date.toDateString() + '\', ' + 
+            '\'' + adv_event.title + '\');">' +
             adv_event.date.toDateString() + '</a></li></ul>');
         }
         var $footnotes = $('section#main .footnotes');
