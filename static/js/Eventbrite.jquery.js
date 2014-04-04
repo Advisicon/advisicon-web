@@ -106,31 +106,37 @@ Eventbrite.prototype = {
             events_list.push( callback( evnts.events[i].event, options ));
           }
         }
-      }else{
-        //html.push('None available at this time.');
       }
-      //html.push('</ul>');
+      
       return events_list;
     },
     'eventDate': function( evnt ){
+
+      /* describe an event object */
       function EventObj( title, url, date) {
         this.title = title;
         this.url   = url;
         this.date  = date;
       }
+
+      // describe a regular expression matching non-iso-8601 dates 
       var not_iso_8601 = /\d\d-\d\d-\d\d \d\d:\d\d:\d\d/;
+
+      // make sure the date string returned from our REST query is in iso-8601
+      // format. If not, convert it.
       var date_string = not_iso_8601.test( evnt.start_date ) ? evnt.start_date.replace(' ', 'T') : evnt.start_date;
-      var start_date = new Date( Date.parse( date_string ));
-      var venue_name = 'Online';
-      var time_string = Eventbrite.prototype.utils.formatTime( start_date );
+
+      // using the date_string, create a date_object
+      var date_object = new Date( Date.parse( date_string ));
+
+      // create a new event object
       var advisicon_event = new EventObj();
-      date_string = start_date.toDateString();
-      if( evnt.venue !== undefined && evnt.venue.name !== undefined && evnt.venue.name !== ''){
-        venue_name = evnt.venue.name;
-      }
+      
+      // populate the event object with the returned values
       advisicon_event.title = evnt.title;
       advisicon_event.url   = evnt.url;
-      advisicon_event.date  = date_string;
+      advisicon_event.date  = date_object;
+
       return advisicon_event;
     },
     'eventListRow': function( evnt ){

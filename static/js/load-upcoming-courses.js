@@ -5,8 +5,7 @@ Eventbrite({'app_key': "P47XBRPQTVS7YF64Z5"},
       'user'           : 'jeff.jacobson@advisicon.com',
       'only_display'   : 'title,start_date,url',
       'event_statuses' : 'live',
-      'asc_or_desc'    : 'asc',
-      'event_title'    : event_title
+      'asc_or_desc'    : 'asc'
     };
     eb.user_list_events( options, function( response ){
       var advisicon_events = eb.utils.eventDates( response, eb.utils.eventDate);
@@ -26,7 +25,7 @@ Eventbrite({'app_key': "P47XBRPQTVS7YF64Z5"},
             '<ul>' +
             '<li>' +
             '<a href="' + adv_event.url + '" title="' + adv_event.title + '">' +
-            adv_event.date + '</a></li></ul>');
+            adv_event.date.toDateString() + '</a></li></ul>');
         }
         var $footnotes = $('section#main .footnotes');
         $('section#main').append( $footnotes );
