@@ -1,0 +1,35 @@
+title: Dave Bush
+keywords: 
+description: Dave Bush is a Senior Project Advisor at Advisicon.
+employee_name: Dave Bush
+layout: default.haml
+--------------------------------------------------------META
+
+
+.vcard
+  %h1
+    <span class="fn n">
+    <span class="given-name">Dave</span> 
+    <span class="family-name">Bush</span>
+    </span>
+    <br />
+    <span class="title">Senior Project Advisor</span>
+  %img.photo{ alt: 'Dave Bush', 
+              src: '/pix/biopics/dave-bush.jpg', 
+              width: '107', 
+              height: '161' }
+  %p
+    Dave is a Senior Project Advisor at Advisicon.
+
+  %h2.repair Contact
+
+  %p
+    Email 
+    %a.email{ href: 'mailto:info@advisicon.com?subject=Question%20for%20Dave%20Bush',
+              onclick: track_event( 'Emails',
+                                     employee_name,
+                                     label: 'via info@advisicon.com' ) }= employee_name
+  %p
+    <a href="http://h2vx.com/vcf/advisicon.com/about-us/dave-bush.html">Add Dave to your Address Book</a>
+
+
