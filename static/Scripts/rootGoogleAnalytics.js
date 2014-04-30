@@ -7,4 +7,5 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-4534135-1', 'advisicon.com');
-  ga('send', 'pageview');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
