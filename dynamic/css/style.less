@@ -224,9 +224,9 @@ td { vertical-align: top; }
     margin-left: auto;
     margin-right: auto;
   }
-  .rounded-corners(@radius: 5) { /* creates rounded corners in firefox and chrome, I'll add IE support later */
-    -moz-border-radius: @radius * 1px;
-    border-radius: @radius * 1px;
+  .rounded-corners(@radius: 5px) { /* creates rounded corners in firefox and chrome, I'll add IE support later */
+    -moz-border-radius: @radius;
+    border-radius: @radius;
     overflow: hidden;
   }
   .round-targeted-corners(@top-left-corner: 0, @top-right-corner: 0, @bottom-right-corner: 0, @bottom-left-corner: 0) {
@@ -669,22 +669,26 @@ td { vertical-align: top; }
           a, .employee {
             display: block;
             float: left;
+            &:nth-child(4n+1) { clear: left; }
             width: 107px;
-            height: 335px;
             padding-left: 10px;
             padding-right: 10px;
             padding-top: 10px;
             margin-bottom: 1em;
-            img {
-              .rounded-corners;
-              display: block;
-              margin-bottom: 1em;
-              opacity: .90;
-              &:hover {
-                opacity: 1;
-              }
-              &:active {
-                opacity: 1;
+            .photo-wrapper {
+              height: 107px;
+              width: 107px;
+              .rounded-corners(100%);
+              img {
+                display: block;
+                margin-bottom: 1em;
+                opacity: .90;
+                &:hover {
+                  opacity: 1;
+                }
+                &:active {
+                  opacity: 1;
+                }
               }
             }
             &:link {
@@ -706,6 +710,15 @@ td { vertical-align: top; }
               .rounded-corners;
             }
             p {
+              .advisiconFont(10);
+              text-align: center;
+              margin: 0 auto;
+              line-height: 1.4;
+              color: #333;
+              &.title { 
+                clear:left;
+                color: #999; 
+              }
             }
           }
           & + h2 {
@@ -767,7 +780,7 @@ td { vertical-align: top; }
                 text-decoration: none;
                 background-color: @red;
                 background-color: @transparentRed;
-                .rounded-corners(3);
+                .rounded-corners(3px);
                 & img.photo {
                   display: none;
                 }
@@ -1071,7 +1084,7 @@ td { vertical-align: top; }
             padding-right: 9px;
             padding-bottom: 1em;
             padding-top: 1em;
-            .rounded-corners(5);
+            .rounded-corners(5px);
             background-color: #eeeeee;
             border-bottom: 3px solid #dddddd;
             &:before {
@@ -1085,7 +1098,7 @@ td { vertical-align: top; }
               padding-bottom: 0;
               margin-top: 0;
               margin-bottom: 0;
-              .rounded-corners(0);
+              .rounded-corners(0px);
               border-bottom: none;
               // background: #eeeeee url(/pix/icons/toc-arrow.png) no-repeat 0px 0px;
               &:before {
@@ -1111,7 +1124,7 @@ td { vertical-align: top; }
           padding-right: 5%;
           padding-left: 5%;
           border-bottom: 3px solid #e6e6e6;
-          .rounded-corners(5);
+          .rounded-corners(5px);
           fieldset {
             float: left;
             clear: left;
@@ -1183,7 +1196,7 @@ td { vertical-align: top; }
     width: 150px;
     background-color: #843535;
     .boxShadow(0, 3px, 3px, 0, #ccc);
-    .rounded-corners(3);
+    .rounded-corners(3px);
     text-decoration: none;
     color: #eeeeee;
     &:link { color: #eeeeee; }
@@ -1222,7 +1235,7 @@ td { vertical-align: top; }
       margin: -.25em;
       background-color: #aaaaaa;
       border: 1px solid #999999;
-      .rounded-corners(2);
+      .rounded-corners(2px);
       color: #333333;
       &:hover {
         background-color: #999999;
@@ -1332,7 +1345,7 @@ td { vertical-align: top; }
               font-size: small;
               padding-right: 2em;
               display: block;
-              .rounded-corners(0);
+              .rounded-corners(0px);
               border: none;
                 img {
                   border: 0;
@@ -1406,7 +1419,7 @@ td { vertical-align: top; }
               margin-bottom: 5px;
               padding-left: 1em;
               padding-right: 1em;
-              .rounded-corners(2);
+              .rounded-corners(2px);
               border: 1px solid #eee;
               &:link {
                 border-color: #eee;
@@ -1459,7 +1472,7 @@ td { vertical-align: top; }
                 color: #333333;
                 line-height: 25px;
                 margin-bottom: 3px;
-                .rounded-corners(2);
+                .rounded-corners(2px);
                 border: 1px solid #dddddd;
                 overflow: hidden;
                 &:nth-child(odd) {clear: both;}
@@ -1680,7 +1693,7 @@ td { vertical-align: top; }
                       opacity: .90;
                       width: 48px;
                       height: 48px;
-                      .rounded-corners(5);
+                      .rounded-corners(5px);
                       &:hover {
                         opacity: 1;
                       }
@@ -1693,7 +1706,7 @@ td { vertical-align: top; }
                     margin-right: 5px;
                     margin-bottom: 58px;
                     padding: 7px 10px 13px;
-                    .rounded-corners(10);
+                    .rounded-corners(10px);
                     background-color: #efe9e9;
                     z-index: 0;
                     a {
@@ -1881,7 +1894,7 @@ td { vertical-align: top; }
         }
         dl {
           float: left;
-          .rounded-corners(15);
+          .rounded-corners(15px);
           margin-bottom: 1.5em;
           margin-top: 0;
           dt {
@@ -2015,7 +2028,7 @@ td { vertical-align: top; }
           border: 0 !important;
           margin: 0;
         //  padding-left: 14px;
-          .rounded-corners(10);
+          .rounded-corners(10px);
           opacity: .9;
           &:hover {
             opacity: 1;
@@ -2173,7 +2186,7 @@ td { vertical-align: top; }
                 text-decoration: none;
                 background-color: @red;
                 background-color: @transparentRed;
-                .rounded-corners(3);
+                .rounded-corners(3px);
       */          & img.photo {
       /*            display: none;
       */          }
@@ -2324,7 +2337,7 @@ td { vertical-align: top; }
           border: none;
           padding: 0;
           margin-bottom: 0;
-          .rounded-corners(0);
+          .rounded-corners(0px);
           .boxShadow(0, 0, 0, 0, #ffffff);
           background-color: #ffffff;
           a {
@@ -2415,7 +2428,7 @@ td { vertical-align: top; }
           }
         }
         #abstract {
-          .rounded-corners(10);
+          .rounded-corners(10px);
           background-color: #eeeeee;
           padding-left: 7px;
           padding-right: 7px;
