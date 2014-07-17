@@ -15,7 +15,7 @@
         - @webinarTitle = clean_course_title(webinar['subject'])
         - @webinarURL = "https://www3.gotomeeting.com/register/#{webinar['webinarKey']}"
         - @webinarDate = DateTime.parse(webinar['times'][0]['startTime']).to_date
-        %span.eb_event_list_title= "<a href='#{@webinarURL}' title='Register on GoToWebinar!' onclick='#{track_event('view webinar', @webinarTitle, label: @webinarDate)}'>#{@webinarTitle}</a>"
+        %span.eb_event_list_title= "<a href=\"#{@webinarURL}\" title=\"Register on GoToWebinar!\" onclick=\"#{track_event('view webinar', @webinarTitle, label: @webinarDate)}\">#{@webinarTitle}</a>"
         %span.eb_event_list_date= @webinarDate.to_s
 - else
 
