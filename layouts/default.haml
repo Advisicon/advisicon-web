@@ -26,6 +26,8 @@
     %title #{full_title(title_hash)}
     -# Mobile viewport optimized: h5bp.com/viewport
     %meta{ name: 'viewport', content: 'width=device-width' }
+    - if defined?(title) && title == nil
+      %meta{ name: 'google-site-verification', content: 'jfxwGLTuNiYVQfkALrNQ47BxUfIyqr6cQNHTJSiJqNM' } 
     -# 
       Place favicon.ico and apple-touch-icon.png in the root directory: 
       mathiasbynens.be/notes/touch-icons
