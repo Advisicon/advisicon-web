@@ -176,15 +176,18 @@ Eventbrite.prototype = {
       if( evnt.venue !== undefined && evnt.venue.name !== undefined && evnt.venue.name !== ''){ 
           venue_name = evnt.venue.name;
       }
-  	  if( venue_name !== undefined ){
+  	  if( venue_name !== undefined && venue_name !== 'Online' ){
   			venue_lng = evnt.venue.longitude;
   			venue_lat = evnt.venue.latitude;
   			venue_map_url = "https://maps.google.com/maps?q=" + venue_lat + "+" + venue_lng;
-  	  }
+        venue_map_link = "<a href='" + venue_map_url + "' title='Map " + venue_name + " on google maps!'>" + venue_name + "</a>";
+  	  } else {
+        venue_map_link = venue_name;
+      }
 
       html = "<div class='eb_event_list_item' id='evnt_div_" + evnt.id + "'>" + 
              "<span class='eb_event_list_title'><a href='" + evnt.url + "' title='Register on eventbrite!'>" + evnt.title + "</a></span>" +
-             "<span class='eb_event_list_location'><a href='" + venue_map_url + "' title='Map " + venue_name + " on google maps!'>" + venue_name + "</a></span>" +
+             "<span class='eb_event_list_location'>" + venue_map_link + "</span>" +
              compiled_date_string +
              "<div class='eb_event_list_details hidden'>" + evnt.description + "</div>" +
              "</div>";
